@@ -68,19 +68,36 @@ they agree on all 16.
 
 `Ace of X` carries `EMBODIES_TYPE → :Function`. (See data caveat 1.)
 
+## Court signs (astrological layer)
+
+Each K/Q/K court's **dominant sign** is the sign that anchors its **suit's element** —
+the 0–20° majority of its two-sign (20°–20°) span. Modality by rank: **Queen =
+cardinal, Knight = fixed, King = mutable**. (The out-of-element 20–30° minority sign,
+the prior sign of the span, is the non-dominant half of the pair.)
+
+| Suit (element) | Queen (cardinal) | Knight (fixed) | King (mutable) |
+|---|---|---|---|
+| Wands (Fire) | Aries | Leo | Sagittarius |
+| Chalices (Water) | Cancer | Scorpio | Pisces |
+| Swords (Air) | Libra | Aquarius | Gemini |
+| Pentacles (Earth) | Capricorn | Taurus | Virgo |
+
+Pages are the seasonal thrones — they anchor the element as a whole, not a single
+sign. These dominant signs feed the 7×11 court layer (each court → its dominant
+sign's domicile ruler).
+
 ## Data caveats (verify / reconcile before relying on these)
 
 1. **28 nodes, not 20.** Each suit has three Ace-type nodes: `Ace of X`, `Source of
    X`, `Mastery of X`. Only `Ace of X` has the `EMBODIES_TYPE` edge; the other two
    carry the type only as a string. Resolve Aces by the `Ace of X` node. Confirm
    whether Source/Mastery are the throne-culmination poles or legacy.
-2. **Court signs are intentionally cross-element** (not a discrepancy).
-   `DOMINANT_ASTROLOGICAL_ASSOCIATION` places each court in a sign of a *different*
-   element than its suit (Wands courts in Water signs, etc.). This is by design: the
-   court→sign mapping drives the **7×11** planetary-lord assignment — each court's
-   dominant-sign domicile ruler — and that distribution closes exactly (2 each to the
-   five non-luminaries, 1 each to the luminaries). Not used by the cognitive
-   generator.
+2. **Court sign data is mispointed in the repo (real bug — PAT-590).** The correct
+   dominant sign is the in-element sign of the table above. The court nodes'
+   `RULES_SIGN` correctly store both signs of each span, but
+   `DOMINANT_ASTROLOGICAL_ASSOCIATION` and `astro_zodiac_sign` point to the wrong
+   member — the 20–30° minority sign in the *prior, out-of-element* sign. Use the
+   Court-signs table above, not those fields, until PAT-590 is fixed.
 3. **Seasonal layer (confirmed correct, not a discrepancy).** The Sabbats on the
    Majestic cards are a real, intentional layer, distinct from both the cognitive
    generator and the inner/outer elements. The **Page is the seasonal throne**,

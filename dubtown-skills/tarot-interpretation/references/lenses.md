@@ -69,21 +69,22 @@ the Pages/Aces layer uses.
 ### Courts — by domicile ruler of the court's dominant sign (complete)
 
 The 12 Knight/Queen/King courts (Pages are thrones — see Pages/Aces below). Each
-court's dominant sign maps to its domicile ruler:
+court's **dominant sign** is the in-element sign anchoring its suit's element (the
+0–20° majority of its span; Queen = cardinal, Knight = fixed, King = mutable — see
+`mbti-majestic.md`), mapped to that sign's domicile ruler:
 
 | Planet | Courts (dominant sign) |
 |---|---|
-| Mars | Knight of Pentacles (Aries), King of Wands (Scorpio) |
-| Venus | Knight of Chalices (Libra), King of Swords (Taurus) |
-| Mercury | Queen of Chalices (Gemini), Queen of Swords (Virgo) |
-| Jupiter | Queen of Wands (Pisces), Queen of Pentacles (Sagittarius) |
-| Saturn | Knight of Swords (Capricorn), King of Chalices (Aquarius) |
-| Sun | King of Pentacles (Leo) |
-| Moon | Knight of Wands (Cancer) |
+| Mars | Queen of Wands (Aries), Knight of Chalices (Scorpio) |
+| Venus | Queen of Swords (Libra), Knight of Pentacles (Taurus) |
+| Mercury | King of Swords (Gemini), King of Pentacles (Virgo) |
+| Jupiter | King of Wands (Sagittarius), King of Chalices (Pisces) |
+| Saturn | Knight of Swords (Aquarius), Queen of Pentacles (Capricorn) |
+| Sun | Knight of Wands (Leo) |
+| Moon | Queen of Chalices (Cancer) |
 
-2 each to the five non-luminaries, 1 each to the luminaries = 12. (Court signs are
-cross-element by design — see `mbti-majestic.md` — and that is exactly what produces
-this distribution.)
+2 each to the five non-luminaries, 1 each to the luminaries = 12.
+
 
 ### Pages + Aces — by sect (complete)
 

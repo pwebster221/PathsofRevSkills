@@ -1,22 +1,18 @@
 ---
 name: tarot-interpretation
 description: >-
-  Interpret one or more tarot cards through Paul's own correspondence stack for
-  The 78 — not generic Rider-Waite meanings. Reads each card's attributions from
-  bundled correspondence tables (self-contained; no live lookup needed) and reads it
-  through the per-arcana grammar:
-  Major Arcana by the Generative Principle + Kabbalah; Majestic Arcana
-  by the MBTI generator (Thrones / Court / Aces); Minor Arcana by triplicity-ascent
-  decan ruler + sign + Enneagram (planet = subject, sign = environment, type =
-  situation). Optionally places a reading inside a decomposition lens (4×19
-  elemental, 7×11 planetary lords, 11×7 Tree stations) and scores resonance with
-  the Mars Scoring Engine. Use this skill whenever the user supplies a card, a
-  spread (cards in named positions), or a derived reading and wants it interpreted
-  in their system — phrasings like "interpret this card", "read these cards",
-  "what does X of Chalices mean in my system", "read this spread", "interpret by
-  lot / by element", "what's the generative read on the Tower", or "score this
-  reading's resonance". INTERPRET ONLY — never draw, deal, or randomly select a
-  card. Cards are user-supplied or deterministically derived elsewhere.
+  Interpret tarot cards through Paul's correspondence stack for The 78 (not generic
+  Rider-Waite), reading from bundled self-contained tables — no live lookup.
+  Per-arcana grammar: Major by the Generative Principle + Kabbalah; Majestic by the
+  MBTI generator (Thrones/Court/Aces); Minor by triplicity-ascent decan ruler + sign
+  + Enneagram (planet=subject, sign=environment, type=situation). Optionally places a
+  reading in a decomposition lens (4×19 elemental, 7×11 planetary lords, 11×7 derived
+  Tree-station laying) and scores resonance via the Mars Scoring Engine. Use whenever
+  the user supplies a card, spread, or derived reading to interpret in their system —
+  e.g. "interpret this card", "read these cards", "what does X of Chalices mean in my
+  system", "read this spread", "interpret by lot/by element", "score this reading".
+  INTERPRET ONLY — never draw, deal, or randomly select a card; cards are
+  user-supplied or deterministically derived.
 ---
 
 # Tarot Interpretation (The 78)
