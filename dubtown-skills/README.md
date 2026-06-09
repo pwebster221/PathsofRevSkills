@@ -41,3 +41,5 @@ point to it from the body, so it loads only when needed.
 | `coding-bible` | Engineering standards | slot — paste existing bible |
 | `esoteric-exploration` | Symbolic synthesis | new — flesh out |
 | `metaphysical-conversation` | Contemplative dialogue | new — flesh out |
+| `tarot-interpretation` | Card interpretation (The 78) | active |
+| `generative-principle` | UNC research / number 1–21 exploration | active |
