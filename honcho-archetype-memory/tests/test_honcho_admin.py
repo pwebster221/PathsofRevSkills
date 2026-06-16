@@ -1,8 +1,10 @@
 import pytest
 from harness.honcho_admin import assert_auth_enabled, AuthDisabledError
 
+
 class _AuthError(Exception):
     status_code = 401
+
 
 def test_auth_enabled_when_invalid_token_rejected():
     def factory(base_url, workspace_id, api_key):
@@ -13,6 +15,7 @@ def test_auth_enabled_when_invalid_token_rejected():
     # should NOT raise: invalid token was rejected => auth is on
     assert_auth_enabled("http://localhost:8000", "ws", client_factory=factory)
 
+
 def test_raises_when_invalid_token_accepted():
     def factory(base_url, workspace_id, api_key):
         class C:
@@ -20,4 +23,14 @@ def test_raises_when_invalid_token_accepted():
                 return iter([])      # accepted invalid token => auth OFF
         return C()
     with pytest.raises(AuthDisabledError):
+        assert_auth_enabled("http://localhost:8000", "ws", client_factory=factory)
+
+
+def test_connection_error_raises_runtime_error():
+    def factory(base_url, workspace_id, api_key):
+        class C:
+            def peers(self):
+                raise ConnectionRefusedError("Connection refused on port 4011")
+        return C()
+    with pytest.raises(RuntimeError, match="Could not verify auth"):
         assert_auth_enabled("http://localhost:8000", "ws", client_factory=factory)

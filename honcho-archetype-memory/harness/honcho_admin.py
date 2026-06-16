@@ -17,7 +17,7 @@ def _looks_like_auth_error(exc: Exception) -> bool:
     status = getattr(exc, "status_code", None)
     if status in (401, 403):
         return True
-    return any(w in str(exc).lower() for w in ("unauth", "forbidden", "invalid token", "401", "403"))
+    return any(w in str(exc).lower() for w in ("unauth", "forbidden", "invalid token"))
 
 
 def assert_auth_enabled(base_url: str, workspace_id: str, client_factory=_default_factory) -> None:
