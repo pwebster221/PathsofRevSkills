@@ -24,7 +24,7 @@ _REQUIRED = ("HONCHO_BASE_URL", "HONCHO_REPO_PATH", "SOLAR_MCP_URL")
 def load_config(env: Mapping[str, str]) -> Config:
     for key in _REQUIRED:
         if not env.get(key):
-            raise ConfigError(f"Missing required config: {key}")
+            raise ConfigError(f"Required config key is missing or empty: {key}")
     return Config(
         honcho_base_url=env["HONCHO_BASE_URL"],
         honcho_repo_path=env["HONCHO_REPO_PATH"],
