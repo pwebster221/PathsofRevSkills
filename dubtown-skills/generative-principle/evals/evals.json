@@ -1,0 +1,28 @@
+{
+  "skill": "generative-principle",
+  "description": "Trigger eval for the generative-principle skill. `should_trigger` prompts must load the skill; `should_not_trigger` prompts must NOT (the comment on each names the skill that should win instead). The two lists must stay disjoint. Run with scripts/run_evals.py.",
+  "should_trigger": [
+    "explore the number 8 in the UNC",
+    "what's the generative move from 7 to 14?",
+    "brainstorm the generative principle",
+    "deepen number 11 — it's still just scaffolding",
+    "is this observation consistent with the generative grammar?",
+    "how does 13 get generated if it's prime and can't be factored?",
+    "work the movements into and out of 12",
+    "which pillar does 15 sit on and why",
+    "test whether every prime can be reached by a sequential moving-through step",
+    "I found a pattern across cards 6, 11, 13 — where would it live in the project?",
+    "run the Operator times Substance grammar on 18",
+    "what does the Generate/Produce rhythm say about why 2 is the only even prime that matters"
+  ],
+  "should_not_trigger": [
+    {"prompt": "interpret the Three of Chalices", "winner": "tarot-interpretation"},
+    {"prompt": "read this spread for me", "winner": "tarot-interpretation"},
+    {"prompt": "what does the Tower mean as my card of the day", "winner": "tarot-interpretation"},
+    {"prompt": "score this reading against my journal entry", "winner": "tarot-interpretation"},
+    {"prompt": "let's talk about what surrender means to me right now", "winner": "metaphysical-conversation"},
+    {"prompt": "help me derive the Hermetic correspondences for Mercury", "winner": "esoteric-exploration"},
+    {"prompt": "refactor this Python function to be faster", "winner": "coding-bible"},
+    {"prompt": "what's the brand color for the Mystic tier", "winner": "path-of-reverence-brand"}
+  ]
+}
