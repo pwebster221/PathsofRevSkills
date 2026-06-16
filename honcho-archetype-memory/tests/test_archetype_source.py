@@ -1,6 +1,6 @@
 import json
 from pathlib import Path
-from harness.archetype_source import clean, Archetype, EXPECTED_COUNT
+from harness.archetype_source import clean, EXPECTED_COUNT
 
 FIXTURE = Path(__file__).parent / "fixtures" / "raw_archetypes_anomalous.json"
 
@@ -24,3 +24,14 @@ def test_count_mismatch_is_reported_not_fatal():
     cleaned, anomalies = clean(_raw())   # fixture intentionally != 78
     assert cleaned                       # still returns the clean set
     assert any(str(EXPECTED_COUNT) in a for a in anomalies)
+
+def test_malformed_row_is_reported_not_raised():
+    raw = [
+        {"id": "4d07f306-cb53-4c89-bfbc-974d9fe01f1b", "name": "The Tower", "slug": "the_tower"},
+        {"id": "78a50c83-8828-4fd6-819a-30398c1b62d8", "name": "No Slug Card"},  # missing slug
+    ]
+    cleaned, anomalies = clean(raw)              # must NOT raise
+    slugs = [a.slug for a in cleaned]
+    assert "the_tower" in slugs                  # good row survives
+    assert len(cleaned) == 1                     # malformed row dropped
+    assert any("malformed" in a.lower() for a in anomalies)  # reported

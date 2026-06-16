@@ -22,8 +22,11 @@ def clean(raw: list[dict]) -> tuple[list[Archetype], list[str]]:
     out: list[Archetype] = []
     anomalies: list[str] = []
     for row in raw:
-        uuid = row["id"]
-        slug = row["slug"]
+        uuid = row.get("id")
+        slug = row.get("slug")
+        if not uuid or not slug:
+            anomalies.append(f"Skipped malformed row (missing id/slug): {row}")
+            continue
         if uuid in seen:
             anomalies.append(f"Dropped duplicate UUID {uuid} ({row.get('name', slug)})")
             continue
