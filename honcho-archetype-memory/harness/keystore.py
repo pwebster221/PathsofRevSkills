@@ -26,5 +26,8 @@ def put(store: dict[str, dict], slug: str, peer_id: str, archetype_uuid: str, to
 
 def save(path: str, store: dict[str, dict]) -> None:
     p = Path(path)
-    p.write_text(json.dumps(store, indent=2))
-    os.chmod(p, 0o600)
+    p.parent.mkdir(parents=True, exist_ok=True)
+    fd = os.open(str(p), os.O_WRONLY | os.O_CREAT | os.O_TRUNC, 0o600)
+    with os.fdopen(fd, "w") as f:
+        f.write(json.dumps(store, indent=2))
+    os.chmod(p, 0o600)   # keep, so an existing file gets narrowed too

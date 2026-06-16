@@ -11,6 +11,8 @@ def test_round_trip_and_perms(tmp_path):
     reloaded = keystore.load(path)
     assert reloaded["the-tower"]["token"] == "tok"
     assert reloaded["the-tower"]["peer_id"] == "the-tower"
+    assert reloaded["the-tower"]["archetype_uuid"] == "uuid-1"
+    assert reloaded["the-tower"]["minted_at"] == "2026-06-16T00:00:00Z"
     mode = stat.S_IMODE(os.stat(path).st_mode)
     assert mode == 0o600
 
