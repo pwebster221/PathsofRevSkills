@@ -44,6 +44,13 @@ def clean(raw: list[dict]) -> tuple[list[Archetype], list[str]]:
 
 
 def _http_get(url: str, token: str | None) -> dict:
+    """GET the archetypes payload from solar-mcp.
+
+    `url` must be the BASE solar-mcp URL (e.g. ``https://host``); this function
+    appends ``/archetypes`` itself. Passing a URL that already ends in
+    ``/archetypes`` would produce ``/archetypes/archetypes`` -- so configure
+    SOLAR_MCP_URL with the base only.
+    """
     import httpx
     headers = {"Authorization": f"Bearer {token}"} if token else {}
     resp = httpx.get(url.rstrip("/") + "/archetypes", headers=headers, timeout=30.0)
@@ -71,7 +78,13 @@ def fetch(cfg, http_get=_http_get) -> tuple[list[Archetype], list[str]]:
         return cleaned, anomalies
     except Exception as exc:  # noqa: BLE001 - any live failure -> snapshot
         logger.warning("solar-mcp live fetch failed (%s); using snapshot fallback", exc)
-        raw = json.loads(Path(cfg.snapshot_path).read_text())[RAW_KEY]
+        try:
+            raw = json.loads(Path(cfg.snapshot_path).read_text())[RAW_KEY]
+        except Exception as snap_exc:
+            raise RuntimeError(
+                f"Live fetch failed ({exc}) AND snapshot fallback failed "
+                f"({snap_exc}); no archetype source available at {cfg.snapshot_path}"
+            ) from snap_exc
         cleaned, anomalies = clean(raw)
         anomalies.insert(0, f"Used snapshot fallback ({cfg.snapshot_path}) due to: {exc}")
         return cleaned, anomalies
