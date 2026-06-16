@@ -9,3 +9,4 @@ dev = ["pytest>=8.0"]
 
 [tool.pytest.ini_options]
 pythonpath = ["."]
+markers = ["integration: requires a running auth-enabled Honcho (deselect with -m 'not integration')"]
