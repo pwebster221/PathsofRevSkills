@@ -31,6 +31,8 @@ def run(cfg, admin_token, archetypes, anomalies, admin, mint, store, now, *, dry
             if dry_run:
                 continue
             admin.ensure_peer(a.peer_id)
+            # created counts peers ENSURED to exist; ensure_peer is idempotent
+            # (get-or-create), so this is not strictly "newly created".
             s.created += 1
             if keystore.has_token(store, a.peer_id) and not rotate:
                 s.skipped += 1
@@ -60,7 +62,7 @@ def main(argv=None) -> int:
     assert_auth_enabled(cfg.honcho_base_url, cfg.workspace_id)
 
     archetypes, anomalies = fetch(cfg)
-    if args.limit:
+    if args.limit is not None:
         archetypes = archetypes[: args.limit]
     for a in anomalies:
         logger.warning("ANOMALY: %s", a)

@@ -20,6 +20,7 @@ def test_mints_for_each_and_skips_existing():
     assert admin.created == ["the-tower", "the-fool"]   # both peers ensured
     assert minted == ["the-tower"]                       # the-fool skipped
     assert summary.minted == 1 and summary.skipped == 1
+    assert summary.created == 2                           # both peers ensured
     assert store["the-tower"]["token"] == "tok-the-tower"
 
 def test_rotate_remints_existing():
@@ -36,6 +37,8 @@ def test_per_archetype_failure_is_collected_not_fatal():
         raise RuntimeError("mint blew up")
     summary = run(None, "admin", [ARCHS[0]], [], admin, mint, {}, "t")
     assert summary.failed and "the-tower" in summary.failed[0]
+    assert summary.created == 1   # peer IS ensured before mint() raises
+    assert summary.minted == 0
 
 def test_dry_run_writes_nothing():
     admin = FakeAdmin()
