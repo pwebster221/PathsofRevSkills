@@ -1,5 +1,6 @@
 ---
 name: sdlc-sre-slo-driven
+description: "Use during sustain to treat reliability as a measurable product feature — defining SLOs and using error budgets to balance velocity against stability without politics. Activates when someone says \"how reliable should this be\", \"how do we choose between features and stability\", \"how do we measure and operate reliability\", or when \"keeping it up\" needs a quantified contract. Within the error budget, move fast; budget burned, stop shipping and invest in reliability — an explicit, agreed, measurable tradeoff."
 stage: sustain
 posture: sre-slo-driven
 tier: 2

@@ -1,5 +1,6 @@
 ---
 name: sdlc-blue-green-canary
+description: "Use during ship when you need zero-downtime deployment and want to separate deploying code from exposing it to users. Activates when someone says \"how do we roll this out safely\", \"deploy without downtime\", \"limit the blast radius\", or when you can validate at production scale before full cutover. Maintains parallel environments (blue-green) and/or progressively shifts traffic (canary) so risk at any moment is proportional to the share of traffic on the new version."
 stage: ship
 posture: blue-green-canary
 tier: 2

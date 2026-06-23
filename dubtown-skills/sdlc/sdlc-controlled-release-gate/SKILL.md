@@ -1,5 +1,6 @@
 ---
 name: sdlc-controlled-release-gate
+description: "Use during ship in regulated, audited, or extreme-risk environments where fully automated promotion is insufficient without governance. Activates when someone says \"who approves this release\", \"we need an audit trail or change board\", \"this is compliance-sensitive\", or when a bad release carries regulatory, legal, or safety cost. A deliberate, auditable risk-evaluation gate where authorized stakeholders accept responsibility — automating all that can be automated while reserving human judgment for what genuinely needs it."
 stage: ship
 posture: controlled-release-gate
 tier: 2
