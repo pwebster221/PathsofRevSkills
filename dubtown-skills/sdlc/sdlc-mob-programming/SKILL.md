@@ -1,0 +1,74 @@
+---
+name: sdlc-mob-programming
+description: >-
+  Use during build when knowledge is siloed, onboarding is slow, shared ownership matters, or the problem is complex enough that no one person should solve it alone. Activates when someone asks "how do we stop knowledge from living in one person's head", "how do we onboard faster", or "how do we make sure the whole team understands this code". Implements Woody Zuill's whole-team approach: the entire team works on the same thing, at the same time, at one computer, with rotating Driver and Navigator roles.
+stage: build
+posture: mob-programming
+tier: 2
+role: skill
+license: MIT
+---
+# Skill: Mob Programming
+
+## What this enables
+
+Code that the whole team understands because the whole team wrote it. Knowledge silos cannot form when everyone is present for every decision. Onboarding accelerates dramatically because new team members learn by doing, in context, alongside the people who know the system. Every line of code is continuously reviewed as it is written - not as a separate process, but as a natural consequence of how the work is done.
+
+## Fit signals
+
+- Critical knowledge lives in one or two people's heads
+- Onboarding new team members is slow or painful
+- Code review finds significant issues late - after the design has solidified
+- The problem is complex enough to benefit from multiple simultaneous perspectives
+- Team cohesion and shared ownership are higher priorities than individual output velocity
+- The team is working on something genuinely hard where getting it wrong is costly
+
+## Anti-signals
+
+- The work is highly parallel and well-defined - multiple people can build independent modules without coordination cost
+- The team is fully distributed across time zones with no overlap window
+- Individual focus is the primary constraint (deep algorithmic work best done solo)
+
+## Core practice
+
+**The whole team - three to five people - works on one task at one computer.**
+
+Two roles rotate on a short cycle (10-15 minutes):
+
+**Driver:** the person at the keyboard. The Driver does not think independently about the problem - they translate the Navigator's direction into code. If the Navigator says "extract that into a method," the Driver does exactly that and nothing more. The Driver is the hands, not the mind.
+
+**Navigators:** everyone not at the keyboard. Navigators guide the direction, discuss the design, catch errors, look things up, and ensure the Driver's output matches the team's intent. The navigator role is active, not passive.
+
+When the timer ends, the Driver moves to navigation, and the next person becomes the Driver. The rotation is strict - it prevents any one person from holding the keyboard long enough to encode their individual mental model into the code.
+
+## Key moves
+
+1. **Rotate on a fixed timer.** 10-15 minutes per Driver. The timer is not advisory. Strict rotation prevents the mob from sliding back into one person driving while others watch. Every team member drives; every team member navigates.
+
+2. **Navigators speak at the highest level of abstraction the Driver can act on**.Not "type public void extractMethod" but "extract that logic into its own method." The Driver handles the mechanical translation. This keeps communication clear and prevents micro-management of the keyboard.
+
+3. **The mob makes decisions together.** When there is disagreement, the mob discusses and reaches a position before the Driver types. Brief disagreements are features, not bugs - they surface design questions before they become code problems. Prolonged disagreements are a signal the decision needs more information, not more debate.
+
+4. **Treat the mob as a single mind with multiple processors.** While the Driver codes, Navigators can simultaneously research, read documentation, review related code, or draft tests. The mob is more effective than its individual parts because it parallelizes thinking with execution.
+
+5. **Start with the hardest problem.** Mob programming is expensive in terms of parallel person-hours. Use it on work that genuinely benefits from collective intelligence - the complex, high-stakes, or knowledge-critical items. Do not mob on trivial tickets.
+
+## Example
+
+**Hunter Industries, Woody Zuill (2012-2014):** Zuill's team at Hunter Industries adopted mob programming not as an experiment but as a response to a real problem: work was being blocked because the people with the knowledge were not available when decisions needed to be made. By mobbing, every person on the team became capable of making every decision.
+
+The results were measurable: near-zero defect rate in production, dramatically faster onboarding (new team members were productive contributors within days, not weeks), and the elimination of the "bus factor" - no single person's absence could block the team.
+
+The team of eight worked at a single computer for the entire working day. Individual velocity measured in lines of code per person was lower. Team velocity measured in working features delivered per week was higher.
+
+## AI leverage points
+
+- **Navigator augmentation:** an AI agent can serve as a persistent navigator presence - one that never tires, always has documentation open, and can look up API signatures or flag potential issues while human navigators focus on design
+- **Mob facilitation:** an agent can track rotation timers, log decisions made by the mob (creating a lightweight decision record), and surface relevant context (related code, prior decisions) as the mob moves through the codebase
+- **Knowledge capture:** at the end of a mob session, an agent can summarize the decisions made, patterns applied, and rationale recorded - replacing the institutional knowledge that would otherwise evaporate
+
+## Connects to
+
+- **Upstream:** `sdlc-design` (architectural decisions made in design are most efficiently implemented when the whole team shares the context)
+- **Downstream:** `sdlc-verify` (mob-produced code requires less separate verification - it was reviewed continuously - but the verification suite still needs to be run)
+- **Lateral:** `sdlc-tdd` (mob programming and TDD are natural partners - the Navigator writes the test, the Driver implements, the mob refactors together), `sdlc-bdd` (mob sessions naturally surface scenario gaps when the whole team is discussing acceptance criteria together)

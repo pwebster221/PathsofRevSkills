@@ -1,0 +1,97 @@
+---
+name: sdlc-formal-specification
+description: >-
+  Use when requirements must be provably complete and unambiguous before implementation begins - especially for safety-critical systems, formal API contracts, cryptographic protocols, or any component where a wrong assumption surviving into production has severe consequences. Activates when someone asks how to specify an interface precisely, how to prove a design is internally consistent, or when contractual or regulatory requirements demand formal documentation. Draws on Z notation, Cleanroom, and formal refinement theory.
+stage: discovery
+posture: formal-specification
+tier: 2
+role: skill
+license: MIT
+---
+# Skill: Formal Specification
+
+## What this enables
+
+A mathematically precise description of what a system must do, independent of how it does it. The specification becomes the ground truth against which implementation is verified - not just tested. It eliminates ambiguity at the source rather than discovering it in production.
+
+## Fit signals
+
+- High criticality: a wrong assumption in production causes serious harm, data loss, security breach, or contractual failure
+- Interface contracts must be provably consistent across teams or systems
+- The system operates in a regulated domain (safety, finance, healthcare)
+- Downstream components depend on precise behavioral guarantees
+- The team has or can develop formal methods expertise
+
+## Anti-signals
+
+- Requirements are expected to change frequently during development (use `sdlc-incremental-backlog` or `sdlc-conversational-elicitation`)
+- The domain is primarily UX/product-facing with high design fluidity
+- Time-to-market pressure makes upfront specification impractical
+- No mechanism exists to translate the specification into verifiable tests
+
+## Core practice
+
+Specification through **schema notation**: define the state space of the system, its invariants (conditions that must always be true), and each operation as a precise mapping from pre-state to post-state. The implementation then refines the specification - proving that the concrete design correctly realizes the abstract model.
+
+The discipline does not require Z notation specifically. The key habits are:
+
+- **State before behavior:** what exists before what can happen
+- **Invariants as first-class citizens:** properties that must hold always, not just usually
+- **Pre/post conditions:** every operation has an explicit contract
+
+## Key moves
+
+1. **Define the state space first.** Name the entities and relationships the system manages. For each, define its type and its constraints. Example: a user account has an identifier (unique), an email (valid format), and a status (one of: active, suspended, deleted). These constraints are invariants.
+
+2. **Specify operations as contracts, not algorithms.** Each operation has:
+
+   - *Precondition:* what must be true for the operation to apply
+   - *Postcondition:* what is true after the operation succeeds
+   - *Frame condition:* what does NOT change (often the most forgotten part)
+
+   Example: PasswordReset operation
+
+   - Pre: user exists, reset token is valid, token has not expired
+   - Post: user's password is updated, token is invalidated
+   - Frame: all other user properties are unchanged
+
+3. **Make implicit assumptions explicit.** Formal specification is most valuable not for what it says, but for the assumptions it forces you to surface. Every "obviously" is a specification gap.
+
+4. **Use refinement to bridge spec to implementation.** The abstract spec operates on ideal types (sets, sequences, functions). The concrete implementation operates on data structures (arrays, hash maps, SQL tables). Refinement proves the implementation correctly realizes the abstraction.
+
+5. **Validate the spec before writing code.** Model checking tools (Alloy, TLA+) or manual proof can verify that the specification itself is consistent - no operations contradict each other, no invariant is vacuously true. A bug found in the spec costs nothing; a bug found in production costs everything.
+
+## Example
+
+Specifying a simple access control system. State space:
+
+- `users`: a set of registered user identifiers
+- `roles`: a set of role identifiers
+- `assignments`: a relation from users to roles (each user may have many roles)
+- `permissions`: a relation from roles to system actions
+
+Invariants:
+
+- Every user in `assignments` exists in `users`
+- Every role in `assignments` exists in `roles`
+- No user holds a role that grants conflicting permissions (domain-specific)
+
+Operation: `AssignRole(u, r)`
+
+- Pre: `u ∈ users`, `r ∈ roles`, `(u, r) ∉ assignments`
+- Post: `assignments' = assignments ∪ {(u, r)}`
+- Frame: `users`, `roles`, `permissions` unchanged
+
+This specification can now be reviewed for completeness before a single line of implementation code is written. Refinement maps `users` to a database table, `assignments` to a junction table, and each operation to a SQL transaction with matching ACID guarantees.
+
+## AI leverage points
+
+- **Invariant surfacing:** describe the domain to an LLM and ask "what conditions must always be true in this system?" Use the output as a starting list for human validation - not a finished invariant set.
+- **Operation contract drafting:** describe an operation in prose, ask the LLM to express it as pre/post/frame conditions. The exercise frequently reveals underspecified behavior.
+- **Consistency checking:** paste a draft specification and ask the LLM to identify operations that might violate stated invariants. Treat output as review prompts, not proofs.
+
+## Connects to
+
+- **Upstream:** `sdlc-discovery` - formal specification is one posture within the Discovery stage
+- **Downstream:** `sdlc-schema-first` (Design stage applies the same thinking to implementation structure), `sdlc-cleanroom` (Build stage executes against the spec with correctness verification)
+- **Lateral:** `sdlc-conversational-elicitation` (produces narrative requirements that feed into formal specs), `sdlc-bdd` (scenarios are a lighter-weight alternative contract mechanism)

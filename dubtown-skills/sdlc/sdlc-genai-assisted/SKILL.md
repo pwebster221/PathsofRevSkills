@@ -1,0 +1,89 @@
+---
+name: sdlc-genai-assisted
+description: >-
+  Use during build when speed of exploration matters, the domain is large or poorly mapped, a contributor needs to move fast on a well-bounded problem, or the team wants to use LLMs to generate, locate, repair, or validate code. Activates when someone asks "can AI help write this", "how do I use Copilot effectively here", or "how do we automate the patch-and-test cycle". Draws on Software 3.0 principles, Chain-of-Thought prompting, RAG-grounded code generation, and the Agentless localize-repair-validate loop.
+stage: build
+posture: genai-assisted
+tier: 2
+role: skill
+license: MIT
+---
+# Skill: GenAI-Assisted Development
+
+## What this enables
+
+The ability to treat natural language as a programming interface. A developer working with a well-prompted LLM can explore solution spaces faster, generate first-pass implementations for review, and automate the mechanical parts of a repair cycle. The human role shifts from writing every line to directing, reviewing, and validating - which is often where the highest-value judgment lives anyway.
+
+This posture is not about replacing developers. It is about changing the ratio of time spent on specification, generation, and validation - and doing so in a way that keeps humans in control of the decisions that matter.
+
+## Fit signals
+
+- Exploration speed is more valuable than perfect first-pass quality
+- The codebase is large and finding the right location to change is non-trivial
+- A single contributor needs to move at a pace that would otherwise require a pair
+- The work is a known defect class that maps to a patch pattern
+- The team wants to accelerate code review by pre-surfacing issues before human review
+
+## Anti-signals
+
+- The output must be provably correct before it is run (use `sdlc-cleanroom`)
+- The work requires deep stakeholder alignment on behaviour (use `sdlc-bdd`)
+- The domain requires formal contracts - mathematical precision that LLMs cannot guarantee
+- The team has no validation step - AI-generated code without human review or automated test confirmation is not this skill; it is risk accumulation
+
+## Core practice
+
+GenAI-assisted development operates in three modes, depending on the task:
+
+**Mode 1: AI as pair (generation**)The developer describes the intent in natural language; the LLM generates a candidate implementation. The developer reviews, edits, and validates. The key technique is **Chain-of-Thought (CoT) prompting**: ask the model to reason step-by-step before generating code. This dramatically reduces hallucination on complex logic.
+
+Example CoT prompt pattern:
+
+```
+Before writing any code, think through:
+1. What are the edge cases for this function?
+2. What data structures fit this problem?
+3. What could go wrong?
+Then write the implementation.
+```
+
+**Mode 2: RAG-grounded generation**For codebase-aware suggestions, use **Retrieval-Augmented Generation (RAG)**: surface the relevant parts of the codebase as context before asking the model to generate. The model that generates against real context produces fewer "reasonable but wrong" suggestions.
+
+**Mode 3: Agentless repair loop**For known defect classes, use the three-phase localization-repair-validation cycle from the Agentless framework (Xia et al., FSE 2025):
+
+1. **Localize** - identify the file, function, and line range where the change needs to happen. Do this hierarchically: repo → file → function. Do not ask the model to search the entire codebase blindly.
+
+2. **Repair** - generate candidate patches in diff format. Generate multiple candidates (the paper uses patch sampling) and filter by applying each against reproduction tests.
+
+3. **Validate** - run the reproduction test suite against each patch. Accept the patch that passes. If none pass, re-localize with additional context.
+
+## Key moves
+
+1. **Treat the model as a fast, overconfident junior developer.** It will generate plausible code that is sometimes wrong. Your job is to review, not to trust. Build a validation step into every GenAI workflow - automated tests, linting, type checking - so that "looks right" is never the only bar.
+
+2. **Front-load context in every prompt.** The quality of the output is proportional to the quality of the context provided. Include: the function signature, the relevant data structures, the existing tests, the specific constraint to satisfy. Vague prompts produce vague code.
+
+3. **Use CoT for anything non-trivial.** Ask the model to reason before generating. The reasoning trace is also useful: if the model's reasoning is visibly wrong, stop before the code is even generated.
+
+4. **Localize before generating.** For repair tasks, spend more time finding exactly where the change belongs than on generating the change itself. The Agentless paper's key finding: hierarchical localization (repo → file → function) reduces the model's search space and dramatically improves patch quality.
+
+5. **Sample multiple patches, test all of them.** Do not commit the first plausible patch. Generate three to five candidates and run them all against the test suite. The one that passes the reproduction tests is the one to review - not the one that looks best to the naked eye.
+
+## Example
+
+**Agentless (Xia et al., FSE 2025, SWE-bench Lite):** The Agentless framework solves GitHub issues without a complex autonomous agent. It uses a simple three-phase pipeline: localize (which file? which function?), repair (generate diff-format patches), validate (run reproduction tests). On SWE-bench Lite, it achieves a 32% solve rate - matching or exceeding many sophisticated agentic frameworks - at a cost of approximately $0.70 per issue, compared to $2-$4+ for complex agents.
+
+The lesson: structured simplicity beats autonomous complexity for a known defect class. An agent that knows its own process works better than one that improvises.
+
+## AI leverage points
+
+- **CoT for design decisions:** before implementing, ask the model to reason through the trade-offs between approaches - surfaces considerations a solo developer might miss
+- **Test generation from implementation:** given a completed function, ask the model to generate edge case tests - complements TDD by adding coverage for cases the developer did not consider
+- **Documentation generation:** after a function is validated, an LLM can generate accurate docstrings and usage examples in seconds
+- **Code review pre-pass:** before human review, run a prompt asking the model to find issues - not to approve, but to surface candidates for the human reviewer's attention
+
+## Connects to
+
+- **Upstream:** `sdlc-design` (architecture decisions scope what GenAI is asked to generate within)
+- **Downstream:** `sdlc-verify` (GenAI-generated code must pass the same verification gate as hand-written code - automated test suite, linting, type checking)
+- **Lateral:** `sdlc-tdd` (TDD provides the test suite that validates GenAI output; the two postures are complementary), `sdlc-agentless-repair`(the repair loop formalizes the GenAI-assisted defect fix cycle)

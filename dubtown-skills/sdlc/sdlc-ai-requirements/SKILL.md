@@ -1,0 +1,74 @@
+---
+name: sdlc-ai-requirements
+description: >-
+  Use during discovery when the problem space is large or poorly understood, when many stakeholder perspectives need to be represented quickly, or when the team needs to rapidly surface edge cases and conflicts across a complex domain. Activates when someone asks how to gather requirements at scale, how to simulate different user types, or how to accelerate elicitation when stakeholders are unavailable. Draws on LLM multi-agent frameworks, RAG-based context injection, and Chain-of-Thought prompting applied to requirements engineering. Human oversight and validation is mandatory throughout.
+stage: discovery
+posture: ai-assisted-requirements
+tier: 2
+role: skill
+license: MIT
+---
+# Skill: AI-Assisted Requirements
+
+## What this enables
+
+Accelerated exploration of a problem space using LLM agents as proxies for stakeholder perspectives - surfacing hidden requirements, conflicts, and edge cases that conversation alone might miss. Not a replacement for human judgment: AI generates candidates, humans validate and decide.
+
+## Fit signals
+
+- The problem space is large and the team does not know what they do not know
+- Multiple stakeholder types exist but are hard to assemble simultaneously
+- Edge case generation needs to be exhaustive (compliance, security, safety)
+- Initial requirements exist in prose and need rapid structuring into scenarios
+- The team is early-stage and needs to quickly map a domain before committing
+
+## Anti-signals
+
+- Stakeholders are available and willing - direct conversation is always preferable to simulation where it is possible
+- Requirements are already well-understood and only need documentation
+- The domain is so specialized that LLMs cannot meaningfully reason about it without extensive fine-tuning or RAG setup
+
+## Core practice
+
+LLM agents assigned distinct **roles and personas** simulate the perspectives of different user types, stakeholders, and system actors. Each agent elicits from its assigned viewpoint, generating scenarios, surfacing conflicts, and asking clarifying questions. A coordinating agent (or human) synthesizes the outputs. RAG grounds the agents in existing documentation, codebases, or domain knowledge to reduce hallucination.
+
+The three-phase cycle:
+
+1. **Elicit:** agents generate scenarios from their assigned perspectives
+2. **Challenge:** agents review each other's scenarios for conflicts, missing cases, and unstated assumptions
+3. **Synthesize:** human reviews consolidated output, validates, and commits what is real
+
+## Key moves
+
+1. **Define personas before prompting.** The quality of AI-generated requirements depends entirely on persona specificity. "A user" generates generic output. "A 60-year-old non-technical small business owner managing payroll for 5 employees on a mobile phone with a slow connection" generates concrete scenarios. Invest time in persona definition before running any prompts.
+
+2. **Use RAG to ground agents in the actual domain.** Inject existing documentation, API specs, database schemas, or prior requirements into the prompt context. Agents operating on real domain knowledge surface requirements that fit the actual system, not a generic approximation of it.
+
+3. **Run Chain-of-Thought elicitation.** Ask agents to reason step by step: "Walk through the experience of \[persona\] trying to accomplish \[goal\]. At each step, identify what they need, what could go wrong, and what they would expect the system to do." CoT surfaces implicit requirements that direct questioning misses.
+
+4. **Use adversarial agents to find conflicts.** After eliciting from cooperative stakeholder personas, run a second pass with a "skeptic" agent whose role is to find contradictions, edge cases, and ways the stated requirements could be misinterpreted. This is particularly valuable for security and compliance scenarios.
+
+5. **Never commit AI output directly.** Every scenario, requirement, or conflict surfaced by AI agents is a candidate for human review, not a finished requirement. The agent's job is to reduce the cost of discovery, not to replace the judgment that decides what is real.
+
+## Example
+
+A team is building a healthcare scheduling system. Stakeholders include patients, clinicians, administrators, and insurers. Rather than scheduling four separate workshops, they configure four agents:
+
+- **Patient agent** (persona: elderly, low digital literacy, chronic condition requiring regular appointments): surfaces requirements around accessibility, reminder frequency, cancellation anxiety, and proxy scheduling for caregivers
+- **Clinician agent** (persona: GP with 20-minute appointment slots, high administrative burden): surfaces requirements around double-booking protection, patient no-show handling, and schedule visibility
+- **Admin agent** (persona: clinic coordinator managing 6 doctors): surfaces requirements around bulk scheduling, waitlist management, and reporting
+- **Insurer agent** (persona: pre-authorization gatekeeper): surfaces requirements around coverage verification before booking confirmation
+
+The four agents also challenge each other's scenarios. The patient agent's "allow unlimited rescheduling" conflicts with the clinician agent's "penalize repeated no-shows." This conflict - surfaced in 20 minutes of AI elicitation - would have taken two workshops to discover otherwise. A human stakeholder session is now focused on resolving the handful of real conflicts rather than generating an initial list from scratch.
+
+## AI leverage points
+
+- **Elicitron-style multi-agent frameworks:** initialize separate agent instances with different personas and run parallel elicitation sessions
+- **MARE pipeline:** Elicitation → Modeling → Verification → Specification, with each phase using a different prompt strategy
+- **SpecGen pattern:** generate an initial specification, run it through a formal verifier, feed error messages back to the agent for refinement
+
+## Connects to
+
+- **Upstream:** `sdlc-discovery` - this is one posture within the Discovery stage
+- **Downstream:** `sdlc-incremental-backlog` (AI-generated scenarios become backlog items after human validation), `sdlc-formal-specification` (AI drafts become formal specs after human verification)
+- **Lateral:** `sdlc-conversational-elicitation` (AI augments human conversation, does not replace it), `sdlc-ai-design` (same AI-first posture applied to the Design stage)

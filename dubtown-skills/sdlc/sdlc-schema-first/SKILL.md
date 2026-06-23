@@ -1,0 +1,89 @@
+---
+name: sdlc-schema-first
+description: >-
+  Use when the data model or API contract is the primary design concern - when multiple services, teams, or consumers must agree on a shared structure before any implementation begins. Activates when someone asks how to design an API, how to define a shared data model, how to ensure compatibility between services, or when the consequences of a wrong data model propagate across system boundaries. Draws on Z notation's data refinement principles, formal contract design, and API-first development practice.
+stage: design
+posture: schema-first
+tier: 2
+role: skill
+license: MIT
+---
+# Skill: Schema-First Design
+
+## What this enables
+
+A precise, agreed interface contract before any implementation begins. Multiple implementations in different languages, teams, or services that are guaranteed to be structurally compatible. A stable foundation that decouples the design of consumers from the design of producers.
+
+## Fit signals
+
+- Multiple consumers (services, clients, teams) need to integrate with the same data model or API
+- Implementation will happen in parallel across teams - contracts must be defined before building begins
+- The cost of a breaking schema change is high (data migration, consumer updates, SLA violations)
+- Data integrity is a primary concern: invariants must be enforced at the contract level, not just in application code
+
+## Anti-signals
+
+- The data model is likely to change significantly as requirements evolve
+  - premature schema definition becomes a migration burden
+- One team owns both producer and consumer and can evolve together
+- The interaction is simple enough that informal agreement suffices
+
+## Core practice
+
+Define the **schema** - the structure, types, and invariants of the data or interface - as the design artifact. Implementation refines toward the schema; the schema is not inferred from the implementation.
+
+Three layers:
+
+1. **Logical model:** entities, relationships, and invariants in abstract terms (technology-agnostic)
+2. **Interface contract:** the API surface exposed to consumers, expressed in a format both sides can validate against (OpenAPI, GraphQL schema, JSON Schema, Protobuf, Avro)
+3. **Physical model:** how the logical model maps to storage (tables, documents, indexes) - derived last, not designed first
+
+## Key moves
+
+1. **Start with the domain model, not the database.** Define entities and relationships in terms of what the business cares about. Resist the pull to open a database design tool first - schema design driven by storage concerns produces data models that leak implementation into interfaces.
+
+2. **State invariants explicitly in the schema.** Go beyond field types. Capture constraints: this field is required, this value must be positive, this combination of fields must be unique, this field is immutable after creation. Invariants that live only in application code are invariants that will eventually be violated.
+
+3. **Design the API surface from the consumer's perspective.** What does the consumer need to accomplish? What is the minimum information they need to provide? What is the minimum information the response needs to contain? Schemas designed from the producer's perspective tend to expose implementation details that then become breaking changes.
+
+4. **Version from day one.** Any schema with more than one consumer needs a versioning strategy before the first version is published. Semantic versioning (breaking vs. non-breaking changes) and deprecation windows should be defined in the design artifact, not discovered during migration.
+
+5. **Generate from the schema, not toward it.** Use the schema as the source of truth from which code is generated (client SDKs, server stubs, validation logic, documentation). Code that is written to match a separately-maintained schema will diverge. Code generated from the schema cannot.
+
+## Example
+
+A team is building a notifications service consumed by three other services. Schema-first design proceeds as follows:
+
+**Logical model:**
+
+- `Notification`: id (unique), recipient (user or group reference), channel (email / push / webhook), content (structured payload), status (queued / sent / failed / acknowledged), created_at (immutable), sent_at (nullable)
+- Invariant: `sent_at` is null if and only if status is `queued`
+- Invariant: content structure must conform to channel-specific schema
+
+**Interface contract (API):**
+
+- `POST /notifications` - enqueue a notification; returns id and status
+- `GET /notifications/{id}` - retrieve status; never returns content (privacy)
+- `PATCH /notifications/{id}/acknowledge` - marks delivered
+
+**Version:** v1; breaking changes (removing fields, changing types) require v2
+
+Before any implementation begins, all three consuming teams can:
+
+- Generate client code from the OpenAPI spec
+- Write integration tests against a mock server that validates against the schema
+- Agree on the versioning policy so migrations are not surprises
+
+The notification service team can implement, refactor, and optimize freely as long as they do not violate the published contract.
+
+## AI leverage points
+
+- **Schema drafting:** describe the domain in prose, ask the LLM to produce an initial OpenAPI or JSON Schema. Use as a starting point for team review, not as a finished contract.
+- **Invariant analysis:** paste a schema and ask the LLM "what business rules does this schema fail to enforce?" Frequently surfaces missing constraints.
+- **Consumer perspective simulation:** ask the LLM to "write the client code that would consume this API for use case X" before the API is built. If the client code is awkward, the schema design is telling you something.
+
+## Connects to
+
+- **Upstream:** `sdlc-design` - this is one posture within the Design stage; also connects to `sdlc-formal-specification` from Discovery which may have produced an abstract spec this schema refines
+- **Downstream:** `sdlc-build` - implementations validate against the schema; `sdlc-continuous-delivery` - schema versioning is part of the deployment pipeline
+- **Lateral:** `sdlc-architecture-first` (ADRs govern which schemas are load-bearing), `sdlc-bdd` (scenarios describe behavior; schemas describe structure - both needed)

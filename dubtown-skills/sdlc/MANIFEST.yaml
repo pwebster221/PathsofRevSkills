@@ -1,0 +1,291 @@
+system: dubtown-skills/sdlc
+version: 1.0.0
+generated: 2026-06-22
+description: >-
+  Two-tier agentic skill system for SDLC methodology selection. Tier-1 stage
+  navigators read context signals and route to Tier-2 posture skills. Each skill
+  is a self-contained folder with SKILL.md and references/SOURCES.md. The shared
+  PDF evidence library lives in Software_Development_Methodologies_PDFs/.
+
+pdf_library: Software_Development_Methodologies_PDFs/
+
+tiers:
+  - tier: 1
+    role: navigator
+    description: Reads context signals for a stage and selects a posture.
+  - tier: 2
+    role: skill
+    description: Executes a specific SDLC methodology posture.
+
+skills:
+  # ---- Tier 1: Stage Navigators ----
+  - id: sdlc-discovery
+    tier: 1
+    stage: discovery
+    role: navigator
+    path: sdlc-discovery/SKILL.md
+    signals: [novelty, criticality, fluidity, collaboration_mode, scale]
+    references: [01_Spiral_Model_Boehm.pdf, 02_RUP_Managers_Introduction.pdf, 03_Scrum_Guide_2020.pdf, 24_GenAI_in_Software_Engineering_DFKI.pdf]
+  - id: sdlc-design
+    tier: 1
+    stage: design
+    role: navigator
+    path: sdlc-design/SKILL.md
+    signals: [system_complexity, team_experience, change_velocity, stakeholder_alignment, time_pressure]
+    references: [02_RUP_Managers_Introduction.pdf, 04_Extreme_Programming_Explained_Beck.pdf, 16_TDD_By_Example_Beck.pdf, 24_GenAI_in_Software_Engineering_DFKI.pdf]
+  - id: sdlc-build
+    tier: 1
+    stage: build
+    role: navigator
+    path: sdlc-build/SKILL.md
+    signals: [quality_bar, team_size, domain_clarity, ai_tooling_maturity, correctness_requirement]
+    references: [16_TDD_By_Example_Beck.pdf, 17_Behaviour_Driven_Development_Jfokus.pdf, 22_Mob_Programming_Zuill.pdf, 18_Cleanroom_Process_Model.pdf, 24_GenAI_in_Software_Engineering_DFKI.pdf]
+  - id: sdlc-verify
+    tier: 1
+    stage: verify
+    role: navigator
+    path: sdlc-verify/SKILL.md
+    signals: [automation_maturity, stakeholder_involvement, risk_profile, release_proximity, artifact_type]
+    references: [11_Continuous_Delivery_Humble_Farley.pdf, 17_Behaviour_Driven_Development_Jfokus.pdf, 18_Cleanroom_Process_Model.pdf, 24_GenAI_in_Software_Engineering_DFKI.pdf]
+  - id: sdlc-ship
+    tier: 1
+    stage: ship
+    role: navigator
+    path: sdlc-ship/SKILL.md
+    signals: [automation_maturity, risk_tolerance, compliance_burden, traffic_scale, release_frequency]
+    references: [11_Continuous_Delivery_Humble_Farley.pdf, 12_DevOps_Beginners_Handbook_Dell.pdf, 13_SRE_Handbook_NewRelic.pdf, 02_RUP_Managers_Introduction.pdf]
+  - id: sdlc-sustain
+    tier: 1
+    stage: sustain
+    role: navigator
+    path: sdlc-sustain/SKILL.md
+    signals: [operational_maturity, system_criticality, toil_level, change_velocity, failure_mode]
+    references: [13_SRE_Handbook_NewRelic.pdf, 10_Kanban_Alternative_Path_to_Agility.pdf, 04_Extreme_Programming_Explained_Beck.pdf, 12_DevOps_Beginners_Handbook_Dell.pdf]
+  # ---- Tier 2: Discovery Postures ----
+  - id: sdlc-conversational-elicitation
+    tier: 2
+    stage: discovery
+    posture: conversational-elicitation
+    role: skill
+    path: sdlc-conversational-elicitation/SKILL.md
+    signals_favored: {novelty: high, fluidity: high, scale: small}
+    references: [17_Behaviour_Driven_Development_Jfokus.pdf, 04_Extreme_Programming_Explained_Beck.pdf, 05_XP_Overview_Pace.pdf]
+  - id: sdlc-incremental-backlog
+    tier: 2
+    stage: discovery
+    posture: incremental-backlog
+    role: skill
+    path: sdlc-incremental-backlog/SKILL.md
+    signals_favored: {fluidity: medium-high, collaboration_mode: agile}
+    references: [03_Scrum_Guide_2020.pdf, 07_Disciplined_Agile_Delivery_Intro.pdf, 09_Lean_Software_Development_Poppendieck.pdf]
+  - id: sdlc-formal-specification
+    tier: 2
+    stage: discovery
+    posture: formal-specification
+    role: skill
+    path: sdlc-formal-specification/SKILL.md
+    signals_favored: {criticality: high, novelty: low}
+    references: [20_Introduction_to_Z_Spivey.pdf, 21_Formal_Methods_DHBW.pdf, 18_Cleanroom_Process_Model.pdf]
+  - id: sdlc-ai-requirements
+    tier: 2
+    stage: discovery
+    posture: ai-assisted-requirements
+    role: skill
+    path: sdlc-ai-requirements/SKILL.md
+    signals_favored: {novelty: high, scale: large}
+    references: [24_GenAI_in_Software_Engineering_DFKI.pdf, 25_LLM_Agents_for_SE_Survey.pdf, 26_Agents_in_SE_Survey_Landscape.pdf]
+  # ---- Tier 2: Design Postures ----
+  - id: sdlc-architecture-first
+    tier: 2
+    stage: design
+    posture: architecture-first
+    role: skill
+    path: sdlc-architecture-first/SKILL.md
+    references: [02_RUP_Managers_Introduction.pdf, 01_Spiral_Model_Boehm.pdf, 14_Team_Topologies_Platform_Engineering.pdf]
+  - id: sdlc-outside-in-design
+    tier: 2
+    stage: design
+    posture: outside-in-design
+    role: skill
+    path: sdlc-outside-in-design/SKILL.md
+    references: [17_Behaviour_Driven_Development_Jfokus.pdf, 16_TDD_By_Example_Beck.pdf, 04_Extreme_Programming_Explained_Beck.pdf]
+  - id: sdlc-schema-first
+    tier: 2
+    stage: design
+    posture: schema-first
+    role: skill
+    path: sdlc-schema-first/SKILL.md
+    references: [21_Formal_Methods_DHBW.pdf]
+  - id: sdlc-emergent-design
+    tier: 2
+    stage: design
+    posture: emergent-design
+    role: skill
+    path: sdlc-emergent-design/SKILL.md
+    references: [04_Extreme_Programming_Explained_Beck.pdf, 16_TDD_By_Example_Beck.pdf, 05_XP_Overview_Pace.pdf]
+  - id: sdlc-ai-design
+    tier: 2
+    stage: design
+    posture: ai-design
+    role: skill
+    path: sdlc-ai-design/SKILL.md
+    references: [24_GenAI_in_Software_Engineering_DFKI.pdf, 25_LLM_Agents_for_SE_Survey.pdf]
+  # ---- Tier 2: Build Postures ----
+  - id: sdlc-tdd
+    tier: 2
+    stage: build
+    posture: tdd
+    role: skill
+    path: sdlc-tdd/SKILL.md
+    signals_favored: {quality_bar: high, domain_clarity: medium-high}
+    references: [16_TDD_By_Example_Beck.pdf, 04_Extreme_Programming_Explained_Beck.pdf]
+  - id: sdlc-bdd
+    tier: 2
+    stage: build
+    posture: bdd
+    role: skill
+    path: sdlc-bdd/SKILL.md
+    signals_favored: {stakeholder_involvement: high}
+    references: [17_Behaviour_Driven_Development_Jfokus.pdf, 16_TDD_By_Example_Beck.pdf]
+  - id: sdlc-mob-programming
+    tier: 2
+    stage: build
+    posture: mob-programming
+    role: skill
+    path: sdlc-mob-programming/SKILL.md
+    signals_favored: {team_size: small, domain_clarity: low}
+    references: [22_Mob_Programming_Zuill.pdf, 23_Mob_Programming_Experience_arXiv.pdf]
+  - id: sdlc-genai-assisted
+    tier: 2
+    stage: build
+    posture: genai-assisted
+    role: skill
+    path: sdlc-genai-assisted/SKILL.md
+    signals_favored: {ai_tooling_maturity: high}
+    references: [24_GenAI_in_Software_Engineering_DFKI.pdf, 25_LLM_Agents_for_SE_Survey.pdf, 27_Demystifying_LLM_SE_Agents_FSE2025.pdf]
+  - id: sdlc-cleanroom
+    tier: 2
+    stage: build
+    posture: cleanroom
+    role: skill
+    path: sdlc-cleanroom/SKILL.md
+    signals_favored: {correctness_requirement: critical, quality_bar: highest}
+    references: [18_Cleanroom_Process_Model.pdf, 19_Cleanroom_SEL_NASA.pdf, 20_Introduction_to_Z_Spivey.pdf]
+  # ---- Tier 2: Verify Postures ----
+  - id: sdlc-ci-pipeline
+    tier: 2
+    stage: verify
+    posture: ci-pipeline-gate
+    role: skill
+    path: sdlc-ci-pipeline/SKILL.md
+    references: [11_Continuous_Delivery_Humble_Farley.pdf, 12_DevOps_Beginners_Handbook_Dell.pdf]
+  - id: sdlc-acceptance-walkthrough
+    tier: 2
+    stage: verify
+    posture: acceptance-walkthrough
+    role: skill
+    path: sdlc-acceptance-walkthrough/SKILL.md
+    references: [17_Behaviour_Driven_Development_Jfokus.pdf, 03_Scrum_Guide_2020.pdf, 05_XP_Overview_Pace.pdf]
+  - id: sdlc-structured-inspection
+    tier: 2
+    stage: verify
+    posture: structured-inspection
+    role: skill
+    path: sdlc-structured-inspection/SKILL.md
+    references: [18_Cleanroom_Process_Model.pdf, 19_Cleanroom_SEL_NASA.pdf]
+  - id: sdlc-exploratory-testing
+    tier: 2
+    stage: verify
+    posture: exploratory-testing
+    role: skill
+    path: sdlc-exploratory-testing/SKILL.md
+    references: []
+  - id: sdlc-ai-code-review
+    tier: 2
+    stage: verify
+    posture: ai-assisted-review
+    role: skill
+    path: sdlc-ai-code-review/SKILL.md
+    references: [24_GenAI_in_Software_Engineering_DFKI.pdf, 25_LLM_Agents_for_SE_Survey.pdf, 27_Demystifying_LLM_SE_Agents_FSE2025.pdf]
+  # ---- Tier 2: Ship Postures ----
+  - id: sdlc-continuous-deployment
+    tier: 2
+    stage: ship
+    posture: continuous-deployment
+    role: skill
+    path: sdlc-continuous-deployment/SKILL.md
+    signals_favored: {automation_maturity: high, release_frequency: continuous}
+    references: [11_Continuous_Delivery_Humble_Farley.pdf, 12_DevOps_Beginners_Handbook_Dell.pdf]
+  - id: sdlc-blue-green-canary
+    tier: 2
+    stage: ship
+    posture: blue-green-canary
+    role: skill
+    path: sdlc-blue-green-canary/SKILL.md
+    signals_favored: {risk_tolerance: medium, traffic_scale: medium-large, automation_maturity: medium-high}
+    references: [11_Continuous_Delivery_Humble_Farley.pdf, 13_SRE_Handbook_NewRelic.pdf]
+  - id: sdlc-gitops-release
+    tier: 2
+    stage: ship
+    posture: gitops-release
+    role: skill
+    path: sdlc-gitops-release/SKILL.md
+    signals_favored: {automation_maturity: high}
+    references: [12_DevOps_Beginners_Handbook_Dell.pdf, 11_Continuous_Delivery_Humble_Farley.pdf]
+  - id: sdlc-controlled-release-gate
+    tier: 2
+    stage: ship
+    posture: controlled-release-gate
+    role: skill
+    path: sdlc-controlled-release-gate/SKILL.md
+    signals_favored: {compliance_burden: high, risk_tolerance: low}
+    references: [02_RUP_Managers_Introduction.pdf, 01_Spiral_Model_Boehm.pdf]
+  - id: sdlc-feature-flag-release
+    tier: 2
+    stage: ship
+    posture: feature-flag-release
+    role: skill
+    path: sdlc-feature-flag-release/SKILL.md
+    signals_favored: {release_frequency: high, risk_tolerance: low-medium, automation_maturity: medium-high}
+    references: [11_Continuous_Delivery_Humble_Farley.pdf, 12_DevOps_Beginners_Handbook_Dell.pdf]
+  # ---- Tier 2: Sustain Postures ----
+  - id: sdlc-sre-slo-driven
+    tier: 2
+    stage: sustain
+    posture: sre-slo-driven
+    role: skill
+    path: sdlc-sre-slo-driven/SKILL.md
+    signals_favored: {system_criticality: high, operational_maturity: medium-high}
+    references: [13_SRE_Handbook_NewRelic.pdf]
+  - id: sdlc-kanban-operations
+    tier: 2
+    stage: sustain
+    posture: kanban-operations
+    role: skill
+    path: sdlc-kanban-operations/SKILL.md
+    signals_favored: {toil_level: medium-high, operational_maturity: low-medium}
+    references: [10_Kanban_Alternative_Path_to_Agility.pdf, 09_Lean_Software_Development_Poppendieck.pdf]
+  - id: sdlc-evolutionary-architecture
+    tier: 2
+    stage: sustain
+    posture: evolutionary-architecture
+    role: skill
+    path: sdlc-evolutionary-architecture/SKILL.md
+    signals_favored: {failure_mode: brittle-cluttered}
+    references: [04_Extreme_Programming_Explained_Beck.pdf]
+  - id: sdlc-chaos-engineering
+    tier: 2
+    stage: sustain
+    posture: chaos-engineering
+    role: skill
+    path: sdlc-chaos-engineering/SKILL.md
+    signals_favored: {operational_maturity: high, system_criticality: high, failure_mode: unclear}
+    references: [13_SRE_Handbook_NewRelic.pdf]
+  - id: sdlc-incident-response
+    tier: 2
+    stage: sustain
+    posture: incident-response
+    role: skill
+    path: sdlc-incident-response/SKILL.md
+    signals_favored: {failure_mode: unreliable, system_criticality: high}
+    references: [13_SRE_Handbook_NewRelic.pdf, 12_DevOps_Beginners_Handbook_Dell.pdf]

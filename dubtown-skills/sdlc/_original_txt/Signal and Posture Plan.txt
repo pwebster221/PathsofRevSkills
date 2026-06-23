@@ -1,0 +1,385 @@
+Stage: [Build / Design / etc.]
+─────────────────────────────
+Signal Questions:
+  - Novelty: low / medium / high
+  - Criticality: low / medium / high
+  - Fluidity: stable / changing / unknown
+  - Collaboration: solo / pair / team / multi-team
+  - Scale: feature / service / system
+
+Posture Options:
+  → [Posture Name] — one line on what it does
+     Fits when: [signal pattern]
+     Skill doc: [link/id]
+
+  → [Posture Name] ...
+  → [Posture Name] ...
+
+
+Skill: [Name]
+Stage: [primary] / also useful in: [secondary]
+─────────────────────────────────────────────
+What it enables:
+  [the capability or outcome - not the procedure]
+
+Fit signals:
+  [2-3 context conditions that point here]
+
+Anti-signals:
+  [when this posture will fight you]
+
+Core practice:
+  [the methodology in plain language - brief]
+
+Key moves:
+  1. [concrete action]
+  2. [concrete action]
+  3. [concrete action]
+
+Example:
+  [one real case, drawn from source material]
+
+AI leverage points:
+  [where GenAI amplifies this skill specifically]
+
+Connects to:
+  upstream: [skill that feeds this]
+  downstream: [skill this feeds into]
+  lateral: [complementary skills at same stage]
+
+
+dubtown-skills/
+│
+├── sdlc-discovery/          ← Tier 1: Stage Navigator
+│   ├── SKILL.md
+│   └── references/
+│
+├── sdlc-design/             ← Tier 1
+├── sdlc-build/              ← Tier 1
+├── sdlc-verify/             ← Tier 1
+├── sdlc-ship/               ← Tier 1
+├── sdlc-sustain/            ← Tier 1
+│
+├── sdlc-conversational-elicitation/   ← Tier 2 posture skills
+├── sdlc-incremental-backlog/
+├── sdlc-formal-specification/
+├── sdlc-ai-requirements/
+├── sdlc-tdd/
+├── sdlc-bdd/
+├── sdlc-mob-programming/
+├── sdlc-genai-assisted/
+├── sdlc-cleanroom/
+├── sdlc-agentless-repair/
+├── sdlc-continuous-delivery/
+├── sdlc-sre-reliability/
+└── ... (~28 skills total)
+
+
+Yes, that's exactly right. Each folder is a self-contained skill unit. A few additions that would make this production-grade for agent use:
+
+---
+
+## What goes in `references/`
+
+That subfolder should hold the source material that backs the skill's claims - not the whole methodology doc, just anchors for attribution and retrieval:
+
+```
+sdlc-tdd/
+├── SKILL.md
+└── references/
+    └── SOURCES.md      ← key citations: authors, books, URLs, doc numbers
+```
+
+Keep `SOURCES.md` lightweight. One block per source, enough for an agent or human to trace the lineage without loading a full bibliography system.
+
+---
+
+## One critical addition: a root-level `MANIFEST.yaml`
+
+This is the key RAG optimization. Without it, an agent has to scan all 28 folders to understand routing. With it, the agent loads one file and knows everything it needs to select a skill.
+
+<copyable label="MANIFEST.yaml">
+system: dubtown-skills
+version: 1.0.0
+description: >
+  Two-tier agentic skill system for SDLC methodology selection.
+  Tier 1 navigators read context signals and route to Tier 2 posture skills.
+
+tiers:
+  - tier: 1
+    role: navigator
+    description: Reads context signals and selects a posture
+  - tier: 2
+    role: skill
+    description: Executes a specific SDLC methodology posture
+
+skills:
+  # ── Tier 1: Stage Navigators ───────────────────────────────────────────
+  - id: sdlc-discovery
+    tier: 1
+    stage: discovery
+    path: sdlc-discovery/SKILL.md
+    signals: [novelty, criticality, fluidity, collaboration_mode, scale]
+
+  - id: sdlc-design
+    tier: 1
+    stage: design
+    path: sdlc-design/SKILL.md
+    signals: [system_complexity, team_experience, change_velocity, stakeholder_alignment, time_pressure]
+
+  - id: sdlc-build
+    tier: 1
+    stage: build
+    path: sdlc-build/SKILL.md
+    signals: [quality_bar, team_size, domain_clarity, ai_tooling_maturity, correctness_requirement]
+
+  - id: sdlc-verify
+    tier: 1
+    stage: verify
+    path: sdlc-verify/SKILL.md
+    signals: [automation_maturity, stakeholder_involvement, risk_profile, release_proximity, artifact_type]
+
+  - id: sdlc-ship
+    tier: 1
+    stage: ship
+    path: sdlc-ship/SKILL.md
+    signals: [automation_maturity, risk_tolerance, compliance_burden, traffic_scale, release_frequency]
+
+  - id: sdlc-sustain
+    tier: 1
+    stage: sustain
+    path: sdlc-sustain/SKILL.md
+    signals: [operational_maturity, system_criticality, toil_level, change_velocity, failure_mode]
+
+  # ── Tier 2: Discovery Postures ─────────────────────────────────────────
+  - id: sdlc-conversational-elicitation
+    tier: 2
+    stage: discovery
+    posture: conversational-elicitation
+    path: sdlc-conversational-elicitation/SKILL.md
+    signals_favored: {novelty: high, fluidity: high, scale: small}
+
+  - id: sdlc-incremental-backlog
+    tier: 2
+    stage: discovery
+    posture: incremental-backlog
+    path: sdlc-incremental-backlog/SKILL.md
+    signals_favored: {fluidity: medium-high, collaboration_mode: agile}
+
+  - id: sdlc-formal-specification
+    tier: 2
+    stage: discovery
+    posture: formal-specification
+    path: sdlc-formal-specification/SKILL.md
+    signals_favored: {criticality: high, novelty: low}
+
+  - id: sdlc-ai-requirements
+    tier: 2
+    stage: discovery
+    posture: ai-assisted-requirements
+    path: sdlc-ai-requirements/SKILL.md
+    signals_favored: {novelty: high, scale: large}
+
+  # ── Tier 2: Design Postures ────────────────────────────────────────────
+  - id: sdlc-design-adr
+    tier: 2
+    stage: design
+    posture: adr
+    path: sdlc-design-adr/SKILL.md
+
+  - id: sdlc-design-ddd
+    tier: 2
+    stage: design
+    posture: domain-driven-design
+    path: sdlc-design-ddd/SKILL.md
+
+  - id: sdlc-design-c4
+    tier: 2
+    stage: design
+    posture: c4-model
+    path: sdlc-design-c4/SKILL.md
+
+  - id: sdlc-design-spike
+    tier: 2
+    stage: design
+    posture: spike-and-prototype
+    path: sdlc-design-spike/SKILL.md
+
+  - id: sdlc-design-formal
+    tier: 2
+    stage: design
+    posture: formal-design
+    path: sdlc-design-formal/SKILL.md
+
+  # ── Tier 2: Build Postures ─────────────────────────────────────────────
+  - id: sdlc-tdd
+    tier: 2
+    stage: build
+    posture: tdd
+    path: sdlc-tdd/SKILL.md
+    signals_favored: {quality_bar: high, domain_clarity: medium-high}
+
+  - id: sdlc-bdd
+    tier: 2
+    stage: build
+    posture: bdd
+    path: sdlc-bdd/SKILL.md
+    signals_favored: {stakeholder_involvement: high}
+
+  - id: sdlc-mob-programming
+    tier: 2
+    stage: build
+    posture: mob-programming
+    path: sdlc-mob-programming/SKILL.md
+    signals_favored: {team_size: small, domain_clarity: low}
+
+  - id: sdlc-genai-assisted
+    tier: 2
+    stage: build
+    posture: genai-assisted
+    path: sdlc-genai-assisted/SKILL.md
+    signals_favored: {ai_tooling_maturity: high}
+
+  - id: sdlc-cleanroom
+    tier: 2
+    stage: build
+    posture: cleanroom
+    path: sdlc-cleanroom/SKILL.md
+    signals_favored: {correctness_requirement: critical, quality_bar: highest}
+
+  # ── Tier 2: Verify Postures ────────────────────────────────────────────
+  - id: sdlc-ci-pipeline-gate
+    tier: 2
+    stage: verify
+    posture: ci-pipeline-gate
+    path: sdlc-ci-pipeline-gate/SKILL.md
+
+  - id: sdlc-acceptance-walkthrough
+    tier: 2
+    stage: verify
+    posture: acceptance-walkthrough
+    path: sdlc-acceptance-walkthrough/SKILL.md
+
+  - id: sdlc-structured-inspection
+    tier: 2
+    stage: verify
+    posture: structured-inspection
+    path: sdlc-structured-inspection/SKILL.md
+
+  - id: sdlc-exploratory-testing
+    tier: 2
+    stage: verify
+    posture: exploratory-testing
+    path: sdlc-exploratory-testing/SKILL.md
+
+  - id: sdlc-ai-assisted-review
+    tier: 2
+    stage: verify
+    posture: ai-assisted-review
+    path: sdlc-ai-assisted-review/SKILL.md
+
+  # ── Tier 2: Ship Postures ──────────────────────────────────────────────
+  - id: sdlc-continuous-deployment
+    tier: 2
+    stage: ship
+    posture: continuous-deployment
+    path: sdlc-continuous-deployment/SKILL.md
+    signals_favored: {automation_maturity: high, release_frequency: continuous}
+
+  - id: sdlc-blue-green-canary
+    tier: 2
+    stage: ship
+    posture: blue-green-canary
+    path: sdlc-blue-green-canary/SKILL.md
+    signals_favored: {risk_tolerance: medium, traffic_scale: medium-large}
+
+  - id: sdlc-feature-flag-release
+    tier: 2
+    stage: ship
+    posture: feature-flag-release
+    path: sdlc-feature-flag-release/SKILL.md
+
+  - id: sdlc-gitops-release
+    tier: 2
+    stage: ship
+    posture: gitops-release
+    path: sdlc-gitops-release/SKILL.md
+    signals_favored: {automation_maturity: high}
+
+  - id: sdlc-controlled-release-gate
+    tier: 2
+    stage: ship
+    posture: controlled-release-gate
+    path: sdlc-controlled-release-gate/SKILL.md
+    signals_favored: {compliance_burden: high, risk_tolerance: low}
+
+  # ── Tier 2: Sustain Postures ───────────────────────────────────────────
+  - id: sdlc-sre-slo-driven
+    tier: 2
+    stage: sustain
+    posture: sre-slo-driven
+    path: sdlc-sre-slo-driven/SKILL.md
+    signals_favored: {system_criticality: high, operational_maturity: medium-high}
+
+  - id: sdlc-incident-response
+    tier: 2
+    stage: sustain
+    posture: incident-response
+    path: sdlc-incident-response/SKILL.md
+    signals_favored: {failure_mode: unreliable}
+
+  - id: sdlc-evolutionary-architecture
+    tier: 2
+    stage: sustain
+    posture: evolutionary-architecture
+    path: sdlc-evolutionary-architecture/SKILL.md
+    signals_favored: {failure_mode: brittle-cluttered}
+
+  - id: sdlc-kanban-operations
+    tier: 2
+    stage: sustain
+    posture: kanban-operations
+    path: sdlc-kanban-operations/SKILL.md
+    signals_favored: {toil_level: medium-high, operational_maturity: low-medium}
+
+  - id: sdlc-chaos-engineering
+    tier: 2
+    stage: sustain
+    posture: chaos-engineering
+    path: sdlc-chaos-engineering/SKILL.md
+    signals_favored: {operational_maturity: high, failure_mode: unclear}
+</copyable>
+
+---
+
+## The complete root structure then looks like this
+
+```
+dubtown-skills/
+│
+├── MANIFEST.yaml              ← agent loads this first; full routing index
+├── README.md                  ← human overview of the two-tier system
+├── SKILL-TEMPLATE.md          ← canonical template for future skill authors
+│
+├── sdlc-discovery/
+│   ├── SKILL.md
+│   └── references/
+│       └── SOURCES.md
+│
+├── sdlc-tdd/
+│   ├── SKILL.md
+│   └── references/
+│       └── SOURCES.md
+│
+└── ... (one folder per skill, same pattern)
+```
+
+---
+
+## The two optional but high-value additions
+
+**`SKILL-TEMPLATE.md`** at root - a blank version of the YAML frontmatter + section structure every skill follows. When you or an agent authors a new skill, it starts here. Enforces consistency without a build tool.
+
+**`README.md`** at root - one page that explains: what this repo is, how the two tiers relate, how an agent is expected to use the MANIFEST, and how a human adds a new skill. This is the "cold start" document for any new agent or collaborator hitting the repo fresh.
+
+Want me to write those two closing documents now?

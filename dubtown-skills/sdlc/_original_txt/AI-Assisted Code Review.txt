@@ -1,0 +1,90 @@
+---
+
+## name: sdlc-ai-code-review description: &gt;- Use during verify when review bandwidth is limited, the changeset is large, or the team wants to surface candidate issues before human review to improve reviewer focus. Activates when someone asks "how do we scale code review", "can AI help review this", or "how do we reduce the noise in our review process". Uses LLM-driven pre-review to flag issues - logic errors, missing edge cases, security patterns, clarity problems - so that human reviewers evaluate substance rather than scan for surface issues. license: MIT
+
+# Skill: AI-Assisted Code Review
+
+## What this enables
+
+A human reviewer who enters the review with a prioritized list of candidate issues is more effective than one who scans from the top. AI-assisted review uses an LLM as a first-pass investigator: it generates a set of candidate concerns for the human reviewer to evaluate - not to accept uncritically, but to use as a structured starting point.
+
+The LLM is a fast, overconfident junior reviewer. It misses context it was not given and sometimes flags non-issues. The human reviewer is the authority. The LLM's job is to reduce the cost of finding the issues the human would have found anyway, and to increase the probability of surfacing the issues the human might have missed.
+
+## Fit signals
+
+- Review bandwidth is limited relative to changeset volume
+- The codebase is large and reviewers lack context about every affected area
+- The team wants a consistent baseline review pass across all contributions
+- Security, correctness, or performance concerns are systematic priorities that benefit from a structured checklist approach
+- Reviewers spend significant time on surface issues that could be automated
+
+## Anti-signals
+
+- The review requires formal correctness verification against a specification (use `sdlc-structured-inspection` - LLMs cannot provide this)
+- The team has no human review step - AI review without human sign-off is not this skill; it is an unverified pipeline
+- The changeset is a single line with obvious intent
+
+## Core practice
+
+AI-assisted review operates in **two phases**: automated pre-review (LLM), then human review (authoritative).
+
+**Phase 1: LLM pre-review**
+
+Submit the diff or changeset to the LLM with a structured prompt. The prompt should specify:
+
+- The context of the change (what it is intended to do)
+- The review dimensions to check (logic, security, edge cases, naming, test coverage)
+- The output format (list of findings with location and severity)
+
+Example prompt pattern:
+
+```
+Context: This change implements order cancellation for partially fulfilled orders.
+Review for:
+1. Logic errors - does the code do what the context describes?
+2. Missing edge cases - what inputs could produce unexpected behaviour?
+3. Security patterns - any input handling, auth assumptions, or data exposure concerns?
+4. Test coverage - are there behaviours the current tests do not cover?
+
+Output: numbered list of candidate findings with file/line reference and severity (high/medium/low).
+```
+
+**Phase 2: Human review with LLM findings as input**
+
+The human reviewer receives both the diff and the LLM's findings list. Their job:
+
+- Confirm or dismiss each LLM finding
+- Add findings the LLM missed (context-dependent issues are the human's domain)
+- Make the approval decision
+
+The LLM findings are **candidates**, not verdicts. The reviewer confirms each one independently. A finding the reviewer cannot reproduce or understand is dismissed.
+
+## Key moves
+
+1. **Give the LLM explicit context, not just the code.** The diff alone is insufficient. Include: what the change is meant to do, what the surrounding system does, any constraints the code must satisfy. Context quality determines finding quality.
+
+2. **Specify review dimensions explicitly.** A generic "review this code" prompt produces generic output. Specific dimensions (logic, security, test coverage) produce actionable findings.
+
+3. **Treat LLM findings as hypotheses.** The reviewer's job is to test each hypothesis against the actual code and context - not to accept or reject based on the LLM's confidence language. Confident LLM language does not imply correct LLM findings.
+
+4. **Track false positive rates.** Over time, a team can measure what percentage of LLM findings are confirmed as real issues. This data calibrates how much weight to give LLM pre-review output and which finding categories are reliable.
+
+5. **Never ship on LLM approval alone.** AI-assisted review accelerates human review; it does not replace it. The ship decision belongs to a human with full context, accountability, and the authority to say no.
+
+## Example
+
+**GenAI in SE (Accenture/DFKI, 2024):** The survey of GenAI in software engineering identifies code review as one of the highest-leverage LLM applications in the SDLC. LLMs trained on large codebases have strong pattern recognition for common defect classes - security antipatterns, null handling, off-by-one errors - that appear repeatedly across projects. This makes them effective first-pass reviewers for systematic defect classes, while human reviewers retain the advantage for context-dependent and architectural concerns.
+
+The paper notes that the productivity gain in review comes not from LLMs catching things humans would miss entirely, but from reducing the cognitive load of the review pass - allowing human attention to focus where it provides the most value.
+
+## AI leverage points
+
+- **Security-specific review:** dedicated security-focused prompts (OWASP patterns, injection risks, auth assumptions) can be run as a separate automated pass on every changeset, independent of the general review
+- **Test coverage analysis:** given the changeset and the existing test suite, an agent can identify which new code paths are not covered by any existing test
+- **Documentation review:** a separate prompt can check whether public interfaces have accurate and complete documentation - a dimension human reviewers frequently deprioritize under time pressure
+
+## Connects to
+
+- **Upstream:** `sdlc-build` (all build postures produce code that enters review), `sdlc-genai-assisted` (GenAI-generated code benefits from AI review to catch the systematic errors that LLM generation introduces)
+- **Downstream:** `sdlc-ship` (reviewed and approved code progresses to ship)
+- **Lateral:** `sdlc-ci-pipeline` (pipeline enforces automated gates; AI review augments human judgment - parallel, not sequential)

@@ -1,0 +1,101 @@
+---
+name: sdlc-verify
+description: >-
+  Use after build work is complete or at any integration checkpoint where the team needs to confirm that what was built is correct, complete, and safe to move forward. Activates when someone asks "how do we know this is ready", "what does our quality gate look like", "do we have stakeholder sign-off", or "how do we confirm this is shippable". Reads context signals and routes to the verification posture that fits the team's tooling, risk profile, and stakeholder requirements.
+stage: verify
+tier: 1
+role: navigator
+license: MIT
+---
+# SDLC Navigator: Verify
+
+Verify is the stage where confidence is established - not assumed. The goal is
+not to produce a perfect test suite; it is to reach a defensible, evidence-backed
+answer to the question: "Is this ready?" Different situations require different
+kinds of evidence.
+
+## Read the Room First
+
+| Signal | Questions to ask |
+|--------|-----------------|
+| **Test coverage** | Does an automated suite already exist? Is it trustworthy? |
+| **Stakeholder sign-off** | Do humans need to see and approve what was built? |
+| **Formality required** | Is a certified quality statement needed - an MTTF, a compliance record? |
+| **Risk profile** | What is the acceptable level of residual defect risk? |
+| **Pipeline maturity** | Is there a deployment pipeline that can enforce a gate automatically? |
+
+## Posture Options
+
+### 1. CI Pipeline Gate
+**When:** An automated test suite exists, a deployment pipeline is in place, and
+the team's definition of "done" should be enforced by the pipeline rather than
+by manual process.
+**What it enables:** Objective, repeatable, human-independent verification that
+every change meets a baseline standard before it progresses. The pipeline is the
+authority - not a person's judgment on a given day.
+**Skill doc:** `sdlc-ci-pipeline`
+
+---
+
+### 2. Acceptance Walkthrough
+**When:** Stakeholders need to see and validate what was built. BDD scenarios
+exist and can serve as the agenda. A demo or structured review is the expected
+sign-off mechanism.
+**What it enables:** Human validation that the software does what stakeholders
+actually wanted - not just what was specified. Catches the gap between correct
+implementation and correct interpretation of requirements.
+**Skill doc:** `sdlc-acceptance-walkthrough`
+
+---
+
+### 3. Structured Inspection
+**When:** Criticality is high, the specification is formal or semi-formal, and
+the team needs to verify correctness against the specification - not just
+confirm that tests pass.
+**What it enables:** Line-by-line verification that code satisfies its
+specification through reasoned argument, not empirical testing. Finds the class
+of defects that tests cannot find: correct behaviour in tested scenarios,
+incorrect behaviour in untested ones.
+**Skill doc:** `sdlc-structured-inspection`
+
+---
+
+### 4. Exploratory Testing
+**When:** The automated suite covers the defined scenarios but edge cases and
+unexpected interactions are a concern. A human investigator working without a
+script is more likely to find the unknown unknowns.
+**What it enables:** Discovery of defects that scripted tests cannot find by
+design - because scripted tests only check what someone thought to check.
+Exploratory testing is adversarial by intent.
+**Skill doc:** `sdlc-exploratory-testing`
+
+---
+
+### 5. AI-Assisted Review
+**When:** Review bandwidth is limited, the changeset is large, or the team
+wants to surface candidate issues before human review to reduce review noise
+and improve reviewer focus.
+**What it enables:** LLM-driven pre-review that flags potential issues - logic
+errors, missing edge cases, security patterns, naming and clarity problems -
+leaving human reviewers to evaluate substance rather than scan for surface issues.
+**Skill doc:** `sdlc-ai-code-review`
+
+---
+
+## Signal Quick-Reference
+
+| If you see this... | Try this posture |
+|-------------------|-----------------|
+| Automated suite exists, pipeline in place | CI Pipeline Gate |
+| Stakeholders need to see and sign off | Acceptance Walkthrough |
+| High criticality, formal spec exists | Structured Inspection |
+| Known unknowns - edge cases not scripted | Exploratory Testing |
+| Large changeset, limited review time | AI-Assisted Review |
+| Production-critical + stakeholder sign-off | Structured Inspection + Acceptance Walkthrough |
+| Fast iteration + coverage concerns | CI Pipeline Gate + AI-Assisted Review |
+
+## Stage Connections
+
+- **Feeds from:** `sdlc-build` (tests and code produced in build are the primary inputs)
+- **Feeds into:** `sdlc-ship` (verification is the gate that authorizes shipment)
+- **Runs alongside:** `sdlc-build` in TDD and BDD postures where test and verify are inseparable

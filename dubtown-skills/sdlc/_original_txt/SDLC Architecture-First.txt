@@ -1,0 +1,79 @@
+---
+
+## name: sdlc-architecture-first description: &gt;- Use when multiple teams need to align on system boundaries, when structural decisions will be expensive to reverse, or when services need independent deployment and ownership. Activates when someone asks how to split a system into services, how to document architectural decisions so the team can reason about them consistently, how to align team structure with system structure, or how to prevent independent teams from making conflicting design choices. Draws on RUP's architecture-centric approach, SAFe's system design practices, and Team Topologies' principle that organizational structure and system structure must be aligned. license: MIT
+
+# Skill: Architecture-First
+
+## What this enables
+
+Documented, deliberate structural decisions made before they become expensive to change. A shared map that lets multiple teams build independently without making conflicting choices. Explicit rationale for why the structure is what it is, so it can be challenged and updated as the system evolves.
+
+## Fit signals
+
+- Multiple teams need to work on different parts of the same system simultaneously
+- Service or module boundaries will be expensive to move once code is built against them
+- Different components have different deployment, scaling, or ownership requirements
+- The system needs to be reasoned about independently of any specific technology choice
+- Regulatory or audit requirements demand documented architectural decisions
+
+## Anti-signals
+
+- One team owns the whole system and can refactor freely (use `sdlc-emergent-design` inside team boundaries)
+- The right structure is genuinely unknown and needs to be discovered through building
+- Speed of initial delivery outweighs the cost of structural misalignment
+
+## Core practice
+
+**Architecture Decision Records (ADRs):** lightweight documents that capture significant structural decisions, the options considered, and the rationale for the choice made. Each ADR is a record of a deliberate decision, not a diagram.
+
+**C4 model thinking** (without requiring the C4 toolchain): four levels of zoom - Context (what is the system?), Containers (what processes or stores run?), Components (what major units exist within a container?), Code (how are components implemented?). Use only the zoom levels that are genuinely needed to communicate.
+
+**Conway's Law awareness:** the architecture of a system tends to mirror the communication structure of the team that built it. Team Topologies' principle: design the team topology first, then let the system architecture follow. If the target architecture conflicts with how teams communicate, the architecture will lose.
+
+## Key moves
+
+1. **Identify load-bearing decisions early.** Not all design choices warrant formal documentation. Load-bearing decisions share one property: reversing them after teams have built against them is expensive. Examples: service boundaries, shared data ownership, asynchronous vs. synchronous communication patterns, authentication model. Document these; let everything else emerge.
+
+2. **Write ADRs at decision time.** An ADR has five fields:
+
+   - *Title:* short phrase naming the decision
+   - *Status:* proposed / accepted / superseded
+   - *Context:* the problem being solved and constraints in play
+   - *Decision:* what was chosen and why
+   - *Consequences:* what becomes easier, what becomes harder, what is accepted as a trade-off
+
+3. **Draw the seams before the internals.** Define what each service or module owns and what it does not own. Ownership means: one team is responsible for the interface, the data, and the runtime behavior. Seams that are ambiguous at design time become production incidents.
+
+4. **Match team topology to system structure.** A stream-aligned team (delivering a product or service end-to-end) should own exactly the services their product needs. Where a platform team is needed (shared infrastructure, internal APIs), its interfaces should be designed as a product - with discoverability, versioning, and documentation.
+
+5. **Version the architecture the same way you version code.** ADRs live in the repository alongside the code they describe. When a decision is superseded, the old ADR is marked superseded and a new one is written. The history of decisions is part of the codebase's institutional memory.
+
+## Example
+
+A fintech team is splitting a monolith into services. Rather than designing the full architecture upfront, they identify three load-bearing decisions:
+
+**ADR-001: Payment processing runs as an isolated service**
+
+- Context: PCI-DSS compliance requires that card data never touches systems that handle other concerns
+- Decision: Extract a PaymentService with its own deployment boundary and network policy; all other services communicate via its API only
+- Consequences: Simpler compliance scope; payment team becomes a bottleneck for payment-adjacent features
+
+**ADR-002: Event-driven communication between OrderService and FulfillmentService**
+
+- Context: Fulfillment operates on a different latency budget and scaling profile than order capture
+- Decision: OrderService emits domain events; FulfillmentService consumes asynchronously; no direct synchronous calls
+- Consequences: Resilience to FulfillmentService outages; eventual consistency in order status; dead letter queue strategy required
+
+These two ADRs let four teams build in parallel for three months without a coordination meeting about structural alignment. When a fifth team proposes a change that would violate ADR-002, the written rationale makes the trade-off explicit rather than invisible.
+
+## AI leverage points
+
+- **ADR drafting:** describe a decision being considered and ask the LLM to draft an ADR. Review for accuracy and completeness - AI frequently surfaces consequences the team has not considered.
+- **Trade-off analysis:** describe two architectural options and ask the LLM to argue both sides. Use as structured input to a team decision, not as the decision itself.
+- **Conway's Law check:** describe your team structure and your proposed system architecture and ask the LLM where communication overhead will emerge. This surfaces seam misalignments before they become incidents.
+
+## Connects to
+
+- **Upstream:** `sdlc-design` - this is one posture within the Design stage
+- **Downstream:** `sdlc-build` - ADRs define the constraints within which each team's Build posture operates
+- **Lateral:** `sdlc-emergent-design` (inside each team's boundary, design can emerge freely), `sdlc-schema-first` (ADRs at the interface level connect to schema contracts at the data level)
