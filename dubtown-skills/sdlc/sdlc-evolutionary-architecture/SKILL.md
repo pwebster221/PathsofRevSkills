@@ -1,5 +1,6 @@
 ---
 name: sdlc-evolutionary-architecture
+description: "Use during sustain to keep a long-lived architecture able to change safely, via small continuous improvements guided by fitness functions rather than a big redesign. Activates when someone says \"the architecture is drifting or decaying\", \"should we do a big rewrite\", \"how do we evolve this safely\", or when architectural qualities must be protected over time. Treats architecture as a continuous series of decisions, not a one-time one — fitness functions objectively detect drift from intended qualities."
 stage: sustain
 posture: evolutionary-architecture
 tier: 2

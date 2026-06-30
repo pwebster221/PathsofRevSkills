@@ -1,5 +1,6 @@
 ---
 name: sdlc-gitops-release
+description: "Use during ship when Git is the single declarative source of truth for both application and infrastructure/cluster state, with an in-cluster agent continuously reconciling actual state toward it. Activates when someone says \"how do we deploy to Kubernetes\", \"how do we manage cluster state or config drift\", \"make releases declarative and auditable\", or when desired-vs-actual state is a first-class concern. Inverts push-based CI/CD into pull-based reconciliation — any manual drift is detected and corrected."
 stage: ship
 posture: gitops-release
 tier: 2

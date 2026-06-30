@@ -1,5 +1,6 @@
 ---
 name: sdlc-sustain
+description: "Use at the sustain stage — the indefinite operational life of a running system: reliability, operational health, architectural evolution, and toil reduction. Activates when someone says \"how do we keep this healthy\", \"how do we operate this\", \"how do we stop it decaying\", or when long-lived-system concerns dominate. Reads context signals and routes to the sustain posture(s) that fit — and unlike earlier stages, several (e.g. an SRE baseline plus chaos engineering) can run at once."
 stage: sustain
 tier: 1
 role: navigator

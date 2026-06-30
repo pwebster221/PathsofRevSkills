@@ -1,5 +1,6 @@
 ---
 name: sdlc-ship
+description: "Use at the ship stage when working software must become running software and you must choose how. Activates when someone says \"how do we release this\", \"what's our rollout strategy\", \"how do we deploy safely\", or when deployment ceremony, risk posture, or compliance is in question. Reads context signals (automation maturity, risk, compliance, traffic, team maturity) and routes to the shipping posture that fits — from continuous deployment to controlled release gates."
 stage: ship
 tier: 1
 role: navigator

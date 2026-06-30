@@ -1,5 +1,6 @@
 ---
 name: sdlc-kanban-operations
+description: "Use during sustain to manage a continuous, interrupt-driven stream of operational work (incidents, requests, maintenance, backlog) of wildly varying size and urgency. Activates when someone says \"we have too much in progress\", \"operational work keeps interrupting us\", \"how do we manage this mixed queue\", or when iteration-based planning doesn't fit the work. Pull-based flow with WIP limits — stop starting, start finishing — to cut context-switching and dropped balls."
 stage: sustain
 posture: kanban-operations
 tier: 2

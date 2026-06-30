@@ -1,5 +1,6 @@
 ---
 name: sdlc-continuous-deployment
+description: "Use during ship when you want every commit that passes all automated quality gates promoted to production automatically, with no human approval. Activates when someone says \"how do we release faster\", \"why are we batching releases\", \"can we deploy on every merge\", or when human approval gates have become the risk rather than the mitigation. Eliminates batch size as a variable (a batch of one) — presupposes a pipeline trusted enough to make manual gates unnecessary."
 stage: ship
 posture: continuous-deployment
 tier: 2

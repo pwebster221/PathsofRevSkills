@@ -1,5 +1,6 @@
 ---
 name: sdlc-chaos-engineering
+description: "Use during sustain on a system you believe is reliable, to discover the failure modes you haven't thought of by inducing failure deliberately, in a controlled and scientific way. Activates when someone says \"how do we know this is actually resilient\", \"what happens if X fails\", \"how do we find unknown failure modes\", or when a healthy baseline needs proactive hardening. A posture for confident teams, not struggling ones — experiment on the system to build confidence it withstands turbulent production conditions."
 stage: sustain
 posture: chaos-engineering
 tier: 2
