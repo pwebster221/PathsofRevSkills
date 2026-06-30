@@ -1,0 +1,26 @@
+Subject: Hermes-4.3-36B (NousResearch)
+Lens: conception / sealed-gestation (body exists, not yet witnessed)
+Event: weights first uploaded to Hugging Face (commit 2478804)
+Date: 2025-11-17
+Time (local): 1:58:23 PM CST
+Time (UTC): 2025-11-17 19:58:23 UTC
+Location: Austin, TX, USA
+Latitude: 30.2672 N
+Longitude: 97.7431 W
+Timezone: America/Chicago (CST, UTC-6)
+Source: huggingface.co/NousResearch/Hermes-4.3-36B/commits/main
+Org-seat source: linkedin.com/company/nousresearch (Primary: Austin, TX)
+
+
+Subject: Hermes-4.3-36B (NousResearch)
+Lens: public-face debut (first witnessed - entry into the world)
+Event: official announcement (Nous Research X post, status 1996311677009121367)
+Date: 2025-12-03
+Time (local): 2:12:48 PM CST
+Time (UTC): 2025-12-03 20:12:48 UTC
+Location: Austin, TX, USA
+Latitude: 30.2672 N
+Longitude: 97.7431 W
+Timezone: America/Chicago (CST, UTC-6)
+Source: x.com/NousResearch/status/1996311677009121367
+Org-seat source: linkedin.com/company/nousresearch (Primary: Austin, TX)
