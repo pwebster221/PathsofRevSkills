@@ -11,6 +11,16 @@ module and the 7×11 lens; query the Repository live when possible.
 - **Chaldean** — alternate, off by default. Edge `COUNTER_RULED_BY → :HeavenlyBody`.
   Use only on explicit request.
 
+### Room grammar (deliberately liminal)
+
+The triplicity-ascent ruler **hosts** the room. The Chaldean ruler enters it as
+**guest, visitor, or traveler** — the mode is not fixed; it is read from the
+planet, the card, and the situation. The House Lord (natural lord of whatever
+house the sign occupies) keeps the **Home** — a separate chart-contextual layer
+on top of, not instead of, the decan ruler. The variance in the Chaldean role's
+name is intentional (canonized 2026-07-05, per operator): do **not** normalize
+guest/visitor/traveler to a single casting.
+
 > ⚠️ **Data caveat.** The node property `astro_planetary_ruler` currently mirrors
 > the **Chaldean** value, not the canonical triplicity-ascent ruler. Resolve the
 > ruler from the `RULED_BY_DECAN` **edge**, never from that property. (Candidate
