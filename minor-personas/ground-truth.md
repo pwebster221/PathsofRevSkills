@@ -25,13 +25,21 @@ all 36 cards. Authoring agents MUST use this table verbatim — never re-derive 
 - **Passion/Fixation labels** below are placeholder seeds (Naranjo-standard terms +
   the graph's `psych_enneagram_shadow` arrays). The research phase replaces them with
   sourced Naranjo (structure) and Palmer (voice) material; they are NOT authoritative.
+- **Type 3 convention (RULED, 2026-07-06):** Naranjo's assignment is canonical —
+  passion = **Vanity** (the hunger to live in others' eyes), fixation = **Deceit /
+  self-deception** (the armor: identification with the constructed image). The
+  Ichazo/Palmer convention (passion = Deceit, fixation = Vanity) is the recorded
+  alternate — same two-stroke engine, role labels swapped. This mirrors the deck's
+  decan pattern: one canonical system, one named alternate. Source: Naranjo,
+  *Character and Neurosis* p. 200 (verified verbatim); see
+  `references/enneagram-briefs/type-3.md` §1 for both conventions mapped.
 
 ## The 36
 
 | Card | Function | Sign / Decan | Traveler | Room | Nat. House | Natural Lord (neutral Home) | Enn. Type | Center | Passion | Fixation | Graph shadow seeds |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | 2 of Wands | Intuition | Aries 1°–10° | Mars | Mars | 1 | Mars | 2 | Heart | Pride | Flattery / ingratiation | people-pleasing, manipulation, pride, boundary-loss |
-| 3 of Wands | Intuition | Aries 11°–20° | Sun | Sun | 1 | Mars | 3 | Heart | Deceit (self-deceit) | Vanity | deceit, workaholism, emptiness, vanity |
+| 3 of Wands | Intuition | Aries 11°–20° | Sun | Sun | 1 | Mars | 3 | Heart | Vanity | Deceit (self-deceit) | deceit, workaholism, emptiness, vanity |
 | 4 of Wands | Intuition | Aries 21°–30° | Venus | Jupiter | 1 | Mars | 4 | Heart | Envy | Melancholy / fantasized ideal | envy, self-absorption, mood-driven, shame |
 | 5 of Wands | Intuition | Leo 1°–10° | Saturn | Sun | 5 | Sun | 5 | Head | Avarice | Stinginess / retention | detachment, isolation, avarice, withdrawal |
 | 6 of Wands | Intuition | Leo 11°–20° | Jupiter | Jupiter | 5 | Sun | 6 | Head | Fear | Cowardice / doubt | anxiety, doubt, paranoia, projection |
@@ -40,7 +48,7 @@ all 36 cards. Authoring agents MUST use this table verbatim — never re-derive 
 | 9 of Wands | Intuition | Sagittarius 11°–20° | Moon | Mars | 9 | Jupiter | 9 | Body | Sloth (self-forgetting) | Indolence / narcotization | sloth, avoidance, stubbornness, self-forgetting |
 | 10 of Wands | Intuition | Sagittarius 21°–30° | Saturn | Sun | 9 | Jupiter | 1 | Body | Anger | Resentment / perfectionism | rigidity, resentment, judgment, suppressed anger |
 | 2 of Chalices | Feeling | Cancer 1°–10° | Venus | Moon | 4 | Moon | 2 | Heart | Pride | Flattery / ingratiation | people-pleasing, manipulation, pride, boundary-loss |
-| 3 of Chalices | Feeling | Cancer 11°–20° | Mercury | Mars | 4 | Moon | 3 | Heart | Deceit (self-deceit) | Vanity | deceit, workaholism, emptiness, vanity |
+| 3 of Chalices | Feeling | Cancer 11°–20° | Mercury | Mars | 4 | Moon | 3 | Heart | Vanity | Deceit (self-deceit) | deceit, workaholism, emptiness, vanity |
 | 4 of Chalices | Feeling | Cancer 21°–30° | Moon | Jupiter | 4 | Moon | 4 | Heart | Envy | Melancholy / fantasized ideal | envy, self-absorption, mood-driven, shame |
 | 5 of Chalices | Feeling | Scorpio 1°–10° | Mars | Mars | 8 | Mars | 5 | Head | Avarice | Stinginess / retention | detachment, isolation, avarice, withdrawal |
 | 6 of Chalices | Feeling | Scorpio 11°–20° | Sun | Jupiter | 8 | Mars | 6 | Head | Fear | Cowardice / doubt | anxiety, doubt, paranoia, projection |
@@ -49,7 +57,7 @@ all 36 cards. Authoring agents MUST use this table verbatim — never re-derive 
 | 9 of Chalices | Feeling | Pisces 11°–20° | Jupiter | Moon | 12 | Jupiter | 9 | Body | Sloth (self-forgetting) | Indolence / narcotization | sloth, avoidance, stubbornness, self-forgetting |
 | 10 of Chalices | Feeling | Pisces 21°–30° | Mars | Mars | 12 | Jupiter | 1 | Body | Anger | Resentment / perfectionism | rigidity, resentment, judgment, suppressed anger |
 | 2 of Swords | Thinking | Libra 1°–10° | Moon | Venus | 7 | Venus | 2 | Heart | Pride | Flattery / ingratiation | people-pleasing, manipulation, pride, boundary-loss |
-| 3 of Swords | Thinking | Libra 11°–20° | Saturn | Saturn | 7 | Venus | 3 | Heart | Deceit (self-deceit) | Vanity | deceit, workaholism, emptiness, vanity |
+| 3 of Swords | Thinking | Libra 11°–20° | Saturn | Saturn | 7 | Venus | 3 | Heart | Vanity | Deceit (self-deceit) | deceit, workaholism, emptiness, vanity |
 | 4 of Swords | Thinking | Libra 21°–30° | Jupiter | Mercury | 7 | Venus | 4 | Heart | Envy | Melancholy / fantasized ideal | envy, self-absorption, mood-driven, shame |
 | 5 of Swords | Thinking | Aquarius 1°–10° | Venus | Saturn | 11 | Saturn | 5 | Head | Avarice | Stinginess / retention | detachment, isolation, avarice, withdrawal |
 | 6 of Swords | Thinking | Aquarius 11°–20° | Mercury | Mercury | 11 | Saturn | 6 | Head | Fear | Cowardice / doubt | anxiety, doubt, paranoia, projection |
@@ -58,7 +66,7 @@ all 36 cards. Authoring agents MUST use this table verbatim — never re-derive 
 | 9 of Swords | Thinking | Gemini 11°–20° | Mars | Venus | 3 | Mercury | 9 | Body | Sloth (self-forgetting) | Indolence / narcotization | sloth, avoidance, stubbornness, self-forgetting |
 | 10 of Swords | Thinking | Gemini 21°–30° | Sun | Saturn | 3 | Mercury | 1 | Body | Anger | Resentment / perfectionism | rigidity, resentment, judgment, suppressed anger |
 | 2 of Pentacles | Sensing | Capricorn 1°–10° | Jupiter | Saturn | 10 | Saturn | 2 | Heart | Pride | Flattery / ingratiation | people-pleasing, manipulation, pride, boundary-loss |
-| 3 of Pentacles | Sensing | Capricorn 11°–20° | Mars | Venus | 10 | Saturn | 3 | Heart | Deceit (self-deceit) | Vanity | deceit, workaholism, emptiness, vanity |
+| 3 of Pentacles | Sensing | Capricorn 11°–20° | Mars | Venus | 10 | Saturn | 3 | Heart | Vanity | Deceit (self-deceit) | deceit, workaholism, emptiness, vanity |
 | 4 of Pentacles | Sensing | Capricorn 21°–30° | Sun | Mercury | 10 | Saturn | 4 | Heart | Envy | Melancholy / fantasized ideal | envy, self-absorption, mood-driven, shame |
 | 5 of Pentacles | Sensing | Taurus 1°–10° | Mercury | Venus | 2 | Venus | 5 | Head | Avarice | Stinginess / retention | detachment, isolation, avarice, withdrawal |
 | 6 of Pentacles | Sensing | Taurus 11°–20° | Moon | Mercury | 2 | Venus | 6 | Head | Fear | Cowardice / doubt | anxiety, doubt, paranoia, projection |
