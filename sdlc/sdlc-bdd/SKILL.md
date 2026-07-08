@@ -1,0 +1,100 @@
+---
+name: sdlc-bdd
+description: >-
+  Use during build when stakeholders and developers need shared, readable specifications that both sides can validate. Activates when someone asks "how do we know this is what the user actually wants", "can product review the test cases", or "how do we prevent building the wrong thing". Also activates when acceptance criteria need to be formalized as executable tests. Draws on Dan North's BDD and the Given/When/Then scenario format to create living documentation that stays in sync with the code.
+stage: build
+posture: bdd
+tier: 2
+role: skill
+license: MIT
+---
+# Skill: Behavior-Driven Development
+
+## What this enables
+
+A shared language between the people who know what the software should do and the people who build it. BDD expresses requirements as concrete scenarios - readable by stakeholders, executable by machines. The result is a test suite that doubles as documentation, and documentation that cannot go stale because it runs against the code.
+
+## Fit signals
+
+- Stakeholders need to read and validate the specifications
+- Acceptance criteria exist or can be elicited through conversation
+- The team has experienced "we built it, but it wasn't what they wanted"
+- The domain is business-facing, UX-facing, or regulatory-facing
+- Living documentation matters - the specs should stay true as the system evolves
+
+## Anti-signals
+
+- There are no accessible stakeholders and requirements cannot be elicited (use `sdlc-tdd` to drive design from the inside out instead)
+- The specification must be mathematically provable before implementation (use `sdlc-formal-specification` or `sdlc-cleanroom`)
+- The work is pure infrastructure with no user-visible behaviour
+
+## Core practice
+
+BDD operates outside-in. You start with the stakeholder's world and work inward toward the code. The vehicle is the **scenario**: a concrete example of a specific interaction, written in structured natural language.
+
+**Scenario format (Gherkin):**
+
+```
+Feature: [the capability being described]
+
+  Scenario: [a specific case]
+    Given [a starting context]
+    When  [an action is taken]
+    Then  [an observable outcome]
+```
+
+Each word is load-bearing:
+
+- **Given** establishes the world state before the action. It is setup, not action.
+- **When** describes a single, specific user or system action.
+- **Then** describes what can be observed after the action - never internal state.
+
+Scenarios are written in conversation with stakeholders before implementation begins. They become the acceptance tests that define "done."
+
+## Key moves
+
+1. **Elicit scenarios through conversation, not specification.** Sit with a stakeholder and ask: "Give me an example of this feature working correctly." Then: "Give me an example where it should fail." Scenarios come from examples, not from requirements documents.
+
+2. **Write the scenario before writing any code.** The scenario is the failing acceptance test. Implementation begins only once there is a scenario that can be made to pass.
+
+3. **Keep scenarios declarative, not procedural.** A scenario describes what the system does, not how to operate it. Avoid UI-level steps ("click the Submit button") in favour of intent-level steps ("When the user submits the order"). The scenario should survive a UI redesign.
+
+4. **One behaviour per scenario.** If a scenario has more than one When, split it. Scenarios that test multiple things at once fail for multiple reasons at once and produce noise, not signal.
+
+5. **Use scenarios as the definition of done.** A story is complete when all its scenarios pass. No scenario, no done.
+
+## Example
+
+**Dan North, Jfokus presentation:** North describes a story: "As a customer, I want to withdraw cash from an ATM, so that I do not have to wait in a queue at the bank." Before writing any code, the team writes scenarios:
+
+```
+Scenario: Account has sufficient funds
+  Given the account balance is $100
+  And the card is valid
+  When the customer requests $20
+  Then the ATM dispenses $20
+  And the account balance is $80
+  And the card is returned
+
+Scenario: Account has insufficient funds
+  Given the account balance is $10
+  When the customer requests $20
+  Then the ATM does not dispense cash
+  And the customer is shown an insufficient funds message
+  And the card is returned
+```
+
+These scenarios define the feature completely. They can be reviewed by the product team, automated as acceptance tests, and run against every deployment. When they pass, the feature is done - by definition.
+
+## AI leverage points
+
+- **Scenario generation:** given a user story, an LLM can draft an initial set of scenarios including edge cases; the team reviews and refines rather than generating from scratch
+- **Gap analysis:** CoT prompting ("what scenarios are missing from this feature?") surfaces conditions the team has not considered
+- **Step definition generation:** from approved Gherkin scenarios, an LLM can scaffold the automation code (step definitions in Cucumber, SpecFlow, etc.)
+- **Scenario review:** an agent can flag scenarios that are procedural rather than declarative, have multiple When clauses, or test internal state
+
+## Connects to
+
+- **Upstream:** `sdlc-conversational-elicitation` (BDD scenarios are the formalized output of elicitation conversations)
+- **Downstream:** `sdlc-verify` (BDD scenarios form the acceptance test layer of the verification suite)
+- **Lateral:** `sdlc-tdd` (TDD operates at the unit level below BDD's acceptance level - they are complementary, not competing), `sdlc-incremental-backlog` (each story in the backlog gains BDD scenarios during refinement)

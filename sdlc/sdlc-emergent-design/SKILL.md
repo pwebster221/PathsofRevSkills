@@ -1,0 +1,81 @@
+---
+name: sdlc-emergent-design
+description: >-
+  Use when the right architecture is more likely to emerge from working code than from upfront planning, when the system is small enough for one team to hold in their head, or when requirements are fluid enough that over-designing creates waste. Activates when someone asks how to avoid big upfront design, when to refactor versus when to plan ahead, or how to keep code structure honest. Draws on XP's simple design rules, TDD's design-through-testing philosophy, and continuous refactoring as the primary design tool.
+stage: design
+posture: emergent-design
+tier: 2
+role: skill
+license: MIT
+---
+# Skill: Emergent Design
+
+## What this enables
+
+Architecture that reflects the system's actual requirements rather than its predicted ones. Design decisions made when they are cheapest - at the moment the team has the most information, not the least. Continuous refactoring as the primary mechanism for keeping structure honest.
+
+## Fit signals
+
+- One team owns the whole system or component
+- Structural decisions are recoverable - wrong choices can be refactored
+- Requirements are expected to evolve, making upfront architecture speculative
+- The team practices TDD, which drives design naturally through testing pressure
+- Speed of learning matters more than speed of delivery
+
+## Anti-signals
+
+- Multiple teams need to align on boundaries before building begins (use `sdlc-architecture-first`)
+- Interface contracts must be published and stable before implementation (use `sdlc-schema-first`)
+- The cost of a wrong structural decision propagates across team or system boundaries
+
+## Core practice
+
+**Simple design** guided by four rules, in priority order:
+
+1. The code passes all its tests
+2. The code reveals its intention clearly
+3. There is no duplication
+4. The code uses the fewest elements necessary
+
+These rules - from Kent Beck's XP - are both a design evaluation tool and a refactoring guide. At any point, if the code satisfies rule 1 but violates rule 2, refactoring is warranted. Design is not a phase; it is an ongoing discipline of keeping the code as simple as today's understanding allows.
+
+YAGNI - "You Aren't Gonna Need It" - is the anti-speculative-design principle. Do not build for requirements that do not exist yet. The cost of adding something later is almost always lower than the cost of maintaining something that was never needed.
+
+## Key moves
+
+1. **Let tests drive structure.** In TDD, the test is written from the perspective of the caller. Code that is hard to test is code whose design is wrong. Refactor until the test becomes simple, and the design will follow. A class that requires a complex setup in a test is telling you it has too many responsibilities.
+
+2. **Refactor continuously, not periodically.** The Red-Green-Refactor cycle is the design loop: write a failing test, write the minimum code to pass it, then improve the structure without changing behavior. This keeps design improvement embedded in daily work rather than deferred to a "cleanup sprint" that never happens.
+
+3. **Name things with intent, not implementation.** A class named `UserDataProcessor` hides its purpose. `InvoiceGenerator` reveals it. When naming is hard, it is usually because the concept is not yet clear - a sign that design needs attention, not a naming convention.
+
+4. **Identify and eliminate duplication aggressively.** Duplication is the primary signal that an abstraction is missing. When the same logic appears in two places, the design is asking to have that logic named and centralized. The abstraction should be created at the second instance of duplication, not the first.
+
+5. **Use spikes to contain uncertainty.** When a design decision is genuinely unknown - a new library, an unfamiliar pattern - run a time-boxed throwaway experiment (a "spike") to generate information. Throw away the spike code. Build the real thing informed by what the spike taught.
+
+## Example
+
+A team is building a document processing service. Rather than designing an upfront architecture, they write their first test:
+
+```python
+def test_invoice_can_be_extracted_from_pdf():
+    raw = load_fixture("invoice.pdf")
+    result = extract_invoice(raw)
+    assert result.total == Decimal("142.50")
+```
+
+The function `extract_invoice` does not exist. Writing the simplest implementation to pass the test, they inline the extraction logic. Three tests later, they notice the extraction logic is duplicated across PDF and DOCX handling. The duplication is the signal: a `DocumentParser` abstraction is warranted. It is created now, when it is needed, not before.
+
+Six months later, the service handles five document types through a clean plugin architecture that no upfront design session would have anticipated, because the requirements that drove it did not exist six months earlier.
+
+## AI leverage points
+
+- **Refactoring suggestions:** paste a code block and ask the LLM "what duplication or single-responsibility violations do you see?" Use as a second perspective on code smell, not as a refactoring engine.
+- **Naming assistance:** describe what a class or function does and ask the LLM for five name candidates. The exercise often surfaces ambiguity in the design itself.
+- **Spike acceleration:** use GenAI to explore an unfamiliar library or pattern quickly during a spike, reducing the time cost of learning before the real implementation begins.
+
+## Connects to
+
+- **Upstream:** `sdlc-design` - this is one posture within the Design stage
+- **Downstream:** `sdlc-tdd` (Build posture that operationalizes this philosophy at the implementation level)
+- **Lateral:** `sdlc-architecture-first` (complementary - use Architecture- First at seams between teams, Emergent Design within a team's boundary)

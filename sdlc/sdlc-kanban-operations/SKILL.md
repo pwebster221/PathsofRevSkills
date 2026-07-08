@@ -1,0 +1,126 @@
+---
+name: sdlc-kanban-operations
+description: "Use during sustain to manage a continuous, interrupt-driven stream of operational work (incidents, requests, maintenance, backlog) of wildly varying size and urgency. Activates when someone says \"we have too much in progress\", \"operational work keeps interrupting us\", \"how do we manage this mixed queue\", or when iteration-based planning doesn't fit the work. Pull-based flow with WIP limits — stop starting, start finishing — to cut context-switching and dropped balls."
+stage: sustain
+posture: kanban-operations
+tier: 2
+role: skill
+license: MIT
+---
+# Skill: Kanban Operations
+
+## Lineage
+
+Kanban for software was introduced by David Anderson in *Kanban* (2010), adapting the Toyota Production System's pull-based flow management to knowledge work. Its application to operational work - as distinct from feature development - is described in David Anderson and Teodora Bozheva's *Fit for Purpose* (2018) and is widely practiced in DevOps and SRE contexts as a way to manage the mixed, unpredictable nature of operational work queues.
+
+The core adaptation: unlike Scrum, which assumes predictable sprint-sized chunks of work, operational teams deal with a continuous, interrupt-driven stream of work items of wildly varying size and urgency. Kanban's pull-based flow model matches this reality far better than iteration-based planning.
+
+---
+
+## Core Principle
+
+> "Stop starting. Start finishing." - David Anderson
+
+Operational teams suffer from too much work in progress. Every context switch between an open incident, a backlog item, a customer request, and a routine maintenance task carries a cognitive switching cost. WIP limits force the team to finish before starting, reducing the queue of partially-done work that creates confusion, delays, and dropped balls.
+
+---
+
+## Key Concepts
+
+| Concept | Definition |
+| --- | --- |
+| **WIP Limit** | The maximum number of work items allowed in a given stage at any time |
+| **Flow** | The smooth movement of work items from request to done without accumulation or blockage |
+| **Pull System** | Work is pulled into the next stage when capacity exists, rather than pushed in regardless of capacity |
+| **Lead Time** | The time from when a work item is requested to when it is delivered |
+| **Cycle Time** | The time from when work actually begins on an item to when it is delivered |
+| **Throughput** | The number of items completed per unit of time |
+| **Classes of Service** | Priority tiers that define how different work types flow through the system |
+
+---
+
+## Board Design for Operations Teams
+
+Operational Kanban boards require classes of service to handle the mixed nature of operational work:
+
+**Columns (example):**
+
+```
+Backlog | Ready | In Progress | Waiting/Blocked | Done
+```
+
+**Classes of Service:**
+
+| Class | Description | WIP Priority |
+| --- | --- | --- |
+| **Expedite** | Active incidents, production outages | Bypasses WIP limits; takes immediate capacity |
+| **Fixed Date** | Compliance deadlines, scheduled maintenance windows | Scheduled slot; tracked to date |
+| **Standard** | Routine operational work, backlog items | Subject to WIP limits; FIFO by default |
+| **Intangible** | Toil reduction, automation, technical debt | Processed when capacity permits; never expired |
+
+---
+
+## Execution Steps
+
+### 1. Map the Value Stream
+
+Before setting up the board, map how operational work currently flows from request to resolution:
+
+- Where does work enter the system? (Alert, ticket, Slack message, calendar, meeting)
+- What stages does it pass through?
+- Where does it get stuck, blocked, or lost?
+
+The map reveals where WIP is accumulating and where to apply limits.
+
+### 2. Establish WIP Limits
+
+Set WIP limits per stage per person (or per team):
+
+- Start conservative: `(team size * 1.5)` per active stage is a common starting point
+- Tighten over time as you observe flow data
+- WIP limits are constraints, not targets. The goal is to be below the limit.
+
+### 3. Define Work Item Types
+
+Categorize all incoming work:
+
+- **Incident** (reactive, high urgency)
+- **Maintenance** (scheduled, routine)
+- **Improvement** (proactive, capacity-dependent)
+- **Request** (from other teams, users)
+- **Toil Reduction** (automation investment)
+
+Each type should have a standard definition of "done" before it can leave the board.
+
+### 4. Manage Flow Daily
+
+Hold a brief daily flow review (10-15 minutes) focused on the board, not on status reports:
+
+- Is anything blocked? What needs to unblock it?
+- Is WIP approaching the limit anywhere?
+- Is the Expedite lane active? Who owns it?
+- Are any items aging beyond expected cycle time?
+
+The conversation is about the work, not about what individuals did yesterday.
+
+### 5. Measure and Improve
+
+Track lead time and cycle time for each class of service. Use this data to:
+
+- Identify systemic delays (long average cycle time in a specific column)
+- Forecast delivery dates based on historical throughput
+- Identify the highest-leverage improvement opportunities
+- Detect toil accumulation (rising volume of routine operational tickets)
+
+Hold a retrospective on flow metrics monthly. Make one process change per retrospective based on data.
+
+---
+
+## Failure Modes and Mitigations
+
+| Failure Mode | Mitigation |
+| --- | --- |
+| WIP limits are ignored under pressure | Make WIP limit violations visible; discuss in daily flow review; leadership must support the discipline |
+| Expedite lane becomes the default for all work | Strictly gate Expedite class to genuine production emergencies; everything else uses Standard |
+| Board becomes a dumping ground with no "done" criteria | Define explicit done criteria for each work type before items can leave the board |
+| Improvement and toil-reduction work is always squeezed out | Reserve a fixed WIP slot for Intangible class items; protect it |

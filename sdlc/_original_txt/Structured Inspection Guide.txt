@@ -1,0 +1,132 @@
+---
+name: sdlc-structured-inspection
+description: >-
+  Use during verify when criticality is high and the team needs to confirm
+  that code satisfies its specification through reasoned argument, not just
+  through passing tests. Activates when someone says "this cannot have a
+  defect class we haven't tested for", "we need to verify correctness against
+  the spec", or when working on safety-critical, regulatory, or high-reliability
+  code where the cost of an undetected defect is unacceptable. Draws on
+  Cleanroom correctness verification and Fagan inspection methods.
+license: MIT
+---
+
+# Skill: Structured Inspection
+
+## What this enables
+
+Verification that code is correct with respect to its specification through
+structured argument - not through testing alone. Tests can only confirm
+behaviour in the cases they cover. Structured inspection can reason about
+all cases, including the ones no test was written for.
+
+This skill finds the class of defects that testing cannot: logic that is
+correct in tested scenarios and incorrect in untested ones.
+
+## Fit signals
+
+- Criticality is high - an undetected defect in production is unacceptable
+- A formal or semi-formal specification exists to inspect against
+- The team has the technical depth to reason about correctness at the code level
+- Testing coverage is known to be incomplete and complete coverage is impractical
+- Regulatory or contractual requirements mandate documented correctness review
+
+## Anti-signals
+
+- No specification exists to inspect against (testing is the only option)
+- The team lacks the background for formal reasoning (use `sdlc-ci-pipeline`
+  and `sdlc-exploratory-testing` as the verification strategy instead)
+- The code is exploratory / prototype quality where correctness is not yet the goal
+
+## Core practice
+
+Structured inspection is a **team-based walkthrough of code against specification**,
+conducted with the explicit goal of finding defects through reasoning - not
+through running the code.
+
+**Fagan Inspection roles:**
+- **Moderator:** runs the session, keeps it on track, records findings. Does not
+  inspect the code simultaneously.
+- **Author:** wrote the code. Explains intent when asked; does not defend decisions.
+- **Reviewers (2-3):** inspect the code against the specification. Ask questions;
+  record defects and open questions.
+
+**Session structure:**
+1. **Overview** (15 min): author presents the code's purpose and relationship
+   to the specification. Not a walkthrough - a context-setting.
+2. **Preparation** (individual, prior to session): each reviewer reads the
+   specification and the code independently. Records initial questions and
+   candidate defects before the group session.
+3. **Inspection meeting** (60-90 min max): reviewers walk through the code
+   against the specification. The moderator records every defect found - not
+   suggestions, not style preferences, but departures from specification.
+4. **Rework:** the author corrects confirmed defects.
+5. **Follow-up:** the moderator confirms rework is complete. For high-criticality
+   code, a re-inspection of corrected sections may be required.
+
+**What inspection looks for:**
+- Logic that does not match the specified behaviour for a given input range
+- Missing cases - inputs the specification covers but the code does not handle
+- State assumptions - code that assumes a precondition the specification does
+  not guarantee
+- Interface mismatches - code that satisfies its internal logic but violates
+  the contract its callers depend on
+
+## Key moves
+
+1. **Separate defect recording from defect resolution.** The inspection session
+   records defects; it does not fix them. Discussing fixes in the session
+   destroys focus and extends sessions past productive length.
+
+2. **Inspect against the specification, not against best practice.** The question
+   is "does this code satisfy the spec?" - not "is this good code?" Style,
+   performance, and architecture comments are not inspection findings.
+
+3. **Prepare individually before the group session.** Inspection sessions without
+   prior individual preparation become walkthroughs, not inspections. Reviewers
+   who have read and reasoned about the code before the session find more defects
+   in less time.
+
+4. **Keep sessions short.** 60-90 minutes maximum. Reviewer attention degrades
+   sharply after 90 minutes. Two focused sessions find more than one exhausting one.
+
+5. **Track defect origins, not just defect counts.** For each defect found,
+   record where in the process it was introduced: specification, design, or
+   implementation. This is the data that improves the process - not pass/fail counts.
+
+## Example
+
+**IBM Cleanroom projects (Mills, Dyer, Linger):** Correctness verification was
+the mechanism by which Cleanroom teams achieved defect densities orders of magnitude
+below industry average. Code increments were not submitted for compilation until
+a correctness review confirmed the increment satisfied its specification through
+explicit argument.
+
+The finding from these projects: most defects found in structured inspection
+were introduced in the implementation phase and would not have been caught by
+any test suite because the tested scenarios happened to exercise the correct
+paths. The defective logic lived in paths that were never tested - and would
+not have been tested, because the developer who wrote the tests also held the
+incorrect mental model.
+
+## AI leverage points
+
+- **Specification gap detection:** before inspection, an agent can compare the
+  specification against the code and flag cases the specification covers but
+  the code does not visibly handle - seeding the inspection checklist
+- **Correctness argument drafting:** an agent can produce a draft correctness
+  argument for each code section, which reviewers challenge and refine rather
+  than constructing from scratch
+- **Defect log structuring:** during the session, an agent captures defect
+  records in a structured format (location, description, severity, specification
+  reference) for immediate use in rework
+
+## Connects to
+
+- **Upstream:** `sdlc-formal-specification` (inspection requires a specification
+  to inspect against), `sdlc-cleanroom` (cleanroom's correctness verification
+  is the build-phase precursor to this verify-phase inspection)
+- **Downstream:** `sdlc-ship` (inspection sign-off is a hard gate for high-criticality
+  releases)
+- **Lateral:** `sdlc-ci-pipeline` (pipeline confirms empirical test results;
+  inspection confirms logical correctness - complementary, not redundant)

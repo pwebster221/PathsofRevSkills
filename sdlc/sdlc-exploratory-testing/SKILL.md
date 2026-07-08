@@ -1,0 +1,128 @@
+---
+name: sdlc-exploratory-testing
+description: >-
+  Use during verify when scripted tests cover the known scenarios but edge cases and unexpected interactions remain a concern. Activates when someone says "we've passed all the tests but I'm not confident", "what about the things we didn't think to test for", or when a release window is approaching and a human investigator is the best tool for finding unknown unknowns. Implements session-based, adversarial human testing as a complement to automated verification.
+stage: verify
+posture: exploratory-testing
+tier: 2
+role: skill
+license: MIT
+---
+# Skill: Exploratory Testing
+
+## What this enables
+
+Discovery of defects that scripted tests cannot find by design. Scripted tests
+check what someone thought to check. Exploratory testing is the adversarial
+complement: a skilled tester with freedom to investigate finds the defects that
+live in the spaces between scenarios, in unexpected input combinations, in
+timing and state conditions that no one scripted.
+
+## Fit signals
+
+- Automated tests exist but their coverage of edge cases is uncertain
+- The software handles user input, complex state, or integrations with external
+  systems - all of which generate unexpected interaction classes
+- A release is approaching and additional confidence is needed beyond the
+  automated suite
+- The team has experienced "all tests passed, but production failed"
+- A human with domain knowledge can generate meaningful test ideas faster than
+  scripting them
+
+## Anti-signals
+
+- There are no automated tests - exploratory testing is not a substitute for
+  a test suite, it is a complement to one
+- The defect space is already formally bounded (use `sdlc-structured-inspection`)
+- The team has unlimited time and comprehensive scripted coverage
+
+## Core practice
+
+Exploratory testing is **simultaneous learning, test design, and test execution**.
+The tester does not follow a script - they form hypotheses about where the
+software might fail, design experiments to test those hypotheses, and observe
+what happens. Each observation generates new hypotheses.
+
+**Session-based structure (Whittaker):**
+
+1. **Charter:** a short mission statement for the session. Not a script - a
+   direction. "Explore the order cancellation flow with emphasis on partial
+   fulfilment states." The charter bounds the session without scripting it.
+
+2. **Session (60-90 minutes):** the tester works within the charter, taking
+   notes on what they tried, what they found, and what questions arose.
+   Nothing is too small to note - a surprising behaviour that turns out to be
+   correct is still worth recording.
+
+3. **Debrief:** the tester reviews notes, classifies findings (defect / question /
+   observation), and records what coverage the session produced. Findings
+   enter the defect tracker; questions become follow-up charters.
+
+**Heuristics that generate useful test ideas:**
+- **Boundary values:** try the edges and just beyond (0, -1, max, max+1)
+- **State transitions:** try operations in unusual sequences
+- **Empty and null:** try missing, empty, and null inputs everywhere
+- **Concurrency:** try the same operation from two sessions simultaneously
+- **Long sessions:** leave the system running and return - does state degrade?
+- **Error recovery:** trigger errors and observe whether the system recovers correctly
+
+## Key moves
+
+1. **Write a charter before every session.** "Just poke around" is not exploratory
+   testing - it is unstructured activity. A charter turns attention into coverage.
+   Keep charters narrow enough to complete in 90 minutes.
+
+2. **Take notes during the session, not after.** Memory of what was tried
+   degrades faster than it feels like it does. Notes taken during the session
+   are data; notes reconstructed afterward are approximations.
+
+3. **Distinguish defects from questions from observations.** Not everything
+   interesting is a defect. A question ("is this behaviour intentional?")
+   deserves follow-up but not a bug report. An observation ("this step takes
+   longer than expected") may or may not be a defect. Classify before reporting.
+
+4. **Use domain knowledge, not just technical knowledge.** The most useful
+   exploratory tester for a payment system is someone who understands payment
+   edge cases - partial amounts, currency conversion, concurrent transactions -
+   not just someone who knows how to click around. Match charter content to
+   tester expertise.
+
+5. **Feed findings back into the automated suite.** Every defect found
+   in exploratory testing should become a regression test if fixable. The
+   exploratory session's output is coverage that was missing; that coverage
+   belongs in the permanent suite.
+
+## Example
+
+**XP and the role of the on-site customer:** In Extreme Programming, the on-site
+customer is available to answer questions and validate the software continuously.
+In practice, their informal testing - trying the software as a real user would -
+frequently surfaces issues that automated acceptance tests missed. The customer's
+exploratory engagement with the working software is not incidental to XP; it is
+a designed feedback mechanism.
+
+The pattern generalizes: anyone who interacts with the software with genuine
+intent (not to follow a script, but to accomplish something) generates
+exploratory test coverage as a byproduct.
+
+## AI leverage points
+
+- **Charter generation:** given the features in a release, an agent can generate
+  a set of exploratory testing charters organized by risk area - giving testers
+  a starting set they can refine or replace
+- **Heuristic prompting:** during a session, an agent can suggest heuristics
+  the tester has not applied ("have you tried concurrent sessions?")
+- **Note processing:** after a session, an agent can process raw session notes
+  and classify findings into defect / question / observation categories,
+  accelerating the debrief
+
+## Connects to
+
+- **Upstream:** `sdlc-ci-pipeline` (exploratory testing complements automated
+  coverage; it does not replace it), `sdlc-bdd` (BDD scenarios define the scripted
+  space; exploratory testing investigates outside it)
+- **Downstream:** `sdlc-ship` (exploratory findings either block or inform the
+  ship decision), `sdlc-tdd` + `sdlc-bdd` (defects found return to build as new
+  tests and scenarios)
+- **Lateral:** `sdlc-structured-inspection` (inspection finds logical errors;
+  exploratory testing finds interaction and state errors - different failure modes)
