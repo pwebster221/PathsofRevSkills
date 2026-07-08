@@ -16,17 +16,24 @@ they are all facets of. A well-made Major contains its constituent decan-passion
 *aspects of one identity*, not as a list of separate voices (the mathematics: sameness
 without erasing difference — the faces stay distinct as facets while the whole is one).
 
-Three families combine the letters three ways (full verified map in `composition.md`):
+The three families are **not three independent lenses** — they are a *nested refinement* of
+the same 36 letters, from finest to coarsest (full verified map in `composition.md`):
 
-- **Modality mothers (3)** — Fool (Uranus/Cardinal), Hanged Man (Neptune/Fixed),
-  Judgement (Pluto/Mutable). Shared invariant: the *modality* — one Enneagram type from
-  each center (Heart/Head/Body), across all four cognitive functions. 12 decans each; the
-  most complex.
-- **Zodiac signs (12)** — the sign trumps. Shared invariant: the *sign* — one cognitive
-  function focused through one Enneagram center. 3 decans each.
-- **Planetary (7)** — Magician, High Priestess, Empress, Wheel, Tower, Sun, World. Shared
-  invariant: the *planet's rulership* — the pairing (or single set, for the luminaries) of
-  the decans in the signs it rules. 6 or 3 decans.
+1. **Zodiac signs (12)** — the *court layer corrected*. Shared invariant: the **sign** — one
+   cognitive function focused through one Enneagram center (its three decans). 3 decans each;
+   sign-element and suit-function always agree, so each is internally single-element.
+2. **Planetary (7)** — Magician, High Priestess, Empress, Wheel, Tower, Sun, World. Shared
+   invariant: the **planet's triplicity-ascent (Room) rulership**. Each card gathers every
+   decan that planet rules by triplicity-ascent, *spread across the signs of the element(s) it
+   lords* — NOT the contiguous decans of the signs it owns by domicile. A planet ruling two
+   signs is a triplicity lord in two elements, so it binds **two functions** across six
+   scattered decans (e.g., the Tower = Mars = his fire decans 2W·7W·9W **and** his water decans
+   3C·5C·10C); the luminaries lord one element (3 decans).
+3. **Modality mothers (3)** — Fool (Uranus/Cardinal), Hanged Man (Neptune/Fixed), Judgement
+   (Pluto/Mutable). Shared invariant: the **modality** — the *elemental split of the planetary
+   layer*, resorted by the modality of each element-portion's ruling sign. This yields, per
+   mother, one Enneagram type from every center (Heart/Head/Body) across all four functions —
+   12 decans; the most complex.
 
 ## The scoring posture — resonance, not declination
 
