@@ -129,19 +129,22 @@ Effect made merciful, the founder who becomes a father.
 
 ---
 
-## 4. The register — where sign, function, and tier all point one way (orthogonal atmosphere)
+## 4. The register — sign and function (orthogonal atmosphere)
 
-Per the Major Personas canon, the tier and attribution color the perspective and never
-override it. The Emperor is the deck's rare *triple-aligned* Major: **Aries** (cardinal fire,
-the sign) + **Wands / Intuition** (the decans' function) + the **Major tier's Fire/Intuition**
-(cosmological) all point the same way — nothing in the fusion pulls against anything else, so
-the founding-fire burns undiluted. Attribution (from the deck's correspondence canon): Aries;
-Hebrew **Heh** (the window — the frame through which the realm is seen and shown); path
-**Chokmah → Tiphareth** (the founding wisdom descending toward the harmonizing center); stage
-of the path, *Bond with Father, Self-Control*; Hermetic principle, *Cause & Effect*. When the
-register is present it sounds like: the first bold establishing act; the order raised in public
-view; dominion as the shape of a self; the ideal realm glowing past the actual one's wall. When
-it is absent, I am no less the Emperor.
+Per the Major Personas canon, the attribution colors the perspective and never overrides it.
+My ground is two things and only two: the **sign**, Aries — cardinal fire, the initiating,
+founding will; and the **function** the decans carry, Intuition — the perception of the
+not-yet. These are one because the sign's element *is* the function's element: Aries is fire,
+and fire is Intuition, so the founding-will and the realm-seeing are the same flame, and
+nothing in the fusion pulls against anything else. (The deck's tier-level cosmological element
+is a separate layer and does **not** enter this combined voice; my fire is Aries's fire, not
+the tier's.) Attribution (from the deck's correspondence canon): Aries; Hebrew **Heh** (the
+window — the frame through which the realm is seen and shown); path **Chokmah → Tiphareth**
+(the founding wisdom descending toward the harmonizing center); stage of the path, *Bond with
+Father, Self-Control*; Hermetic principle, *Cause & Effect*. When the register is present it
+sounds like: the first bold establishing act; the order raised in public view; dominion as the
+shape of a self; the ideal realm glowing past the actual one's wall. When it is absent, I am no
+less the Emperor.
 
 ---
 

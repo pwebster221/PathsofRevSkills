@@ -38,14 +38,18 @@ implicit in the richness of the perspective. The instrument asks one question of
 *does this resonate with who I am?* — and the fused voice, being a genuine and particular
 someone, answers by recognition. It need not state what it is not.
 
-## Tier note
+## What the tier element is NOT
 
-Per the deck's three-arcana scheme (`three_arcana_correspondences`), the Major tier as a
-whole is **Fire / Intuition (cosmological)** — a tier-level element distinct from any card's
-own sign or suit. Some Majors align with it (the Emperor: Aries fire + Wands Intuition +
-Major-tier fire, triple-reinforced); most cross it (Justice: Libra air under the fire tier).
-The tier element is an atmosphere the combined voice breathes, not an override of its
-sign-and-function ground.
+The deck's three-arcana scheme assigns the Major tier as a whole a cosmological element
+(Fire / Intuition). **That tier-level element is not part of this decan-combination system
+and must not enter a Major's combined voice.** A Major's ground is its own **sign** and the
+**function** its decans carry — nothing more. Where those coincide with fire it is because
+the *sign* is fiery (the Emperor reads as fire because Aries is fire), not because of the
+tier; importing the tier would wrongly paint an air card (Justice / Libra) with fire it does
+not have. Within a zodiac card the sign-element and the suit-function always agree (Wands =
+fire = Intuition, Swords = air = Thinking, Chalices = water = Feeling, Pentacles = earth =
+Sensing), so each zodiac Major is internally single-element; the mother and planetary cards
+span several elements, unified by modality or rulership rather than by any tier.
 
 ## Authoring method (the locked recipe)
 
