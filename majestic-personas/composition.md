@@ -91,6 +91,44 @@ Two structural corollaries of the shift:
   texture": every court is two-thirds pure element + one-third the tail of the
   preceding element.
 
+## The remapping law (personal function→element splits)
+
+The canonical split (Wands/Fire = Intuition, Chalices/Water = Feeling, Swords/Air =
+Thinking, Pentacles/Earth = Sensing) is one of exactly **8 valid assignments out of the
+24 possible** — verified by full enumeration (2026-07-08). A practitioner may re-split
+the four functions across the four elements to match how they carry their own stack,
+and the generator will still produce all 16 types, **if and only if** the split obeys
+one rule:
+
+> **The two perceiving functions (N, S) must occupy one silent diagonal — {Fire, Earth}
+> or {Air, Water}, the element pairs with no relation — and the two judging functions
+> (T, F) the other.**
+
+Why: MBTI dominant–auxiliary is always one perceiver + one judger — never N–S, never
+T–F. The element grid's two relations (opposing: Fire↔Water, Air↔Earth; complementary:
+Fire↔Air, Water↔Earth) exist to host dom–aux pairings, so the two same-kind pairs,
+which can never meet as dom–aux, must be exiled to the two relationless diagonals. Then
+every opposing and complementary edge automatically carries a legal perceiver+judger
+pairing.
+
+- **Count:** 2 (which diagonal takes perception) × 2 (N/S order) × 2 (T/F order) = 8.
+  These are exactly the symmetries of the elemental square — the canonical assignment
+  plus its rotations and reflections.
+- **What breaks otherwise:** in each of the other 16 splits, all 8 opposing-rank courts
+  (every Page and Knight) generate perceiver–perceiver or judger–judger stacks — types
+  that do not exist. Only the Queens and Kings survive, yielding 8 types; the two
+  dom–aux families exiled to the diagonals become unreachable. A deck with no youth
+  ranks.
+- **Worked examples:** N=Air with T=Fire is valid *only* with the forced completion
+  S=Water, F=Earth (each function's partner takes its diagonal) — all 16 generate, with
+  the court families reshuffled. But S=Fire, N=Water, F=Air, T=Earth puts {N,S} on an
+  opposing pair and {T,F} on the other: only the NT/SF Queens and Kings survive, and
+  the entire NF and ST families are unreachable.
+- **Invariance:** under any of the 8 valid splits, the 20 persona skills in this
+  directory **do not change** — the corpus is invariant. Only the card→type routing
+  table moves: a remapping re-labels which card summons which type-skill; the
+  perspectives themselves stand.
+
 ## Data caveats
 
 1. **PAT-590 (repo bug, open):** the court nodes' `DOMINANT_ASTROLOGICAL_ASSOCIATION` /
