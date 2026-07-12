@@ -103,17 +103,27 @@ sign cannot oppose). The myth is only as true as the math beneath it.
 3. Compute current transits with `get_current_transit` / `get_transit_full` for the reading
    moment.
 4. **Score the chart esoterically.** Two Mars engines, two jobs:
-   - `POST /score/esoteric` (MCP: `MarsAPI score_esoteric`) — per-placement: each
-     placement's exact longitude lights up its six nested cards (decan pip ⊂ court
-     stretch ⊂ Page/season + Ace/element + sign-Major + planet-Major), dignity-weighted.
-     This is the **selector for the sections**: it decides which cards in a placement's
-     field carry the story.
+   - `POST /score/esoteric` (MCP: `MarsAPI score_esoteric`) — the **layered engine**
+     (live 2026-07-12; replaced the flat per-placement response): every placement charges
+     the 36-decan substrate (four-fold dignity + aspect transfer), and every card is an
+     aggregation window over it. Returns `archetypal_report` (7 planetary courts; each
+     court's sum reveals its dark planet-Major at Da'ath), `planetary_report` (10 planets
+     on their sefira rows, each with a dignity/aspects modulation breakdown), `grid`
+     (the 77 cells, base-count and charged phases), and `arcana_rankings` (ranked
+     Major/Majestic/Minor). This is the **selector for the sections**: a placement's six
+     nested cards (decan pip ⊂ court stretch ⊂ Page/season + Ace/element + sign-Major +
+     planet-Major) are structural — derive them from the longitude via the composition
+     map — and their computed weights are read off `grid.cells` and `arcana_rankings`.
+     Prefer sending the Kairos blob (`{"deep_analysis": ...}` — the full ~83-point
+     census: lots, midpoints, stars, and antiscia all light decans); the legacy
+     `{"placements": [...]}` payload still works but sees only 12 points.
    - `POST /score/resonance` (MCP: `MarsAPI score_resonance`) — the v2 "78 Natal
      Resonance": a chart-global ranked 78. This is the **selector for the Prologue and the
      Legend synthesis**: the chart's dominant cards overall.
-   Kairos may also embed the per-placement scoring at `deep_analysis.esoteric` in
-   `/natal/full`; if present, use it — if absent, call Mars directly. Never rank the cards
-   by feel.
+   Kairos embeds the same two-report response at `deep_analysis.esoteric` in
+   `/natal/full`; if present, use it — but via the Kairos MCP a full natal can arrive
+   cap-trimmed (60KB ceiling), so when the scoring matters, call Mars directly. Never
+   rank the cards by feel.
 5. **Verify every aspect you intend to narrate against the computed aspect list.** If it
    isn't in the data, it isn't in the myth. Sanity-check geometry: same-sign bodies conjoin,
    they do not oppose; check orbs and whether aspects are applying or separating (an
@@ -163,10 +173,11 @@ Reading the field:
 - **A placement is therefore the intersection of two readings** — the planet's field laid
   against the sign's field. **An aspect is the intersection of four.**
 - **The esoteric scoring (Stage 0.4) is the selection.** The six nested cards and their
-  dignity weights are the computed answer to "which cards in this field carry the
+  charged weights are the computed answer to "which cards in this field carry the
   placement's story" — surface the two or three heaviest, and note their *seats*: where on
-  the planet's Tree the weight fell. Dignity sets the weight (domicile +1 … fall −1); a
-  planet in fall is not "weak," it is working the Reaper's station.
+  the planet's Tree the weight fell. Dignity sets the weight (four whole-sign frames
+  summed, domicile-loud to fall-silent, plus whatever the placement's aspects carry in);
+  a planet in fall is not "weak," it is working the Reaper's station.
 - The **Spirit/Shadow polarity** (PAT-450's six stations: four elements, Spirit-as-generative,
   Shadow-as-Reaper) colors how a placement expresses — as generative outpouring or as the
   necessary ending that gives the beginning meaning.
