@@ -82,7 +82,9 @@ Craft rules for the layers:
   A card may appear in both registers in the same section — that doubling is a feature.
 - **Load only the surfaced cards.** Read the SKILL.md of the two or three cards the
   intersection selects for a section — never the whole deck. The field informs; the
-  scoring selects; the instruments render.
+  scoring selects; the instruments render. If an authored persona or perspective file is
+  unavailable after searching the skill library, disclose the missing layer in a brief
+  method note and keep the card reading structural; never imitate or invent its voice.
 - **Stations never name other cards** (the no-cross-attribution canon). Cross-card
   weighing happens in the Oracle's narration, above the instruments.
 
@@ -95,7 +97,9 @@ Everything begins with verified data. The single worst failure mode of this form
 asserted "Saturn in Aries opposite Mars in Aries," an impossibility: two bodies in the same
 sign cannot oppose). The myth is only as true as the math beneath it.
 
-1. Get birth data: name, date, time, location. If time is missing, say plainly that angles,
+1. Get birth data: name, date, time, location. If a numeric date is ambiguous, resolve it
+   from explicit locale context or state the convention used in the reading's method note;
+   never silently choose day/month order. If time is missing, say plainly that angles,
    houses, and the Moon's degree are unreliable, and scope the reading accordingly.
 2. Compute the natal chart with the Kairos MCP — use `get_natal_full` (or `get_natal` plus
    tiers). Pull at minimum: planets, angles, aspects, dignities, **fixed stars**
@@ -127,7 +131,10 @@ sign cannot oppose). The myth is only as true as the math beneath it.
 5. **Verify every aspect you intend to narrate against the computed aspect list.** If it
    isn't in the data, it isn't in the myth. Sanity-check geometry: same-sign bodies conjoin,
    they do not oppose; check orbs and whether aspects are applying or separating (an
-   applying aspect is a story still tightening — use that).
+   applying aspect is a story still tightening — use that). When a transit overlay is
+   cap-trimmed before its transit contacts appear, fetch current transit longitudes for the
+   observer location and calculate angular separations deterministically; never infer the
+   missing contacts from sign alone. See `references/transit-overlay-fallback.md`.
 6. Fixed stars are part of the reading, not an appendix. A natal point conjunct Regulus,
    Algol, or Spica is a mythic datum of the first order — these are the oldest layer of the
    sky's story and they add depth nothing else provides.

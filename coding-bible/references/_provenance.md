@@ -1,12 +1,23 @@
 # Provenance — coding-bible mirror
 
-## Source of truth
+## Sources & propagation (3-tier)
 
-The canonical coding bible lives at:
+The coding bible exists in three locations with one directional propagation flow.
 
-```
-/Users/dubtownraces/Development/ProgrammingStandards/ProgrammingStandards-Rules/UPDATED-Code-Brand-Truth/coding-bible.md
-```
+| Tier | Location | Role |
+|---|---|---|
+| **Authoring (upstream)** | `/Users/dubtownraces/Development/ProgrammingStandards/ProgrammingStandards-Rules/UPDATED-Code-Brand-Truth/coding-bible.md` | Where Paul writes the canon. v1 (2026-05-16). Owner: paul.webster@dubtowndesigns.com. |
+| **Runtime SOT (THIS TREE)** | `/root/.hermes/skills/dubtown/coding-bible/` | **Primary SOT for the Hermes agent runtime.** The canon read when the skill auto-loads. Subagents spawned via `delegate_task` pull from here via `skill_view('coding-bible')`. This is the file the agent actually reads. |
+| **Redistribution mirror** | `/root/.hermes/plugins/dubtown-standards/skills/coding-bible/` | Claude Code plugin artifact for sharing the canon out to other Claude Code environments. **Derived from the runtime SOT — do not edit directly.** |
+
+**Propagation flow:** authoring → runtime SOT → redistribution mirror.
+
+When the upstream canon changes:
+
+1. Re-mirror into the runtime SOT (this tree) first — the Hermes agent reads from here, including any spawned subagents.
+2. Then propagate to the plugin tree via `/canon-mirror-sync --apply` from a Claude Code session, or a plain `cp -r`. The plugin tree is for redistribution to other Claude Code environments, not for the Hermes agent.
+
+**Never edit the redistribution mirror directly** — drift from the runtime SOT silently breaks subagent canon access without surfacing anywhere visible.
 
 Version mirrored: **v1 (2026-05-16)**, built to **PoR Brand System v1**.
 Owner: paul.webster@dubtowndesigns.com
