@@ -117,14 +117,29 @@ Drawn from `references/coding-rules.md` and `references/gotchas-load-bearing.md`
 
 ### MCP & service shape
 
+- **`por-mcp` monorepo is the SoT for standalone MCP servers** ✱
+  (github.com/pwebster221/por-mcp, private; decided 2026-07-15). One truth, many
+  expressions: each LXC clones the full repo and runs only its own server via
+  `deploy.sh <name>` (git pull → dep sync → `systemctl restart` → health check).
+  `mcp-registry.json` at repo root is the machine-readable fleet manifest — agents
+  read it instead of crawling LXCs. In scope: standalone wrappers only (agi-skills,
+  kairos, solar, mani-mcp-proxy, reporeason). MCPs mounted inside a parent FastAPI
+  app (Sacred Journey, Mars, Grimoire, Repository-KG, VenusFace) stay with their
+  service — registry entries with `"managed": "in-service"`.
+- **Migration never changes a server's runtime.** The fleet is native systemd + venv;
+  no forced containerization. `deploy.sh` dispatches on the registry's `"runtime"`
+  field (`systemd` default; `compose` only where a server already runs under Docker,
+  i.e. reporeason). Tunnels are untouched — they point at localhost ports and don't
+  care where the code is canonical.
 - **FastMCP behind tunnel requires a custom `main()`** running uvicorn with
   `proxy_headers=True` and `forwarded_allow_ips="*"`, plus Starlette `CORSMiddleware`
   mounted *before* the MCP app. `mcp.run()` is insufficient.
 - **Mounted MCP → `/mcp/mcp`** (Sacred Journey, Solar, Mars, Repository).
   **Standalone wrappers → `/mcp`** (Kairos MCP, reporeason). Do not assume — check.
-- **MCP service auth plan: decided, not deployed** (PAT-509-adjacent). `kaimcp`,
-  `scoring`, `raw-charts`, `reporeason` are publicly reachable until rollout. Apply
-  Authentik or equivalent gate to any new public MCP surface.
+- **MCP auth: fleet-deployed** — Authentik OIDC via fastmcp OIDCProxy on the MCP
+  surfaces (wired 2026-07-11); mutation tools additionally gate on `MCP_WRITE_TOKEN`.
+  Raw REST APIs underneath remain public — treat any new public surface as needing
+  its own Authentik gate.
 
 ### Data & client drift
 

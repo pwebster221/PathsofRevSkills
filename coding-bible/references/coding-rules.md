@@ -154,15 +154,16 @@ Standalone wrappers (Kairos, reporeason) → `/mcp`.
 
 ---
 
-### ☿ ✱ MCP service auth plan (decided, not deployed)
+### ☿ ✦ MCP service auth (deployed) + por-mcp monorepo SoT
 
-**PURPOSE** &nbsp; Lock down public MCP surfaces.
-**WHERE APPLIED** &nbsp; `kaimcp`, `scoring`, `raw-charts`, `reporeason`.
+**PURPOSE** &nbsp; Lock down public MCP surfaces; one canonical home for standalone MCP server code.
+**WHERE APPLIED** &nbsp; All first-party MCP endpoints (`kaimcp`, `scoring`, `solar-mcp`, `neo4j`, `grimoire`, `reporeason`, `agi-skills`, `mani-mcp`).
 
-▲ ✱ **CONVENTIONS & GOTCHAS**
-Decision made 2026-04-22; rollout pending. Until then, *those endpoints are publicly reachable.*
+▲ ✦ **CONVENTIONS & GOTCHAS**
+Auth: Authentik OIDC via fastmcp OIDCProxy, fleet-wired 2026-07-11; mutation tools additionally gate on `MCP_WRITE_TOKEN`. Raw REST APIs underneath remain public — any new public surface needs its own Authentik gate.
+SoT: **por-mcp monorepo** (github.com/pwebster221/por-mcp, private; decided 2026-07-15) holds standalone MCP servers (agi-skills, kairos, solar, mani-mcp-proxy, reporeason). Each LXC clones the full repo, runs only its own server via `deploy.sh <name>`; `mcp-registry.json` is the fleet manifest. In-service MCPs (Sacred Journey, Mars, Grimoire, Repository-KG, VenusFace) stay with their parent app — registry-only. *Migration never changes a server's runtime* (systemd+venv default; compose only where already used).
 
-**LINKS** &nbsp; `[[project_mcp_auth_plan]]`.
+**LINKS** &nbsp; `[[project_mcp_oauth_oidcproxy]]`, `[[project_paths_mcp_monorepo]]`.
 
 ---
 
