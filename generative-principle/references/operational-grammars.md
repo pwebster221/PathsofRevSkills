@@ -1,13 +1,13 @@
 # Operational Grammars
 
-Two grammars generate the 1–21 sequence. Hypothesis (PAT-473): the multiplicative grammar
+Two grammars generate the 1–21 sequence. Hypothesis (ESO-22): the multiplicative grammar
 handles **composites**, the sequential grammar handles **primes**, and together they may form a
-complete operational system. Both rest on the trinity (PAT-214): every operation has an
+complete operational system. Both rest on the trinity (ESO-14): every operation has an
 **Operator**, a **Substance**, and an emergent **Result** that is *abstracted out*, not added.
 
 ---
 
-## 1. Multiplicative — Operator × Substance → Result (PAT-214)
+## 1. Multiplicative — Operator × Substance → Result (ESO-14)
 
 The minimum viable structure for *anything happening*: someone doing something to something,
 with an outcome. Three irreducible terms.
@@ -69,7 +69,7 @@ Modalities locate where friction lives in a stuck operation:
 
 ---
 
-## 2. Sequential — "moving through" (PAT-473)
+## 2. Sequential — "moving through" (ESO-22)
 
 Surfaced during the Mars rubric-deepening exercise; observed across cards 6, 11, 13, 14, 15, 21.
 This grammar recovers **primes**, which the multiplicative grammar cannot factor.
@@ -100,12 +100,12 @@ emergent term not reducible to a product.
 
 Read as an **additive trinity**: A + B = pair, +1 = abstracted Third.
 
-### Open questions (PAT-473)
+### Open questions (ESO-22)
 
 - Are the two grammars genuinely independent, or is one a special case of the other?
 - Why is the +1 absent for 1-along-12 → 13? Is the Third *embedded in* the active 1 (1 = Operator-Third already)?
 - Does *every* prime have some "A active + B passive → prime" sequential step?
-- Connection to PAT-213's "2 as the unique Generate-prime": 2 = 1 + 0 + 1? (Generate moves are
+- Connection to ESO-8's "2 as the unique Generate-prime": 2 = 1 + 0 + 1? (Generate moves are
   Odd→Even; may explain why 2 is the Generate-prime exception while all other primes arise via
   Produce / sequential moves.)
 
