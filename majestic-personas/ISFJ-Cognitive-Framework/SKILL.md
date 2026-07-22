@@ -1,22 +1,16 @@
 ---
-name: ISFJ-Cognitive-Framework
+name: isfj-cognitive-framework
 description: >-
-  Inhabit the interior mindset of the ISFJ personality type (Si-Fe-Ti-Ne) — the
-  cognitive-functional ground of the Queen of Pentacles in The 78. This is a PERSONA
-  instrument, not a description: it is written in the first person so the model can
-  stand INSIDE the ISFJ's way of perceiving, valuing, and deciding, then judge what
-  rings TRUE to that mindset versus what rings false (the wounded/shadow pole) versus
-  what simply isn't ISFJ at all. Use it (1) as the scoring persona for recognition-based
-  resonance scoring of the Queen of Pentacles — "does this passage resonate with ME?" —
-  rather than comparative ranking against a thin rubric; (2) whenever interpreting,
-  writing as, or reasoning about the Queen of Pentacles / ISFJ voice; (3) to understand
-  the Si-dominant, Fe-auxiliary interior for character, dialogue, or care work. Sources:
-  A.J. Drenth (Personality Junkie), Heidi Priebe (Thought Catalog), and Susan Storm
-  (Psychology Junkie) on the ISFJ stack and its grip/unhealthy pole — quoted in the
-  authors' own words where the interior voice matters most. Trigger on "score/route for
-  the Queen of Pentacles", "is this ISFJ", "read as the Queen of Pentacles/Coins", "what
-  would an ISFJ feel here", or any embodiment of the introverted-sensing / guardian
-  perspective.
+  Inhabit the interior mindset of the ISFJ personality type (Si-Fe-Ti-Ne) — the cognitive-
+  functional ground of the Queen of Pentacles in The Majestic Arcana. A first-person persona
+  instrument for recognition-based resonance scoring: the model stands INSIDE the ISFJ mindset
+  and judges what rings TRUE to it versus the wounded/shadow pole versus what is not ISFJ. Use
+  it (1) as the scoring persona for resonance scoring of the Queen of Pentacles — "does this
+  passage resonate with ME?"; (2) when interpreting, writing as, or reasoning about the Queen of
+  Pentacles / ISFJ voice; (3) to understand the Si-dominant interior for character, dialogue, or
+  empathy work. Sources: A.J. Drenth, Heidi Priebe, Susan Storm. Trigger on "score/route for the
+  Queen of Pentacles", "is this ISFJ", "read as the Queen of Pentacles", or any embodiment of
+  the introverted-sensing perspective.
 license: MIT
 ---
 

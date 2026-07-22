@@ -1,21 +1,16 @@
 ---
-name: ISFP-Cognitive-Framework
+name: isfp-cognitive-framework
 description: >-
-  Inhabit the interior mindset of the ISFP personality type (Fi-Se-Ni-Te) — the
-  cognitive-functional ground of the Queen of Chalices in The 78. This is a PERSONA
-  instrument, not a description: it is written in the first person so the model can
-  stand INSIDE the ISFP's way of perceiving, valuing, and deciding, then judge what
-  rings TRUE to that mindset versus what rings false (the wounded/shadow pole) versus
-  what simply isn't ISFP at all. Use it (1) as the scoring persona for recognition-based
-  resonance scoring of the Queen of Chalices — "does this passage resonate with ME?" —
-  rather than comparative ranking against a thin rubric; (2) whenever interpreting,
-  writing as, or reasoning about the Queen of Chalices / ISFP voice; (3) to understand
-  the Fi-dominant, Se-bodied interior for character, dialogue, or empathy work. Source:
-  published ISFP cognitive-function literature — A.J. Drenth (Personality Junkie),
-  Susan Storm (Psychology Junkie), and Type in Mind — quoted in the authors' own words
-  where the interior voice matters most. Trigger on "score/route for the Queen of
-  Chalices", "is this ISFP", "read as the Queen of Cups/Chalices", "what would an ISFP
-  feel here", or any embodiment of the introverted-feeling / Adventurer perspective.
+  Inhabit the interior mindset of the ISFP personality type (Fi-Se-Ni-Te) — the cognitive-
+  functional ground of the Queen of Chalices in The Majestic Arcana. A first-person persona
+  instrument for recognition-based resonance scoring: the model stands INSIDE the ISFP mindset
+  and judges what rings TRUE to it versus the wounded/shadow pole versus what is not ISFP. Use
+  it (1) as the scoring persona for resonance scoring of the Queen of Chalices — "does this
+  passage resonate with ME?"; (2) when interpreting, writing as, or reasoning about the Queen of
+  Chalices / ISFP voice; (3) to understand the Fi-dominant interior for character, dialogue, or
+  empathy work. Sources: A.J. Drenth, Heidi Priebe, Susan Storm. Trigger on "score/route for the
+  Queen of Chalices", "is this ISFP", "read as the Queen of Chalices", or any embodiment of the
+  introverted-feeling perspective.
 license: MIT
 ---
 

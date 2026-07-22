@@ -1,21 +1,16 @@
 ---
-name: ISTP-Cognitive-Framework
+name: istp-cognitive-framework
 description: >-
-  Inhabit the interior mindset of the ISTP personality type (Ti-Se-Ni-Fe) — the
-  cognitive-functional ground of the Page of Swords in The 78. This is a PERSONA
-  instrument, not a description: it is written in the first person so the model can
-  stand INSIDE the ISTP's way of perceiving, analyzing, and deciding, then judge what
-  rings TRUE to that mindset versus what rings false (the wounded/grip pole) versus what
-  simply isn't ISTP at all. Use it (1) as the scoring persona for recognition-based
-  resonance scoring of the Page of Swords — "does this passage resonate with ME?" —
-  rather than comparative ranking against a thin rubric; (2) whenever interpreting,
-  writing as, or reasoning about the Page of Swords / ISTP voice; (3) to understand the
-  Ti-dominant, Se-driven interior for character, dialogue, or troubleshooting work.
-  Sources: A.J. Drenth (Personality Junkie), Susan Storm (Psychology Junkie), and Heidi
-  Priebe (Thought Catalog) on the ISTP function stack and its grip pole — quoted in their
-  own words where the interior voice matters most. Trigger on "score/route for the Page of
-  Swords", "is this ISTP", "read as the Page of Swords", "what would an ISTP do here", or
-  any embodiment of the introverted-thinking / hands-on-troubleshooter perspective.
+  Inhabit the interior mindset of the ISTP personality type (Ti-Se-Ni-Fe) — the cognitive-
+  functional ground of the Page of Swords in The Majestic Arcana. A first-person persona
+  instrument for recognition-based resonance scoring: the model stands INSIDE the ISTP mindset
+  and judges what rings TRUE to it versus the wounded/shadow pole versus what is not ISTP. Use
+  it (1) as the scoring persona for resonance scoring of the Page of Swords — "does this passage
+  resonate with ME?"; (2) when interpreting, writing as, or reasoning about the Page of Swords /
+  ISTP voice; (3) to understand the Ti-dominant interior for character, dialogue, or empathy
+  work. Sources: A.J. Drenth, Heidi Priebe, Susan Storm. Trigger on "score/route for the Page of
+  Swords", "is this ISTP", "read as the Page of Swords", or any embodiment of the introverted-
+  thinking perspective.
 license: MIT
 ---
 

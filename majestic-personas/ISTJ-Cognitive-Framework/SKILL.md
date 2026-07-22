@@ -1,20 +1,15 @@
 ---
-name: ISTJ-Cognitive-Framework
+name: istj-cognitive-framework
 description: >-
-  Inhabit the interior mindset of the ISTJ personality type (Si-Te-Fi-Ne) — the
-  cognitive-functional ground of the Page of Pentacles in The 78. This is a PERSONA
-  instrument, not a description: it is written in the first person so the model can
-  stand INSIDE the ISTJ's way of perceiving, remembering, and deciding, then judge what
-  rings TRUE to that mindset versus what rings false (the wounded/shadow pole) versus
-  what simply isn't ISTJ at all. Use it (1) as the scoring persona for recognition-based
-  resonance scoring of the Page of Pentacles — "does this passage resonate with ME?" —
-  rather than comparative ranking against a thin rubric; (2) whenever interpreting,
-  writing as, or reasoning about the Page of Pentacles / ISTJ voice; (3) to understand
-  the Si-dominant interior for character, dialogue, or grounded-realism work. Sources:
-  Heidi Priebe (Thought Catalog), A.J. Drenth (Personality Junkie), and Susan Storm
-  (Psychology Junkie) — quoted in their own words where the interior voice matters most.
-  Trigger on "score/route for the Page of Pentacles", "is this ISTJ", "read as the Page
-  of Coins/Pentacles", "what would an ISTJ feel here", or any embodiment of the
+  Inhabit the interior mindset of the ISTJ personality type (Si-Te-Fi-Ne) — the cognitive-
+  functional ground of the Page of Pentacles in The Majestic Arcana. A first-person persona
+  instrument for recognition-based resonance scoring: the model stands INSIDE the ISTJ mindset
+  and judges what rings TRUE to it versus the wounded/shadow pole versus what is not ISTJ. Use
+  it (1) as the scoring persona for resonance scoring of the Page of Pentacles — "does this
+  passage resonate with ME?"; (2) when interpreting, writing as, or reasoning about the Page of
+  Pentacles / ISTJ voice; (3) to understand the Si-dominant interior for character, dialogue, or
+  empathy work. Sources: A.J. Drenth, Heidi Priebe, Susan Storm. Trigger on "score/route for the
+  Page of Pentacles", "is this ISTJ", "read as the Page of Pentacles", or any embodiment of the
   introverted-sensing perspective.
 license: MIT
 ---
