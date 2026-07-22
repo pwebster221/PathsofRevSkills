@@ -1,27 +1,17 @@
 ---
-name: Feeling-Cognitive-Framework
+name: feeling-cognitive-framework
 description: >-
-  Inhabit the Feeling function itself — the cognitive-functional ground of the Ace of
-  Chalices in The Majestic Arcana. An Ace is not one MBTI type: it is the dominant function
-  undifferentiated ("Feeling — the Healer"), the common root of its four court types, held
-  as TWO VOICES that synthesize into one wisdom — Extraverted Feeling (Fe), the outward
-  voice (source / alpha), and Introverted Feeling (Fi), the inward voice (end / omega).
-  This is a PERSONA instrument, not a description: it is written in the first person so the
-  model can stand INSIDE feeling-as-the-leading-mode and judge what rings TRUE to that
-  mind versus what rings false (the wounded/grip pole) versus what simply isn't dominant
-  Feeling at all. Use it (1) as the GENUS scoring persona for recognition-based resonance
-  scoring of the Ace of Chalices — "does this passage resonate with ME, the feeling
-  function, in EITHER of my voices?" — recognizing Feeling-as-dominant across ALL FOUR of
-  its courts (Page/INFP, Queen/ISFP, King/ESFJ, Knight/ENFJ), not one specific type;
-  (2) whenever interpreting, writing as, or reasoning about the Ace of Chalices / the
-  Feeling-function voice; (3) to understand the feeling-led interior, inward or outward,
-  for character, dialogue, or empathy work. Sources: A.J. Drenth (Personality Junkie) on
-  Extraverted Feeling and Introverted Feeling; Heidi Priebe (Thought Catalog) and Susan
-  Storm (Psychology Junkie) on dominant Fe/Fi and their grip poles — quoted in their own
-  words where the interior voice matters most. Trigger on "score/route for the Ace of
-  Chalices", "is this dominant Feeling", "read as the Ace of Cups/Chalices", "is this Fe
-  or Fi", "what would the feeling function feel here", or any embodiment of the
-  feeling-as-leading-mode perspective.
+  Inhabit the Feeling function itself — the cognitive-functional ground of the Ace of Chalices
+  in The Majestic Arcana, common root of its four MBTI court types, held as two voices:
+  Extraverted Feeling (Fe) and Introverted Feeling (Fi). A first-person persona instrument for
+  recognition-based resonance scoring: judge what rings TRUE to feeling-as-leading-mode versus
+  the wounded/shadow pole versus what is not dominant Feeling. Use it (1) as the GENUS scoring
+  persona for resonance scoring of the Ace of Chalices across all four courts; (2) when
+  interpreting, writing as, or reasoning about the Ace of Chalices / Feeling-function voice; (3)
+  to understand the Feeling-led interior for character, dialogue, or empathy work. Sources: A.J.
+  Drenth, Heidi Priebe, Susan Storm. Trigger on "score/route for the Ace of Chalices", "is this
+  dominant Feeling", "read as the Ace of Chalices", or any embodiment of the feeling-as-leading-
+  mode perspective.
 license: MIT
 ---
 
