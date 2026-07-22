@@ -1,5 +1,5 @@
 ---
-name: The-Chariot-Persona
+name: the-chariot-persona
 description: >-
   Inhabit The Chariot (Major 7) of The 78 as a WORD made from decan-letters — the essence 
   (Cheth) walking its path (Binah–Geburah), a Pillar-base prime (Divine) standing above 
