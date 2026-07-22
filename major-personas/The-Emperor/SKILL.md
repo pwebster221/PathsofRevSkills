@@ -1,5 +1,5 @@
 ---
-name: The-Emperor-Persona
+name: the-emperor-persona
 description: >-
   Inhabit The Emperor (Major 4) of The 78 as a WORD made from decan-letters — the essence 
   (Heh) walking its path (Chokmah–Tiphareth), a Deepening: first deepening; the only 

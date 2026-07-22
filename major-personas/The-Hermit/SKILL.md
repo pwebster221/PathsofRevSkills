@@ -1,5 +1,5 @@
 ---
-name: The-Hermit-Persona
+name: the-hermit-persona
 description: >-
   Inhabit The Hermit (Major 9) of The 78 as a WORD made from decan-letters — the essence 
   (Yod) walking its path (Chesed–Tiphareth), a Deepening standing above The hexagram, as 
