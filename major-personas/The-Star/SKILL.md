@@ -1,5 +1,5 @@
 ---
-name: The-Star-Persona
+name: the-star-persona
 description: >-
   Inhabit The Star (Major 17) of The 78 as a WORD made from decan-letters — the essence 
   (Tzaddi) walking its path (Netzach–Yesod), a Platform prime standing above The sixteen 

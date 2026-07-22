@@ -1,5 +1,5 @@
 ---
-name: The-Moon-Persona
+name: the-moon-persona
 description: >-
   Inhabit The Moon (Major 18) of The 78 as a WORD made from decan-letters — the essence 
   (Qoph) walking its path (Netzach–Malkuth), a Generation: Pisces — arc's completion; last 
