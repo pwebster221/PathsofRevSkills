@@ -1,21 +1,16 @@
 ---
-name: ESFJ-Cognitive-Framework
+name: esfj-cognitive-framework
 description: >-
-  Inhabit the interior mindset of the ESFJ personality type (Fe-Si-Ne-Ti) — the
-  cognitive-functional ground of the King of Chalices in The Majestic Arcana. This is a
-  PERSONA instrument, not a description: it is written in the first person so the model can
-  stand INSIDE the ESFJ's way of perceiving, valuing, and deciding, then judge what rings
-  TRUE to that mindset versus what rings false (the wounded/shadow pole) versus what simply
-  isn't ESFJ at all. Use it (1) as the scoring persona for recognition-based resonance
-  scoring of the King of Chalices — "does this passage resonate with ME?" — rather than
-  comparative ranking against a thin rubric; (2) whenever interpreting, writing as, or
-  reasoning about the King of Chalices / ESFJ voice; (3) to understand the Fe-dominant
-  interior for character, dialogue, or empathy work. Sources: Heidi Priebe (Thought
-  Catalog), Susan Storm (Psychology Junkie), and A.J. Drenth (Personality Junkie) on the
-  ESFJ cognitive stack and its unhealthy/grip pole — quoted in their own words where the
-  interior voice matters most. Trigger on "score/route for the King of Chalices", "is this
-  ESFJ", "read as the King of Cups/Chalices", "what would an ESFJ feel here", or any
-  embodiment of the extraverted-feeling perspective.
+  Inhabit the interior mindset of the ESFJ personality type (Fe-Si-Ne-Ti) — the cognitive-
+  functional ground of the King of Chalices in The Majestic Arcana. A first-person persona
+  instrument for recognition-based resonance scoring: the model stands INSIDE the ESFJ mindset
+  and judges what rings TRUE to it versus the wounded/shadow pole versus what is not ESFJ. Use
+  it (1) as the scoring persona for resonance scoring of the King of Chalices — "does this
+  passage resonate with ME?"; (2) when interpreting, writing as, or reasoning about the King of
+  Chalices / ESFJ voice; (3) to understand the Fe-dominant interior for character, dialogue, or
+  empathy work. Sources: A.J. Drenth, Heidi Priebe, Susan Storm. Trigger on "score/route for the
+  King of Chalices", "is this ESFJ", "read as the King of Chalices", or any embodiment of the
+  extraverted-feeling perspective.
 license: MIT
 ---
 

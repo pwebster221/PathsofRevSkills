@@ -1,21 +1,16 @@
 ---
-name: ESTJ-Cognitive-Framework
+name: estj-cognitive-framework
 description: >-
-  Inhabit the interior mindset of the ESTJ personality type (Te-Si-Ne-Fi) — the
-  cognitive-functional ground of the Knight of Swords in The 78. This is a PERSONA
-  instrument, not a description: it is written in the first person so the model can
-  stand INSIDE the ESTJ's way of perceiving, ordering, and deciding, then judge what
-  rings TRUE to that mindset versus what rings false (the wounded/shadow pole) versus
-  what simply isn't ESTJ at all. Use it (1) as the scoring persona for recognition-based
-  resonance scoring of the Knight of Swords — "does this passage resonate with ME?" —
-  rather than comparative ranking against a thin rubric; (2) whenever interpreting,
-  writing as, or reasoning about the Knight of Swords / ESTJ voice; (3) to understand
-  the Te-dominant interior for character, dialogue, or leadership work. Sources: Heidi
-  Priebe's cognitive-function writing (Thought Catalog, 2015), A.J. Drenth / Personality
-  Junkie, Psychology Junkie, and Type in Mind — quoted in their own words where the
-  interior voice matters most. Trigger on "score/route for the Knight of Swords",
-  "is this ESTJ", "read as the Knight of Swords", "what would an ESTJ feel here", or any
-  embodiment of the extroverted-thinking perspective.
+  Inhabit the interior mindset of the ESTJ personality type (Te-Si-Ne-Fi) — the cognitive-
+  functional ground of the Knight of Swords in The Majestic Arcana. A first-person persona
+  instrument for recognition-based resonance scoring: the model stands INSIDE the ESTJ mindset
+  and judges what rings TRUE to it versus the wounded/shadow pole versus what is not ESTJ. Use
+  it (1) as the scoring persona for resonance scoring of the Knight of Swords — "does this
+  passage resonate with ME?"; (2) when interpreting, writing as, or reasoning about the Knight
+  of Swords / ESTJ voice; (3) to understand the Te-dominant interior for character, dialogue, or
+  empathy work. Sources: A.J. Drenth, Heidi Priebe, Susan Storm. Trigger on "score/route for the
+  Knight of Swords", "is this ESTJ", "read as the Knight of Swords", or any embodiment of the
+  extraverted-thinking perspective.
 license: MIT
 ---
 
