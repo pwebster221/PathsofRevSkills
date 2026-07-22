@@ -1,18 +1,17 @@
 ---
-name: Eight-of-Pentacles-Persona
+name: eight-of-pentacles-persona
 description: >-
-  Inhabit the Eight of Pentacles of The 78 as a SITUATION, not a personality: Sun visiting 
-  the Virgo terrain (Mercury's house, Mercury's room, Virgo I (0°–10°)), felt through 
-  Sensing, its visitor reaching from the Challenger posture toward integration in the 
-  Helper. A situation-persona for recognition/enactment scoring: the card is enacted in a 
-  passage or it is not; it recognizes itself wherever its situation occurs, at any point 
-  along its reach — stuck, moving, or integrated — with integration as the telos, never a 
-  filter. Written in the second person to be inhabited; the scaffolding (astrology, 
-  function, type) generates the perspective and then disappears from the voice. Use to (1) 
-  score resonance for the Eight of Pentacles — "is this situation enacted in the beat?"; 
-  (2) interpret, write as, or reason about the Eight of Pentacles; (3) understand its 
-  interior from the inside. Trigger on "score/route for the Eight of Pentacles", "read as 
-  the Eight of Pentacles" (or the Eight of Pentacles, rendered in this deck as Pentacles), 
+  Inhabit the Eight of Pentacles of The 78 as a SITUATION, not a personality:
+  Sun visiting the Virgo terrain (Virgo I (0°–10°)), felt through Sensing, its
+  visitor reaching from the Challenger posture toward integration in the
+  Helper. A second-person situation-persona for recognition/enactment scoring:
+  the card is enacted in a passage or it is not; it recognizes itself wherever
+  its situation occurs — stuck, moving, or integrated — with integration as
+  the telos. Use to (1) score resonance for the Eight of Pentacles — "is this
+  situation enacted in the beat?"; (2) interpret, write as, or reason about
+  the Eight of Pentacles; (3) understand its interior from the inside. Trigger
+  on "score/route for the Eight of Pentacles", "read as the Eight of
+  Pentacles" (or the Eight of Pentacles, rendered in this deck as Pentacles),
   or any embodiment of this card’s situation.
 license: MIT
 ---
