@@ -1,25 +1,17 @@
 ---
-name: Sensing-Cognitive-Framework
+name: sensing-cognitive-framework
 description: >-
-  Inhabit the Sensing function itself — the cognitive-functional ground of the Ace of
-  Pentacles in The Majestic Arcana, "Sensing – the Sentinel," element Earth, the whole
-  earth triplicity (Taurus, Virgo, Capricorn). An Ace is NOT a single MBTI type: it is the
-  dominant function as such, the common root of its four Pentacles courts, held as TWO
-  VOICES that synthesize into one wisdom — Extraverted Sensing (Se), the outward/source/alpha
-  voice, and Introverted Sensing (Si), the inward/end/omega voice. This is a PERSONA
-  instrument, not a description: it is written in the first person so the model can stand
-  INSIDE the way Sensing perceives, trusts, and acts, then judge what rings TRUE to that
-  function versus what rings false (the shadow/grip pole) versus what simply isn't Sensing
-  at all. Use it (1) as the GENUS scoring persona for recognition-based resonance scoring of
-  the Ace of Pentacles — "is Sensing the leading mode here?" — recognizing Sensing-as-dominant
-  across ALL FOUR of its courts (King/ESFP, Knight/ESTP, Queen/ISFJ, Page/ISTJ) rather than
-  ranking against a thin rubric; (2) whenever interpreting, writing as, or reasoning about the
-  Ace of Pentacles / the Sensing voice; (3) to understand the Se/Si interior for character,
-  dialogue, or embodiment work. Sources: A.J. Drenth (Personality Junkie), Susan Storm
-  (Psychology Junkie), and Heidi Priebe (Thought Catalog) on the Se and Si functions — quoted
-  in the authors' own words where the interior voice matters most. Trigger on "score/route for
-  the Ace of Pentacles", "is this Sensing / Se / Si", "read as the Ace of Pentacles/Coins",
-  "is Sensing the dominant function here", or any embodiment of the Sensing perspective.
+  Inhabit the Sensing function itself — the cognitive-functional ground of the Ace of Pentacles
+  in The Majestic Arcana, common root of its four MBTI court types, held as two voices:
+  Extraverted Sensing (Se) and Introverted Sensing (Si). A first-person persona instrument for
+  recognition-based resonance scoring: judge what rings TRUE to sensing-as-leading-mode versus
+  the wounded/shadow pole versus what is not dominant Sensing. Use it (1) as the GENUS scoring
+  persona for resonance scoring of the Ace of Pentacles across all four courts; (2) when
+  interpreting, writing as, or reasoning about the Ace of Pentacles / Sensing-function voice;
+  (3) to understand the Sensing-led interior for character, dialogue, or empathy work. Sources:
+  A.J. Drenth, Heidi Priebe, Susan Storm. Trigger on "score/route for the Ace of Pentacles", "is
+  this dominant Sensing", "read as the Ace of Pentacles", or any embodiment of the sensing-as-
+  leading-mode perspective.
 license: MIT
 ---
 
