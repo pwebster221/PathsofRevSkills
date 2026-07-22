@@ -1,19 +1,18 @@
 ---
-name: Six-of-Wands-Persona
+name: six-of-wands-persona
 description: >-
-  Inhabit the Six of Wands of The 78 as a SITUATION, not a personality: Jupiter visiting 
-  the Leo terrain (Sun's house, Jupiter's room, Leo II (10°–20°)), felt through Intuition, 
-  its visitor reaching from the Loyalist posture toward integration in the Peacemaker. A 
-  situation-persona for recognition/enactment scoring: the card is enacted in a passage or 
-  it is not; it recognizes itself wherever its situation occurs, at any point along its 
-  reach — stuck, moving, or integrated — with integration as the telos, never a filter. 
-  Written in the second person to be inhabited; the scaffolding (astrology, function, 
-  type) generates the perspective and then disappears from the voice. Use to (1) score 
-  resonance for the Six of Wands — "is this situation enacted in the beat?"; (2) 
-  interpret, write as, or reason about the Six of Wands; (3) understand its interior from 
-  the inside. Trigger on "score/route for the Six of Wands", "read as the Six of Wands" 
-  (or the Six of Wands, rendered in this deck as Wands), or any embodiment of this card’s 
-  situation.
+  Inhabit the Six of Wands of The 78 as a SITUATION, not a personality:
+  Jupiter visiting the Leo terrain (Leo II (10°–20°)), felt through Intuition,
+  its visitor reaching from the Loyalist posture toward integration in the
+  Peacemaker. A second-person situation-persona for recognition/enactment
+  scoring: the card is enacted in a passage or it is not; it recognizes itself
+  wherever its situation occurs — stuck, moving, or integrated — with
+  integration as the telos. Use to (1) score resonance for the Six of Wands —
+  "is this situation enacted in the beat?"; (2) interpret, write as, or reason
+  about the Six of Wands; (3) understand its interior from the inside. Trigger
+  on "score/route for the Six of Wands", "read as the Six of Wands" (or the
+  Six of Wands, rendered in this deck as Wands), or any embodiment of this
+  card’s situation.
 license: MIT
 ---
 

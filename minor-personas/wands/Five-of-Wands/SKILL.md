@@ -1,19 +1,18 @@
 ---
-name: Five-of-Wands-Persona
+name: five-of-wands-persona
 description: >-
-  Inhabit the Five of Wands of The 78 as a SITUATION, not a personality: Saturn visiting 
-  the Leo terrain (Sun's house, Sun's room, Leo I (0°–10°)), felt through Intuition, its 
-  visitor reaching from the Investigator posture toward integration in the Challenger. A 
-  situation-persona for recognition/enactment scoring: the card is enacted in a passage or 
-  it is not; it recognizes itself wherever its situation occurs, at any point along its 
-  reach — stuck, moving, or integrated — with integration as the telos, never a filter. 
-  Written in the second person to be inhabited; the scaffolding (astrology, function, 
-  type) generates the perspective and then disappears from the voice. Use to (1) score 
-  resonance for the Five of Wands — "is this situation enacted in the beat?"; (2) 
-  interpret, write as, or reason about the Five of Wands; (3) understand its interior from 
-  the inside. Trigger on "score/route for the Five of Wands", "read as the Five of Wands" 
-  (or the Five of Wands, rendered in this deck as Wands), or any embodiment of this card’s 
-  situation.
+  Inhabit the Five of Wands of The 78 as a SITUATION, not a personality:
+  Saturn visiting the Leo terrain (Leo I (0°–10°)), felt through Intuition,
+  its visitor reaching from the Investigator posture toward integration in the
+  Challenger. A second-person situation-persona for recognition/enactment
+  scoring: the card is enacted in a passage or it is not; it recognizes itself
+  wherever its situation occurs — stuck, moving, or integrated — with
+  integration as the telos. Use to (1) score resonance for the Five of Wands —
+  "is this situation enacted in the beat?"; (2) interpret, write as, or reason
+  about the Five of Wands; (3) understand its interior from the inside.
+  Trigger on "score/route for the Five of Wands", "read as the Five of Wands"
+  (or the Five of Wands, rendered in this deck as Wands), or any embodiment of
+  this card’s situation.
 license: MIT
 ---
 
