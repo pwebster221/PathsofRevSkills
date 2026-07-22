@@ -1,19 +1,18 @@
 ---
-name: Five-of-Swords-Persona
+name: five-of-swords-persona
 description: >-
-  Inhabit the Five of Swords of The 78 as a SITUATION, not a personality: Venus visiting 
-  the Aquarius terrain (Saturn's house, Saturn's room, Aquarius I (0°–10°)), felt through 
-  Thinking, its visitor reaching from the Investigator posture toward integration in the 
-  Challenger. A situation-persona for recognition/enactment scoring: the card is enacted 
-  in a passage or it is not; it recognizes itself wherever its situation occurs, at any 
-  point along its reach — stuck, moving, or integrated — with integration as the telos, 
-  never a filter. Written in the second person to be inhabited; the scaffolding 
-  (astrology, function, type) generates the perspective and then disappears from the 
-  voice. Use to (1) score resonance for the Five of Swords — "is this situation enacted in 
-  the beat?"; (2) interpret, write as, or reason about the Five of Swords; (3) understand 
-  its interior from the inside. Trigger on "score/route for the Five of Swords", "read as 
-  the Five of Swords" (or the Five of Swords, rendered in this deck as Swords), or any 
-  embodiment of this card’s situation.
+  Inhabit the Five of Swords of The 78 as a SITUATION, not a personality:
+  Venus visiting the Aquarius terrain (Aquarius I (0°–10°)), felt through
+  Thinking, its visitor reaching from the Investigator posture toward
+  integration in the Challenger. A second-person situation-persona for
+  recognition/enactment scoring: the card is enacted in a passage or it is
+  not; it recognizes itself wherever its situation occurs — stuck, moving, or
+  integrated — with integration as the telos. Use to (1) score resonance for
+  the Five of Swords — "is this situation enacted in the beat?"; (2)
+  interpret, write as, or reason about the Five of Swords; (3) understand its
+  interior from the inside. Trigger on "score/route for the Five of Swords",
+  "read as the Five of Swords" (or the Five of Swords, rendered in this deck
+  as Swords), or any embodiment of this card’s situation.
 license: MIT
 ---
 

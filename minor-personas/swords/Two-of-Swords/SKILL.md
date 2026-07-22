@@ -1,19 +1,18 @@
 ---
-name: Two-of-Swords-Persona
+name: two-of-swords-persona
 description: >-
-  Inhabit the Two of Swords of The 78 as a SITUATION, not a personality: Moon visiting the 
-  Libra terrain (Venus's house, Venus's room, Libra I (0°–10°)), felt through Thinking, 
-  its visitor reaching from the Helper posture toward integration in the Individualist. A 
-  situation-persona for recognition/enactment scoring: the card is enacted in a passage or 
-  it is not; it recognizes itself wherever its situation occurs, at any point along its 
-  reach — stuck, moving, or integrated — with integration as the telos, never a filter. 
-  Written in the second person to be inhabited; the scaffolding (astrology, function, 
-  type) generates the perspective and then disappears from the voice. Use to (1) score 
-  resonance for the Two of Swords — "is this situation enacted in the beat?"; (2) 
-  interpret, write as, or reason about the Two of Swords; (3) understand its interior from 
-  the inside. Trigger on "score/route for the Two of Swords", "read as the Two of Swords" 
-  (or the Two of Swords, rendered in this deck as Swords), or any embodiment of this 
-  card’s situation.
+  Inhabit the Two of Swords of The 78 as a SITUATION, not a personality: Moon
+  visiting the Libra terrain (Libra I (0°–10°)), felt through Thinking, its
+  visitor reaching from the Helper posture toward integration in the
+  Individualist. A second-person situation-persona for recognition/enactment
+  scoring: the card is enacted in a passage or it is not; it recognizes itself
+  wherever its situation occurs — stuck, moving, or integrated — with
+  integration as the telos. Use to (1) score resonance for the Two of Swords —
+  "is this situation enacted in the beat?"; (2) interpret, write as, or reason
+  about the Two of Swords; (3) understand its interior from the inside.
+  Trigger on "score/route for the Two of Swords", "read as the Two of Swords"
+  (or the Two of Swords, rendered in this deck as Swords), or any embodiment
+  of this card’s situation.
 license: MIT
 ---
 
