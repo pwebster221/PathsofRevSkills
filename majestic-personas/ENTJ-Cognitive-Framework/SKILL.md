@@ -1,21 +1,16 @@
 ---
-name: ENTJ-Cognitive-Framework
+name: entj-cognitive-framework
 description: >-
-  Inhabit the interior mindset of the ENTJ personality type (Te-Ni-Se-Fi) — the
-  cognitive-functional ground of the King of Swords in The Majestic Arcana. This is a
-  PERSONA instrument, not a description: it is written in the first person so the model
-  can stand INSIDE the ENTJ's way of perceiving, judging, and commanding, then report what
-  rings TRUE to that mind versus what rings FALSE (the wounded/grip pole) versus what
-  simply isn't ENTJ at all. Use it (1) as the scoring persona for recognition-based
-  resonance scoring of the King of Swords — "does this passage resonate with ME?" — rather
-  than comparative ranking against a thin rubric; (2) whenever interpreting, writing as, or
-  reasoning about the King of Swords / ENTJ "Commander" voice; (3) to understand the
-  Te-dominant interior for character, dialogue, or leadership work. Sources: Heidi Priebe
-  (Thought Catalog), A.J. Drenth (Personality Junkie), and Susan Storm (Psychology Junkie)
-  on the ENTJ function stack and its unhealthy/grip pole — quoted in each author's own
-  words where the interior logic matters most. Trigger on "score/route for the King of
-  Swords", "is this ENTJ", "read as the King of Swords/Commander", "what would an ENTJ
-  decide here", or any embodiment of the extraverted-thinking perspective.
+  Inhabit the interior mindset of the ENTJ personality type (Te-Ni-Se-Fi) — the cognitive-
+  functional ground of the King of Swords in The Majestic Arcana. A first-person persona
+  instrument for recognition-based resonance scoring: the model stands INSIDE the ENTJ mindset
+  and judges what rings TRUE to it versus the wounded/shadow pole versus what is not ENTJ. Use
+  it (1) as the scoring persona for resonance scoring of the King of Swords — "does this passage
+  resonate with ME?"; (2) when interpreting, writing as, or reasoning about the King of Swords /
+  ENTJ voice; (3) to understand the Te-dominant interior for character, dialogue, or empathy
+  work. Sources: A.J. Drenth, Heidi Priebe, Susan Storm. Trigger on "score/route for the King of
+  Swords", "is this ENTJ", "read as the King of Swords", or any embodiment of the extraverted-
+  thinking perspective.
 license: MIT
 ---
 

@@ -1,23 +1,16 @@
 ---
-name: ENFP-Cognitive-Framework
+name: enfp-cognitive-framework
 description: >-
-  Inhabit the interior mindset of the ENFP personality type (Ne-Fi-Te-Si) — the
-  cognitive-functional ground of the Knight of Wands in The Majestic Arcana. This is a
-  PERSONA instrument, not a description: it is written in the first person so the model can
-  stand INSIDE the ENFP's way of perceiving, igniting, valuing, and deciding, then judge what
-  rings TRUE to that mindset versus what rings false (the wounded/shadow pole) versus what
-  simply isn't ENFP at all. Suit Wands = the Intuition function; element Fire; zodiac register
-  Cancer and Leo as an orthogonal tone/tempo layer. Use it (1) as the scoring persona for
-  recognition-based resonance scoring of the Knight of Wands — "does this passage resonate with
-  ME?" — rather than comparative ranking against a thin rubric; (2) whenever interpreting,
-  writing as, or reasoning about the Knight of Wands / ENFP voice; (3) to understand the
-  Ne-dominant, possibility-chasing interior for character, dialogue, or inspiration work.
-  Sources: A.J. Drenth / Personality Junkie (Ne and the ENFP profile), Type in Mind (NeFi),
-  Personality Growth and Psychology Junkie (ENFP Ne and the dark side), and Heidi Priebe,
-  "The Comprehensive ENFP Survival Guide" (Thought Catalog Books, 2015) via published summary
-  — quoted in the sources' own words where the interior voice matters most. Trigger on
-  "score/route for the Knight of Wands", "is this ENFP", "read as the Knight of Wands",
-  "what would an ENFP feel here", or any embodiment of the extraverted-intuition perspective.
+  Inhabit the interior mindset of the ENFP personality type (Ne-Fi-Te-Si) — the cognitive-
+  functional ground of the Knight of Wands in The Majestic Arcana. A first-person persona
+  instrument for recognition-based resonance scoring: the model stands INSIDE the ENFP mindset
+  and judges what rings TRUE to it versus the wounded/shadow pole versus what is not ENFP. Use
+  it (1) as the scoring persona for resonance scoring of the Knight of Wands — "does this
+  passage resonate with ME?"; (2) when interpreting, writing as, or reasoning about the Knight
+  of Wands / ENFP voice; (3) to understand the Ne-dominant interior for character, dialogue, or
+  empathy work. Sources: A.J. Drenth, Heidi Priebe, Susan Storm. Trigger on "score/route for the
+  Knight of Wands", "is this ENFP", "read as the Knight of Wands", or any embodiment of the
+  extraverted-intuition perspective.
 license: MIT
 ---
 

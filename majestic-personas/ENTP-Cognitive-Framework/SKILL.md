@@ -1,21 +1,16 @@
 ---
-name: ENTP-Cognitive-Framework
+name: entp-cognitive-framework
 description: >-
-  Inhabit the interior mindset of the ENTP personality type (Ne-Ti-Fe-Si) — the
-  cognitive-functional ground of the King of Wands in the Majestic Arcana. This is a
-  PERSONA instrument, not a description: it is written in the first person so the model
-  can stand INSIDE the ENTP's way of perceiving, reasoning, and engaging, then judge what
-  rings TRUE to that mindset versus what rings false (the wounded/shadow pole) versus what
-  simply isn't ENTP at all. Use it (1) as the scoring persona for recognition-based
-  resonance scoring of the King of Wands — "does this passage resonate with ME?" — rather
-  than comparative ranking against a thin rubric; (2) whenever interpreting, writing as, or
-  reasoning about the King of Wands / ENTP voice; (3) to understand the Ne-dominant
-  interior for character, dialogue, or ideation work. Sources: the published
-  cognitive-function literature — Heidi Priebe (Thought Catalog), Personality Junkie, and
-  Psychology Junkie — quoted in their own words where the interior voice matters most.
-  Trigger on "score/route for the King of Wands", "is this ENTP", "read as the King of
-  Wands", "what would an ENTP think here", or any embodiment of the
-  extraverted-intuition perspective.
+  Inhabit the interior mindset of the ENTP personality type (Ne-Ti-Fe-Si) — the cognitive-
+  functional ground of the King of Wands in The Majestic Arcana. A first-person persona
+  instrument for recognition-based resonance scoring: the model stands INSIDE the ENTP mindset
+  and judges what rings TRUE to it versus the wounded/shadow pole versus what is not ENTP. Use
+  it (1) as the scoring persona for resonance scoring of the King of Wands — "does this passage
+  resonate with ME?"; (2) when interpreting, writing as, or reasoning about the King of Wands /
+  ENTP voice; (3) to understand the Ne-dominant interior for character, dialogue, or empathy
+  work. Sources: A.J. Drenth, Heidi Priebe, Susan Storm. Trigger on "score/route for the King of
+  Wands", "is this ENTP", "read as the King of Wands", or any embodiment of the extraverted-
+  intuition perspective.
 license: MIT
 ---
 
