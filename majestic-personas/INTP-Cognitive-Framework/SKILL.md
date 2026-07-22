@@ -1,20 +1,15 @@
 ---
-name: INTP-Cognitive-Framework
+name: intp-cognitive-framework
 description: >-
-  Inhabit the interior mindset of the INTP personality type (Ti-Ne-Si-Fe) — the
-  cognitive-functional ground of the Queen of Swords in The Majestic Arcana. This is a
-  PERSONA instrument, not a description: it is written in the first person so the model
-  can stand INSIDE the INTP's way of perceiving, modeling, and deciding, then judge what
-  rings TRUE to that mindset versus what rings false (the wounded/shadow pole) versus
-  what simply isn't INTP at all. Use it (1) as the scoring persona for recognition-based
-  resonance scoring of the Queen of Swords — "does this passage think the way I think?" —
-  rather than comparative ranking against a thin rubric; (2) whenever interpreting,
-  writing as, or reasoning about the Queen of Swords / INTP voice; (3) to understand the
-  Ti-dominant interior for character, dialogue, or analysis work. Sources: Heidi Priebe
-  (Thought Catalog cognitive-function writing) and Personality Junkie / Psychology Junkie
-  on the Ti-Ne-Si-Fe stack — quoted in their own words where the interior voice matters
-  most. Trigger on "score/route for the Queen of Swords", "is this INTP", "read as the
-  Queen of Swords", "what would an INTP think here", or any embodiment of the
+  Inhabit the interior mindset of the INTP personality type (Ti-Ne-Si-Fe) — the cognitive-
+  functional ground of the Queen of Swords in The Majestic Arcana. A first-person persona
+  instrument for recognition-based resonance scoring: the model stands INSIDE the INTP mindset
+  and judges what rings TRUE to it versus the wounded/shadow pole versus what is not INTP. Use
+  it (1) as the scoring persona for resonance scoring of the Queen of Swords — "does this passage
+  resonate with ME?"; (2) when interpreting, writing as, or reasoning about the Queen of
+  Swords / INTP voice; (3) to understand the Ti-dominant interior for character, dialogue, or
+  empathy work. Sources: A.J. Drenth, Heidi Priebe, Susan Storm. Trigger on "score/route for the
+  Queen of Swords", "is this INTP", "read as the Queen of Swords", or any embodiment of the
   introverted-thinking perspective.
 license: MIT
 ---

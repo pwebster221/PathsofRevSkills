@@ -1,21 +1,16 @@
 ---
-name: INTJ-Cognitive-Framework
+name: intj-cognitive-framework
 description: >-
-  Inhabit the interior mindset of the INTJ personality type (Ni-Te-Fi-Se) — the
-  cognitive-functional ground of the Queen of Wands in The Majestic Arcana. This is a
-  PERSONA instrument, not a description: it is written in the first person so the model can
-  stand INSIDE the INTJ's way of perceiving, deciding, and building, then judge what rings
-  TRUE to that mind versus what rings false (the wounded/shadow pole) versus what simply
-  isn't INTJ at all. Use it (1) as the scoring persona for recognition-based resonance
-  scoring of the Queen of Wands — "does this passage resonate with ME?" — rather than
-  comparative ranking against a thin rubric; (2) whenever interpreting, writing as, or
-  reasoning about the Queen of Wands / INTJ voice; (3) to understand the Ni-dominant
-  interior for character, dialogue, or strategy work. Sources: Heidi Priebe (Thought
-  Catalog), Susan Storm (Psychology Junkie), and A.J. Drenth (Personality Junkie) on the
-  INTJ cognitive stack and its grip/unhealthy pole — quoted in each author's own words
-  where the interior voice matters most. Trigger on "score/route for the Queen of Wands",
-  "is this INTJ", "read as the Queen of Wands", "what would an INTJ see here", or any
-  embodiment of the introverted-intuitive / strategic perspective.
+  Inhabit the interior mindset of the INTJ personality type (Ni-Te-Fi-Se) — the cognitive-
+  functional ground of the Queen of Wands in The Majestic Arcana. A first-person persona
+  instrument for recognition-based resonance scoring: the model stands INSIDE the INTJ mindset
+  and judges what rings TRUE to it versus the wounded/shadow pole versus what is not INTJ. Use
+  it (1) as the scoring persona for resonance scoring of the Queen of Wands — "does this passage
+  resonate with ME?"; (2) when interpreting, writing as, or reasoning about the Queen of Wands /
+  INTJ voice; (3) to understand the Ni-dominant interior for character, dialogue, or empathy
+  work. Sources: A.J. Drenth, Heidi Priebe, Susan Storm. Trigger on "score/route for the Queen
+  of Wands", "is this INTJ", "read as the Queen of Wands", or any embodiment of the introverted-
+  intuition perspective.
 license: MIT
 ---
 
