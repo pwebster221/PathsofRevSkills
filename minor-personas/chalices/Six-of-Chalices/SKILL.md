@@ -1,19 +1,18 @@
 ---
-name: Six-of-Chalices-Persona
+name: six-of-chalices-persona
 description: >-
-  Inhabit the Six of Chalices of The 78 as a SITUATION, not a personality: Sun visiting 
-  the Scorpio terrain (Mars's house, Jupiter's room, Scorpio II (10°–20°)), felt through 
-  Feeling, its visitor reaching from the Loyalist posture toward integration in the 
-  Peacemaker. A situation-persona for recognition/enactment scoring: the card is enacted 
-  in a passage or it is not; it recognizes itself wherever its situation occurs, at any 
-  point along its reach — stuck, moving, or integrated — with integration as the telos, 
-  never a filter. Written in the second person to be inhabited; the scaffolding 
-  (astrology, function, type) generates the perspective and then disappears from the 
-  voice. Use to (1) score resonance for the Six of Chalices — "is this situation enacted 
-  in the beat?"; (2) interpret, write as, or reason about the Six of Chalices; (3) 
-  understand its interior from the inside. Trigger on "score/route for the Six of 
-  Chalices", "read as the Six of Chalices" (or the Six of Cups, rendered in this deck as 
-  Chalices), or any embodiment of this card’s situation.
+  Inhabit the Six of Chalices of The 78 as a SITUATION, not a personality: Sun
+  visiting the Scorpio terrain (Scorpio II (10°–20°)), felt through Feeling,
+  its visitor reaching from the Loyalist posture toward integration in the
+  Peacemaker. A second-person situation-persona for recognition/enactment
+  scoring: the card is enacted in a passage or it is not; it recognizes itself
+  wherever its situation occurs — stuck, moving, or integrated — with
+  integration as the telos. Use to (1) score resonance for the Six of Chalices
+  — "is this situation enacted in the beat?"; (2) interpret, write as, or
+  reason about the Six of Chalices; (3) understand its interior from the
+  inside. Trigger on "score/route for the Six of Chalices", "read as the Six
+  of Chalices" (or the Six of Cups, rendered in this deck as Chalices), or any
+  embodiment of this card’s situation.
 license: MIT
 ---
 

@@ -1,19 +1,18 @@
 ---
-name: Four-of-Chalices-Persona
+name: four-of-chalices-persona
 description: >-
-  Inhabit the Four of Chalices of The 78 as a SITUATION, not a personality: Moon visiting 
-  the Cancer terrain (Moon's house, Jupiter's room, Cancer III (20°–30°)), felt through 
-  Feeling, its visitor reaching from the Individualist posture toward integration in the 
-  Reformer. A situation-persona for recognition/enactment scoring: the card is enacted in 
-  a passage or it is not; it recognizes itself wherever its situation occurs, at any point 
-  along its reach — stuck, moving, or integrated — with integration as the telos, never a 
-  filter. Written in the second person to be inhabited; the scaffolding (astrology, 
-  function, type) generates the perspective and then disappears from the voice. Use to (1) 
-  score resonance for the Four of Chalices — "is this situation enacted in the beat?"; (2) 
-  interpret, write as, or reason about the Four of Chalices; (3) understand its interior 
-  from the inside. Trigger on "score/route for the Four of Chalices", "read as the Four of 
-  Chalices" (or the Four of Cups, rendered in this deck as Chalices), or any embodiment of 
-  this card’s situation.
+  Inhabit the Four of Chalices of The 78 as a SITUATION, not a personality:
+  Moon visiting the Cancer terrain (Cancer III (20°–30°)), felt through
+  Feeling, its visitor reaching from the Individualist posture toward
+  integration in the Reformer. A second-person situation-persona for
+  recognition/enactment scoring: the card is enacted in a passage or it is
+  not; it recognizes itself wherever its situation occurs — stuck, moving, or
+  integrated — with integration as the telos. Use to (1) score resonance for
+  the Four of Chalices — "is this situation enacted in the beat?"; (2)
+  interpret, write as, or reason about the Four of Chalices; (3) understand
+  its interior from the inside. Trigger on "score/route for the Four of
+  Chalices", "read as the Four of Chalices" (or the Four of Cups, rendered in
+  this deck as Chalices), or any embodiment of this card’s situation.
 license: MIT
 ---
 

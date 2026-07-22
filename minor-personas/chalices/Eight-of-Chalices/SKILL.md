@@ -1,19 +1,18 @@
 ---
-name: Eight-of-Chalices-Persona
+name: eight-of-chalices-persona
 description: >-
-  Inhabit the Eight of Chalices of The 78 as a SITUATION, not a personality: Saturn 
-  visiting the Pisces terrain (Jupiter's house, Jupiter's room, Pisces I (0°–10°)), felt 
-  through Feeling, its visitor reaching from the Challenger posture toward integration in 
-  the Helper. A situation-persona for recognition/enactment scoring: the card is enacted 
-  in a passage or it is not; it recognizes itself wherever its situation occurs, at any 
-  point along its reach — stuck, moving, or integrated — with integration as the telos, 
-  never a filter. Written in the second person to be inhabited; the scaffolding 
-  (astrology, function, type) generates the perspective and then disappears from the 
-  voice. Use to (1) score resonance for the Eight of Chalices — "is this situation enacted 
-  in the beat?"; (2) interpret, write as, or reason about the Eight of Chalices; (3) 
-  understand its interior from the inside. Trigger on "score/route for the Eight of 
-  Chalices", "read as the Eight of Chalices" (or the Eight of Cups, rendered in this deck 
-  as Chalices), or any embodiment of this card’s situation.
+  Inhabit the Eight of Chalices of The 78 as a SITUATION, not a personality:
+  Saturn visiting the Pisces terrain (Pisces I (0°–10°)), felt through
+  Feeling, its visitor reaching from the Challenger posture toward integration
+  in the Helper. A second-person situation-persona for recognition/enactment
+  scoring: the card is enacted in a passage or it is not; it recognizes itself
+  wherever its situation occurs — stuck, moving, or integrated — with
+  integration as the telos. Use to (1) score resonance for the Eight of
+  Chalices — "is this situation enacted in the beat?"; (2) interpret, write
+  as, or reason about the Eight of Chalices; (3) understand its interior from
+  the inside. Trigger on "score/route for the Eight of Chalices", "read as the
+  Eight of Chalices" (or the Eight of Cups, rendered in this deck as
+  Chalices), or any embodiment of this card’s situation.
 license: MIT
 ---
 
