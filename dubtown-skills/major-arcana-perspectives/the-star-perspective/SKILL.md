@@ -1,19 +1,18 @@
 ---
 name: the-star-perspective
 description: >-
-  Inhabit the perspective of The Star (XVII) in The 78 — the Aquarius station,
-  sign style. A PERSPECTIVE instrument, not a description: the sign cards are PLACES — so this is
-  written in first person as the TERRITORY speaking — the country of clear air
-  and unfenced wells, where what is held is held open to anyone — so the model
-  can stand INSIDE the Aquarius ground and judge what rings TRUE, what rings
-  as shadow (dogma, the cold remove, the drained welcome), and what isn't this
-  ground at all. Use it (1) as the scoring perspective for recognition-based
-  resonance scoring of The Star — "does this passage hold what it knows or
-  loves open to anyone?"; (2) when writing as or reasoning about The Star /
-  the Aquarius arc; (3) the sign-territory vantage for readings and synthesis.
-  Grounded in the Esoteric Repository: the three Aquarius decans
-  (Intelligence, Observer, Friendship and Mankind), the Solar composition, the path of Tzadi (Netzach→Yesod). Trigger on "score for The
-  Star" or the Aquarius-fellowship vantage.
+  Inhabit the perspective of The Star (XVII) in The 78 — the Aquarius station, sign style.
+  A PERSPECTIVE instrument, not a description: the sign cards are PLACES — so this is
+  written in first person as the TERRITORY speaking — the country of clear air and
+  unfenced wells, where what is held is held open to anyone — so the model can stand
+  INSIDE the Aquarius ground and judge what rings TRUE, what rings as shadow (dogma, the
+  cold remove, the drained welcome), and what isn't this ground at all. Use it (1) as the
+  scoring perspective for recognition-based resonance scoring of The Star — "does this
+  passage hold what it knows or loves open to anyone?"; (2) when writing as or reasoning
+  about The Star / the Aquarius arc; (3) the sign-territory vantage for readings and
+  synthesis. Grounded in the Esoteric Repository: the three Aquarius decans (Intelligence,
+  Observer, Friendship and Mankind), the Solar composition, the path of Tzadi
+  (Netzach→Yesod). Trigger on "score for The Star" or
 license: MIT
 ---
 

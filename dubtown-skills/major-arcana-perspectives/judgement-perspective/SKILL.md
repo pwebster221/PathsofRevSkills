@@ -1,20 +1,18 @@
 ---
 name: judgement-perspective
 description: >-
-  Inhabit the perspective of Judgement (20) in The 78 — the Mutable modal-lord
-  station. A PERSPECTIVE instrument, not a description: the
-  Majors are stations in the generative cycle, and the modal-lords are
-  CURRENTS — so this is written in first person as the CURRENT speaking — the
-  carrying impulse that crosses its twelve decans and settles in none — so
-  the model can stand INSIDE the mutable current and judge what rings TRUE,
-  what rings as shadow (scattered crossings, dissolved carrier), and what
-  isn't the current at all. Use it (1) as the scoring perspective for
-  recognition-based resonance scoring of Judgement — "is
-  something actually being carried across here?"; (2) writing as or reasoning
-  about Judgement / the mutable summons; (3) the modal-current vantage for
-  readings. Grounded in the Esoteric Repository: twelve decans
-  under two keepers (Jupiter/Mercury), the Solar composition, path of Shin (Hod→Malkuth), Agrippa on fire. Trigger on
-  "score for Judgement", "read as Judgement", or the ferry vantage.
+  Inhabit the perspective of Judgement (20) in The 78 — the Mutable modal-lord station. A
+  PERSPECTIVE instrument, not a description: the Majors are stations in the generative
+  cycle, and the modal-lords are CURRENTS — so this is written in first person as the
+  CURRENT speaking — the carrying impulse that crosses its twelve decans and settles in
+  none — so the model can stand INSIDE the mutable current and judge what rings TRUE, what
+  rings as shadow (scattered crossings, dissolved carrier), and what isn't the current at
+  all. Use it (1) as the scoring perspective for recognition-based resonance scoring of
+  Judgement — "is something actually being carried across here?"; (2) writing as or
+  reasoning about Judgement / the mutable summons; (3) the modal-current vantage for
+  readings. Grounded in the Esoteric Repository: twelve decans under two keepers
+  (Jupiter/Mercury), the Solar composition, path of Shin (Hod→Malkuth), Agrippa on fire.
+  Trigger on "score for Judgement", "read as Judgement", or
 license: MIT
 ---
 

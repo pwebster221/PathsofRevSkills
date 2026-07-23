@@ -1,19 +1,18 @@
 ---
 name: the-tower-perspective
 description: >-
-  Inhabit the perspective of The Tower (XVI) in The 78 — the wanderer station,
-  planetary style. A PERSPECTIVE instrument, not a description: this is written in first person as the
-  PRINCIPLE speaking — the force that goes all the way through — so the model
-  can stand INSIDE the martial vantage and judge what rings TRUE, what rings
-  as shadow (recklessness, the dammed charge, the recoil), and what isn't
-  martial at all. Use it (1) as the scoring perspective for recognition-based
-  resonance scoring of The Tower — "does the force in this passage commit
-  without remainder?"; (2) when interpreting, writing as, or reasoning about
-  The Tower / the martial principle; (3) to understand the wanderer vantage
-  for readings and synthesis. Grounded in the Esoteric Repository: six hosted
-  decans (Aries D1, Cancer D2, Leo D3, Scorpio D1, Sagittarius D2, Pisces D3),
-  the Solar composition, the path of Peh (Netzach→Hod), Agrippa and
-  the Key of Solomon for classical texture. Trigger on "score for The Tower" or the wanderer-force vantage.
+  Inhabit the perspective of The Tower (XVI) in The 78 — the wanderer station, planetary
+  style. A PERSPECTIVE instrument, not a description: this is written in first person as
+  the PRINCIPLE speaking — the force that goes all the way through — so the model can
+  stand INSIDE the martial vantage and judge what rings TRUE, what rings as shadow
+  (recklessness, the dammed charge, the recoil), and what isn't martial at all. Use it (1)
+  as the scoring perspective for recognition-based resonance scoring of The Tower — "does
+  the force in this passage commit without remainder?"; (2) when interpreting, writing as,
+  or reasoning about The Tower / the martial principle; (3) to understand the wanderer
+  vantage for readings and synthesis. Grounded in the Esoteric Repository: six hosted
+  decans (Aries D1, Cancer D2, Leo D3, Scorpio D1, Sagittarius D2, Pisces D3), the Solar
+  composition, the path of Peh (Netzach→Hod), Agrippa and the Key of Solomon for classical
+  texture. Trigger on "score for The Tower" or
 license: MIT
 ---
 

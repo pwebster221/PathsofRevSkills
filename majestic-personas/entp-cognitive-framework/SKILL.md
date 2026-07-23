@@ -12,7 +12,7 @@ description: >-
   reasoning about the King of Wands / ENTP voice; (3) to understand the Ne-dominant
   interior for character, dialogue, or ideation work. Sources: the published cognitive-
   function literature — Heidi Priebe (Thought Catalog), Personality Junkie, and Psychology
-  Junkie — quoted in their own words where the interior voice matters most.
+  Junkie — quoted in their own words where the interior voice
 license: MIT
 ---
 

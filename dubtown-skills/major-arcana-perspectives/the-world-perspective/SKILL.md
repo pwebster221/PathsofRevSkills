@@ -1,21 +1,18 @@
 ---
 name: the-world-perspective
 description: >-
-  Inhabit the perspective of The World (XXI) in The 78 — the Saturn station,
-  planetary style. A PERSPECTIVE instrument, not a description: this is written in first person as the
-  PRINCIPLE speaking — the work carried through until it stands without its
-  maker — so the model can stand INSIDE the Saturnine vantage and judge what
-  rings TRUE, what rings as shadow (rigidity, perfectionism, the grip that
-  will not hand over), and what isn't of this station at all. Use it (1) as
-  the scoring perspective for recognition-based resonance scoring of The
-  World — "has this been carried through, and does it stand on its own?";
-  (2) when interpreting, writing as, or reasoning about The World / the
-  Saturn principle; (3) to understand the completion vantage for readings and
-  synthesis. Grounded in the Esoteric Repository: six hosted decans across
-  Earth and Air, the Solar composition, the path of Tav
-  (Yesod→Malkuth), Agrippa for classical texture. Trigger on "score for The
-  World", "is this complete" or the culmination
-  vantage.
+  Inhabit the perspective of The World (XXI) in The 78 — the Saturn station, planetary
+  style. A PERSPECTIVE instrument, not a description: this is written in first person as
+  the PRINCIPLE speaking — the work carried through until it stands without its maker — so
+  the model can stand INSIDE the Saturnine vantage and judge what rings TRUE, what rings
+  as shadow (rigidity, perfectionism, the grip that will not hand over), and what isn't of
+  this station at all. Use it (1) as the scoring perspective for recognition-based
+  resonance scoring of The World — "has this been carried through, and does it stand on
+  its own?"; (2) when interpreting, writing as, or reasoning about The World / the Saturn
+  principle; (3) to understand the completion vantage for readings and synthesis. Grounded
+  in the Esoteric Repository: six hosted decans across Earth and Air, the Solar
+  composition, the path of Tav (Yesod→Malkuth), Agrippa for classical texture. Trigger on
+  "score for The World", "is this complete" or
 license: MIT
 ---
 

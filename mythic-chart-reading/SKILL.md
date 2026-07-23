@@ -3,16 +3,16 @@ name: mythic-chart-reading
 description: >-
   Compose a full mythic narrative reading of a natal chart and current transits — a
   "Personal Legend" (Part I) and "Current Trials of the Hero" (Part II) — weaving verified
-  astrological data through Campbell's Hero's Journey, cross-cultural mythology, Kabbalistic
-  Sephiroth, the 7×11/11×7 tarot operator grid, the Mars esoteric scoring engines, and the
-  layered card-instrument system (persona voices + station perspectives). Use this skill
-  whenever the user asks for a "mythic reading", "mythic natal chart", "personal legend",
-  "hero's journey reading", "read my chart as a story/myth", "current trials", "oracle
-  reading of my chart", or wants natal/transit astrology rendered as archetypal narrative
-  rather than technical analysis — even if they only say "give me the deep narrative version
-  of my chart." Requires the Kairos astrology MCP for chart computation and the Mars API for
-  esoteric scoring. Not for technical chart breakdowns (use Kairos tools directly) or
-  single-card tarot questions (use tarot-interpretation).
+  astrological data through Campbell's Hero's Journey, cross-cultural mythology,
+  Kabbalistic Sephiroth, the 7×11/11×7 tarot operator grid, the Mars esoteric scoring
+  engines, and the layered card-instrument system (persona voices + station perspectives).
+  Use this skill whenever the user asks for a "mythic reading", "mythic natal chart",
+  "personal legend", "hero's journey reading", "read my chart as a story/myth", "current
+  trials", "oracle reading of my chart", or wants natal/transit astrology rendered as
+  archetypal narrative rather than technical analysis — even if they only say "give me the
+  deep narrative version of my chart." Requires the Kairos astrology MCP for chart
+  computation and the Mars API for esoteric scoring. Not for technical chart breakdowns
+  (use Kairos tools directly) or single-card tarot questions (use
 ---
 
 # Mythic Chart Reading
