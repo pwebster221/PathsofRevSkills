@@ -1,18 +1,17 @@
 ---
 name: generative-principle
 description: >-
-  Use for exploring, deriving, and brainstorming the Unified Numeric Cosmology (UNC) —
-  the generative pattern across the numbers 1–21 — anchored to the Linear project
-  "Generative Principle" (team `ESO` project "Rungs" — one issue per number 1–21, plus cross-cutting discovery issues). This is
-  the RESEARCH register, not card interpretation: deepen a number's depth, work a movement
-  between numbers, test the two operational grammars (multiplicative Operator×Substance→Result
-  and sequential "moving-through"), reason about primes vs composites, pillars, septenaries,
-  and the Generate/Produce rhythm — then record findings back to the right Linear issue.
-  Trigger on prompts like "explore the number N," "what's the generative move into N,"
-  "brainstorm the UNC / generative principle," "how does N relate to M," "deepen this number,"
-  "is this pattern consistent with the UNC," or any open-ended work on the 1–21 numeric backbone.
-  Hand OFF to tarot-interpretation when the task is reading actual cards rather than deriving
-  the numeric structure; hand off to esoteric-exploration for non-numeric symbolic synthesis.
+  Use for exploring, deriving, and brainstorming the Unified Numeric Cosmology (UNC) — the
+  generative pattern across the numbers 1–21 — anchored to the Linear project "Generative
+  Principle" (team `ESO` project "Rungs" — one issue per number 1–21, plus cross-cutting
+  discovery issues). This is the RESEARCH register, not card interpretation: deepen a
+  number's depth, work a movement between numbers, test the two operational grammars
+  (multiplicative Operator×Substance→Result and sequential "moving-through"), reason about
+  primes vs composites, pillars, septenaries, and the Generate/Produce rhythm — then
+  record findings back to the right Linear issue. Trigger on prompts like "explore the
+  number N," "what's the generative move into N," "brainstorm the UNC / generative
+  principle," "how does N relate to M," "deepen this number," "is this pattern consistent
+  with the UNC," or any open-ended work on the 1–21 numeric backbone.
 license: MIT
 ---
 
