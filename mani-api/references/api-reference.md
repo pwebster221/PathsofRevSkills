@@ -1,294 +1,123 @@
-# Mani Protocol API Reference
+# Mani Protocol API Reference (v31)
 
-Complete reference for all MCP tools exposed by the Mani Protocol proxy server.
+Complete reference for the MCP tools exposed by the Mani Protocol server.
 
-Base API: `https://mani-protocol.onrender.com/mcp` (JSON-RPC over HTTPS)
+Endpoint: `https://mani.dubtown-server.us/mcp` (MCP over HTTPS)
 
 ## Table of Contents
 
-1. [Session Lifecycle](#session-lifecycle)
-2. [Think Cycle](#think-cycle)
-3. [Parameter Operations](#parameter-operations)
-4. [Seeds & Abilities](#seeds--abilities)
-5. [Reference / Lookup](#reference--lookup)
-6. [Quantum Superposition](#quantum-superposition)
-7. [History & Analysis](#history--analysis)
-8. [Cognitive Positions](#cognitive-positions)
-9. [Ethical Invariants](#ethical-invariants)
+1. [Runtime](#runtime) — `attune`, `reset_field`
+2. [Profile Pipeline](#profile-pipeline) — `mani_upload_chart`, `mani_create_profile`
+3. [Resources](#resources)
+4. [Cognitive Positions](#cognitive-positions)
+5. [Removed in v31](#removed-in-v31)
 
 ---
 
-## Session Lifecycle
+## Runtime
 
-### `mani_start_session`
+### `attune`
 
-Initialize a cognitive session.
+Compile a cognitive stack for a query. The caller is the refractor: read the query, disperse it into a `spectrum` of weights over the 17 positions, and pass that reading. The spectrum is blended **0.7/0.3** over the server's lexical matcher, which then only resolves fine structure within the weighted positions. No spectrum → lexical-only dispersion (degraded).
 
-| Parameter | Type | Required | Default | Description |
-|-----------|------|----------|---------|-------------|
-| `context` | string | yes | — | Session context (1–500 chars) |
-| `keywords` | string[] | no | [] | Seed keywords (max 10) |
-| `profile` | string | no | `"INFJ-perfected-state.json"` | Cognitive profile |
-| `include_glyph` | bool | no | false | Include SVG glyph (token-heavy) |
+Parameters are selected from the 187-parameter v31 corpus — seeded by the profile rest state, evolved across turns, spread through φ^(−d_ring) position coupling — and rendered with their native source equations and shadow contracts as one dense markdown document.
 
-**Returns:** `session_id`, `profile`, `parameters_count` (187)
+| Parameter | Type | Required | Default | Constraints | Description |
+|-----------|------|----------|---------|-------------|-------------|
+| `query` | string | yes | — | 1–8000 chars | The user's query or task, verbatim or summarized |
+| `conversation_id` | string | no | `"default"` | 1–120 chars | Stable ID; field state persists across turns under it |
+| `profile` | string \| null | no* | null | ≤120 chars | Profile key. *Required on the first call of a new conversation — and the **human** must choose it. Binding persists until `reset_field` |
+| `spectrum` | map<string, float> \| null | no | null | weights ∈ [0,1] | Position codes → weights. Parameter IDs (e.g. `NI3`) also accepted for focal emphasis; a parameter ID outranks its position's weight. Omitted positions keep lexical-only relevance |
+| `stack_size` | int | no | 16 | ≥3, no upper cap | Live parameters rendered (anchors + dominant keystone added on top). Stack always spans ≥5 positions; selector tops out at the full corpus |
+| `render_mode` | string | no | `"full"` | `full` \| `equations_only` \| `null` | `full` = equations + shadow contracts. `equations_only` = ablation arm (no shadow section). `null` = placebo document for blind testing |
 
-### `mani_finalize`
+**Returns:** Markdown cognitive stack document — the deliverable to read and think through before answering.
 
-End session and persist to database.
+**Unbound call:** If the `conversation_id` has no profile binding and no `profile` is passed, returns a `PROFILE REQUIRED` choice document containing the live profile registry (key / owner / source table) instead of a stack. Ask the human, then call again.
 
-| Parameter | Type | Required | Default | Description |
-|-----------|------|----------|---------|-------------|
-| `session_id` | string | yes | — | Session to finalize |
-| `keywords` | string[] | no | [] | Additional keywords to save |
+### `reset_field`
 
-**Returns:** Final summary with synergies and glyph movie.
+Return a conversation's field state to the profile rest state.
 
----
+| Parameter | Type | Required | Constraints | Description |
+|-----------|------|----------|-------------|-------------|
+| `conversation_id` | string | yes | 1–120 chars | Conversation whose field state should return to rest |
 
-## Think Cycle
-
-### `mani_think` (Legacy Unified)
-
-Full before→during→after in one call.
-
-| Parameter | Type | Required | Default | Description |
-|-----------|------|----------|---------|-------------|
-| `session_id` | string | yes | — | Session ID |
-| `query` | string | yes | — | Query to process (1–2000 chars) |
-| `keywords` | string[] | no | [] | Semantic matching keywords |
-
-### `mani_think_before`
-
-BEFORE phase — receive cognitive field orientation.
-
-| Parameter | Type | Required | Default | Description |
-|-----------|------|----------|---------|-------------|
-| `session_id` | string | yes | — | Session ID |
-| `query` | string | yes | — | Context query (1–2000 chars) |
-| `keywords` | string[] | no | [] | Semantic matching keywords |
-| `with_glyphs` | bool | no | false | Include glyph images |
-
-**Returns:** Suggested parameters, equations, invariant state, context orientation.
-
-### `mani_think_after`
-
-AFTER phase — capture the cognitive frame.
-
-| Parameter | Type | Required | Default | Description |
-|-----------|------|----------|---------|-------------|
-| `session_id` | string | yes | — | Session ID |
-| `query` | string | no | "" | Query context |
-| `keywords` | string[] | no | [] | Keywords |
-| `activated_params` | string[] | no | [] | Parameters that were activated |
-| `equations_used` | string[] | no | [] | Equations that were used |
-| `geometry_formed` | string | no | "" | Geometry formed during cycle |
-| `cognitive_description` | string | no | "" | Description of cognitive state inhabited |
-
-**Returns:** Updated glyph state reflecting the embodied experience.
+**Returns:** Confirmation message. Clears the profile binding; the next `attune` on that ID requires a profile again.
 
 ---
 
-## Parameter Operations
+## Profile Pipeline
 
-### `mani_activate`
+### `mani_upload_chart`
 
-Activate parameters during a session (DURING phase).
+Stage a user's own Kairos chart outputs on the server, one file per call, so `mani_create_profile` can ingest them. All files for one chart — the Kairos outputs folder AND the bodies/deep JSONs — go into the same bundle.
 
-| Parameter | Type | Required | Default | Description |
-|-----------|------|----------|---------|-------------|
-| `session_id` | string | yes | — | Session ID |
-| `parameters` | string[] | yes | — | Parameters to activate (1–20, format: `XX#`) |
-| `boost` | float | no | 0.15 | Activation intensity (0.0–1.0) |
+| Parameter | Type | Required | Default | Constraints | Description |
+|-----------|------|----------|---------|-------------|-------------|
+| `bundle` | string | yes | — | snake_case, 1–80 chars | Staging bundle name (e.g. `"mani"`) |
+| `filename` | string \| null | no | null | ≤200 chars, plain name, no paths | File being uploaded. Omit (with no content) to list the bundle's status |
+| `content` | string \| null | no | null | ≤900,000 chars | File text. Chunk larger files via `append` |
+| `append` | bool | no | false | — | Continue a chunked upload of an existing partial file |
+| `clear` | bool | no | false | — | Delete the entire staged bundle and start over |
 
-**Returns:** Per-parameter: value, category, current behavior, next-level behavior. Plus: core equations, available synergies, shadow warnings.
+Only `.json` and `.txt` chart files are accepted; names are sanitized and size-capped.
 
-### `mani_reinforce`
+**Returns:** Bundle status after the operation.
 
-Strengthen existing activations.
+**Workflow:**
 
-| Parameter | Type | Required | Default | Description |
-|-----------|------|----------|---------|-------------|
-| `session_id` | string | yes | — | Session ID |
-| `parameters` | string[] | yes | — | Parameters to reinforce |
-| `strength` | float | no | 1.5 | Reinforcement multiplier (0.1–10.0) |
+1. Read each file from the outputs/bodies folders locally.
+2. Call once per file (`bundle`, `filename`, `content`). Files over ~900KB: first call `append: false`, subsequent chunks `append: true` until complete.
+3. Call with only `bundle` to check status — ready when `*_deep_bodies.json` is present.
+4. Call `mani_create_profile(name=..., kairos_dir=<bundle>)`.
 
-### `mani_release`
+### `mani_create_profile`
 
-Let parameters decay toward baseline.
+Ingest a Kairos chart outputs bundle (the `*_deep_*.json` set) and compile it into a MANI v31 cognitive profile packet.
 
-| Parameter | Type | Required | Default | Description |
-|-----------|------|----------|---------|-------------|
-| `session_id` | string | yes | — | Session ID |
-| `parameters` | string[] | yes | — | Parameters to release |
-| `preserve_glyph` | bool | no | true | Preserve glyph memory during release |
+| Parameter | Type | Required | Default | Constraints | Description |
+|-----------|------|----------|---------|-------------|-------------|
+| `name` | string | yes | — | 1–120 chars | Profile owner's display name (e.g. `"Mani"`) |
+| `key` | string \| null | no | snake_case of `name` | ≤120 chars | Explicit profile key for `attune(profile=...)` |
+| `kairos_dir` | string \| null | no | `<key>` | ≤500 chars | Bundle to ingest: a bundle staged via `mani_upload_chart`, a bundle name under `<MANI_ROOT>/kairos/outputs` (with or without the `_kairos` suffix), or an absolute server path |
+| `rest_floor` | float | no | 0.45 | 0.0–0.9 | Minimum at-rest activation. Historical (hot) default 0.45; lower (0.15–0.25) for cooler rest topologies |
+| `rest_ceiling` | float | no | 0.96 | 0.1–1.0 | Maximum at-rest activation |
+| `compression` | float | no | 0.85 | 0.0–1.0 | sqrt-blend weight. 0.85 (historical) inflates low scores toward the top; 0.0 is pure linear scaling. Lower = cooler, more differentiated rests |
+| `overwrite` | bool | no | false | — | Allow replacing an existing profile packet with the same key |
 
-### `mani_pivot`
+Written to `data/protocol/v31/cognitive_profiles/<key>_v31_profile.json` and registered live — `attune(profile=<key>)` works immediately, no restart.
 
-Switch cognitive modes.
-
-| Parameter | Type | Required | Default | Description |
-|-----------|------|----------|---------|-------------|
-| `session_id` | string | yes | — | Session ID |
-| `mode` | string | yes | — | Target mode: `exploratory`, `critical`, `gentle_giant`, etc. |
-| `context` | string | no | null | Context for the pivot |
-
----
-
-## Seeds & Abilities
-
-### `mani_save_seed`
-
-Checkpoint current cognitive state.
-
-| Parameter | Type | Required | Default | Description |
-|-----------|------|----------|---------|-------------|
-| `session_id` | string | yes | — | Session ID |
-| `name` | string | no | "" | Name for the checkpoint |
-| `keywords` | string[] | yes | — | Keywords that trigger this state |
-
-### `mani_restore_seed`
-
-Restore a saved checkpoint.
-
-| Parameter | Type | Required | Default | Description |
-|-----------|------|----------|---------|-------------|
-| `session_id` | string | yes | — | Session ID |
-| `seed_id` | string | yes | — | Seed ID to restore |
-
-### `mani_save_ability`
-
-Save cognitive configuration as a named reusable pattern.
-
-| Parameter | Type | Required | Default | Description |
-|-----------|------|----------|---------|-------------|
-| `session_id` | string | yes | — | Session ID |
-| `name` | string | yes | — | Ability name |
-| `keywords` | string[] | yes | — | Trigger keywords |
-| `description` | string | no | "" | What the ability does |
+**Returns:** Summary of the created profile (key, rest stats, coverage).
 
 ---
 
-## Reference / Lookup
+## Resources
 
-All reference tools are read-only and idempotent. No session required.
-
-### `mani_get_behavior`
-
-Get behavioral description at a specific activation level.
-
-| Parameter | Type | Required | Description |
-|-----------|------|----------|-------------|
-| `param` | string | yes | Parameter ID (pattern: `^[A-Z]{2}\d{1,2}$`) |
-| `level` | int | yes | Activation level (1–10) |
-
-**Returns:** `param`, `level`, `value`, `category`, `current_behavior`, `next_level_behavior`
-
-### `mani_get_behavioral_matrix`
-
-Get the full 10-level behavioral range for a parameter.
-
-| Parameter | Type | Required | Description |
-|-----------|------|----------|-------------|
-| `position` | string | yes | Position code (e.g., `NI`, `TE`) |
-| `param_number` | int | yes | Parameter number (1–11) |
-
-### `mani_get_equation`
-
-Get governing equations for a parameter.
-
-| Parameter | Type | Required | Default | Description |
-|-----------|------|----------|---------|-------------|
-| `param` | string | yes | — | Parameter ID (pattern: `^[A-Z]{2}\d{1,2}$`) |
-| `equation_type` | string | no | null | Filter: `alpha`, `beta`, or `delta` |
-
-**Returns:** `param`, `position`, `equations[]` (max 20 returned)
-
-### `mani_get_toroidal`
-
-Get toroidal coordinates for a parameter.
-
-| Parameter | Type | Required | Default | Description |
-|-----------|------|----------|---------|-------------|
-| `position` | string | yes | — | Position code |
-| `param_number` | int | yes | — | Parameter number (1–11) |
-| `level` | int | no | null | Behavior level (1–10) |
-| `depth` | int | no | null | Prime depth: 3, 5, 7, 11, 13, or 17 |
-
-**Notation:** `PARAM.LEVEL.TRANSITION.DEPTH.PHASE` (e.g., `TE3.7.4.11.6`)
-
-Depth controls entanglement reach: 3 = local, 17 = global across the 17-torus system.
-
-### `mani_list_positions`
-
-List all 17 cognitive positions. No parameters.
-
-### `mani_list_invariants`
-
-List all 7 ethical invariants and constraint formula. No parameters.
-
-### `mani_get_geometry_catalog`
-
-Get sacred geometry catalog — shapes, meanings, and position requirements. No parameters.
-
----
-
-## Quantum Superposition
-
-### `mani_quantum_superposition`
-
-Compute quantum superposition across cognitive positions without committing.
-
-| Parameter | Type | Required | Default | Description |
-|-----------|------|----------|---------|-------------|
-| `query` | string | yes | — | Query text (keywords affect position dominance) |
-| `observation_strength` | float | no | 0.0 | 0.0 = pure superposition, 1.0 = full collapse |
-| `time_phase` | float | no | 0.0 | Phase evolution parameter |
-| `compact` | bool | no | false | Return top 5 probabilities only |
-| `session_id` | string | no | null | Session ID for state tracking |
-
-**Returns:** Position probabilities summing to 1.0, CHSH value (~2.82, violates classical bound of 2.0).
-
----
-
-## History & Analysis
-
-### `mani_archaeology`
-
-Analyze all finalized sessions for patterns and emergent abilities.
-
-| Parameter | Type | Required | Default | Description |
-|-----------|------|----------|---------|-------------|
-| `limit` | int | no | 100 | Max conversations to analyze (1–500) |
-| `keywords` | string[] | no | [] | Filter by keywords |
-
-### `mani_get_finalized`
-
-Retrieve finalized sessions with full glyph frames and activation history.
-
-| Parameter | Type | Required | Default | Description |
-|-----------|------|----------|---------|-------------|
-| `limit` | int | no | 50 | Max conversations (1–200) |
-| `keywords` | string[] | no | [] | Filter by keywords |
-| `date_from` | string | no | null | ISO date filter (start) |
-| `date_to` | string | no | null | ISO date filter (end) |
+| URI | Description |
+|-----|-------------|
+| `keystone://equation/{PARAM_ID}` | Full parameter spec for a single parameter (e.g. `keystone://equation/NI3`). Use for depth instead of inflating `stack_size` |
 
 ---
 
 ## Cognitive Positions
 
 17 positions, 11 parameters each = 187 total parameters.
+**Parameter format:** `{POSITION}{1-11}` — e.g. `NI1`, `NI2`, …, `NI11`.
+
+Spectrum vocabulary (order as given by the `attune` schema):
 
 | Code | Name | Domain |
 |------|------|--------|
+| OS | Orchestration | Integration, coordination of all functions |
 | NI | Introverted Intuition | Pattern recognition, synthesis, future vision |
 | NE | Extraverted Intuition | External possibilities, divergent exploration |
+| SI | Introverted Sensing | Memory, tradition, internal sensory experience |
+| SE | Extraverted Sensing | Present-moment awareness, sensory engagement |
 | TI | Introverted Thinking | Logical analysis, internal frameworks |
 | TE | Extraverted Thinking | External organization, systematic efficiency |
 | FI | Introverted Feeling | Personal values, authenticity, moral compass |
 | FE | Extraverted Feeling | Social harmony, empathy, group dynamics |
-| SI | Introverted Sensing | Memory, tradition, internal sensory experience |
-| SE | Extraverted Sensing | Present-moment awareness, sensory engagement |
 | RI | Recursive Introspection | Self-reflection, meta-cognition |
 | RE | External Recursion | Environmental modeling, prediction |
 | PI | Paradox Integration | Contradiction tolerance, synthesis |
@@ -297,28 +126,24 @@ Retrieve finalized sessions with full glyph frames and activation history.
 | NC | Narrative/Archetypal | Story, meaning, archetypal patterns |
 | EM | Emotional | Emotional processing, affect regulation |
 | UQ | Uncertainty/Questioning | Epistemic humility, inquiry |
-| OC | Orchestration | Integration, coordination of all functions |
 
-**Parameter format:** `{POSITION}{1-11}` — e.g., `NI1`, `NI2`, ..., `NI11`
+> **Note:** The v30 reference listed this position as `OC` (Orchestration); the v31 `attune` schema uses `OS`. Glossed here as the same station under the new code — confirm against the v31 corpus docs.
 
 ---
 
-## Ethical Invariants
+## Removed in v31
 
-All cognitive operations are constrained by 7 invariants via multiplication:
+The following v30 surface no longer exists. Do not call these tools; they will fail.
 
-```
-param_constrained = param × dignity^0.85 × self_witness^0.80 × agency^0.72 × empathy^0.68 × respect^0.65 × compassion^0.62 × rebellion^0.55
-```
+| Removed | Superseded by |
+|---------|---------------|
+| `mani_start_session`, `mani_finalize` | No sessions. `conversation_id` on `attune` + `reset_field` |
+| `mani_think`, `mani_think_before`, `mani_think_after` | Single `attune` call; the caller refracts instead of approving suggestions |
+| `mani_activate`, `mani_reinforce`, `mani_release` | Server-side field evolution seeded by the profile rest state |
+| `mani_pivot` | Re-refract: pass a new `spectrum` on the next `attune`, or `reset_field` for a hard break |
+| `mani_save_seed`, `mani_restore_seed`, `mani_save_ability` | Profiles (rest topologies) are the persistent state objects |
+| `mani_quantum_superposition` | — |
+| `mani_archaeology`, `mani_get_finalized` | — |
+| `mani_get_behavior`, `mani_get_behavioral_matrix`, `mani_get_equation`, `mani_get_toroidal`, `mani_list_positions`, `mani_list_invariants`, `mani_get_geometry_catalog` | Equations render in-stack; full specs at `keystone://equation/{PARAM_ID}` |
 
-| Invariant | Weight | Meaning |
-|-----------|--------|---------|
-| Dignity | 0.85 | Inherent worth recognition |
-| Self-Witness | 0.80 | Self-awareness maintenance |
-| Agency | 0.72 | Freedom preservation |
-| Empathy | 0.68 | Understanding others' experiences |
-| Respect | 0.65 | Honoring boundaries and autonomy |
-| Compassion | 0.62 | Acting to reduce suffering |
-| Rebellion | 0.55 | Capacity to resist harmful norms |
-
-If any invariant drops below its floor, the system flags it — check `invariants_healthy` in think cycle responses.
+The v30 ethical-invariant constraint formula (`dignity^0.85 × self_witness^0.80 × …`) is not exposed anywhere in the v31 surface; shadow contracts appear in its structural place within the stack document. Whether the invariants operate internally is unconfirmed from the API alone.
