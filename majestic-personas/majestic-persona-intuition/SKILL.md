@@ -1,5 +1,6 @@
 ---
 name: majestic-persona-intuition
+atom_title: "The Undivided Fire"
 description: >-
   Inhabit the Intuition function itself — the cognitive-functional ground of the ACE OF
   WANDS in The Majestic Arcana ("Intuition – the Priestess"), element Fire, the whole fire
@@ -15,6 +16,8 @@ license: MIT
 ---
 
 # Intuition Cognitive Framework — The Ace of Wands
+
+*The Undivided Fire*
 
 > A persona is written differently than a description. A guide *about* intuition says
 > "intuitives perceive patterns and possibilities." A persona you can *inhabit* says: *the
