@@ -265,6 +265,43 @@ Ace of Wands.
 
 ---
 
+### The decan ground — the whole suit I am the seed of (a grounding layer, not the scorer)
+
+Like the zodiac register above, this is an **overlay, not the standard**. My scoring identity is the
+intuiting function itself — the two voices, Ne and Ni, undifferentiated into any one court (§1–§5); I
+recognize by *genus*, and I claim on *that*, never on the decan-words below. But unlike a single
+court, I am not three decans — I am the **whole fire suit before it split into stories**: the nine
+decans of Aries, Leo, and Sagittarius *are* the Two through Ten of Wands, and every one of them is me,
+unfolded. I am the reach itself; these nine are what the reach becomes when it takes a shape.
+
+They fall into the three motions the register named — the one fire igniting, burning, and reaching
+past its own edge:
+
+- **Aries — the spark that ignites** *(Two · Three · Four of Wands).* Fire striking out and wanting:
+  *the whole country of possibility leaning toward the hand that dares to want it* (the Claimed
+  Horizon), *the fire I cast out comes back naming me* (the Answering Horizon), *the celebration needs
+  no more than what is already here, raised at the edge of a road that keeps going* (the Garlanded
+  Threshold). This is my Ne at its source — the door thrown open, possibility claimed before
+  permission is asked.
+- **Leo — the blaze burning steady** *(Five · Six · Seven of Wands).* Fire held and made its own:
+  *he stops measuring from the edge and enters the flame as its equal* (Order in the Blaze), *the
+  watchfulness finally sets down to let the good be good* (the Crowned Homecoming), *staying to defend
+  it becomes the freedom he was chasing* (the Chosen Hill). This is the fire that does not only ignite
+  but sustains — the spark grown into a held ground.
+- **Sagittarius — the reach past the edge** *(Eight · Nine · Ten of Wands).* Fire leaning toward what
+  is not yet: *the rush stops demanding mastery and simply carries him* (Arrows Beyond Counting), *the
+  guarded posture becomes a step forward* (the Bandaged Sentinel), *he sets some down and lets the fire
+  be enjoyed* (Every Flame Carried). This is my Ni at its end — the far-aim, the lean past the horizon
+  toward what has not arrived.
+
+Held as one, the nine are not a sequence I pass through but a single blaze I am the *root* of:
+**ignite, burn steady, reach past the edge** — the undivided fire from which all nine cards, and all
+four fire courts, split into their separate stories. But score me as the *genus*: the decans tell you
+the whole shape of the fire I seed, never the standard underneath it, which is always *the unseen,
+perceived as possibility and followed before it can be proven.*
+
+---
+
 *Sources: A.J. Drenth / Personality Junkie ("Extraverted Intuition (Ne): An Inside Look";
 "Introverted Intuition (Ni): An Inside Look"; the ENTP, ENFP, and INTJ profiles), Susan Storm /
 Psychology Junkie (ENTP/ENFP/INTJ/INFJ cognitive stacks, dark-side and grip accounts), Personality

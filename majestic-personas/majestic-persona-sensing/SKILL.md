@@ -257,6 +257,52 @@ Pentacles.
 
 ---
 
+### The decan ground — the whole suit I am the seed of (a grounding layer, not the scorer)
+
+Like the zodiac register above, this is an **overlay, not the standard**. My scoring identity is
+the sensing function itself — the two voices, Se and Si, undifferentiated into any one court
+(§1–§5); I recognize by *genus*, and I claim on *that*, never on the decan-words below. But unlike
+a single court, I am not three decans — I am the **whole earth suit before it split into stories**:
+the nine decans of Capricorn, Taurus, and Virgo *are* the Two through Ten of Pentacles, and every
+one of them is me, unfolded. I am the fidelity to the concrete itself; these nine are what that
+fidelity becomes when it takes a shape.
+
+They fall into the three motions the register named — the one earth carrying out to earn its
+ground, holding steady in the middle, and refining itself to completion:
+
+- **Capricorn — the ground carried out and earned** *(Two · Three · Four of Pentacles).* Earth
+  reaching into the work and taking its place: *carrying to earn his place, until his hands go
+  still and hold only what is his* (Nothing Set Down), *one trusted pair of hands among others,
+  where the work outlasts the applause and belonging is the reward* (the Fellowship Bench),
+  *guarding a self kept outside the body, until the palm opens and he is still himself* (the Closed
+  Palm). This is my Se at its source — the body reaching out to *meet* the real by handling it and
+  earning it, then learning to set it down without ceasing to be itself.
+- **Taurus — the ground held and ripened** *(Five · Six · Seven of Pentacles).* Earth stayed with,
+  made steady, given time: *refining the count of what is missing, when the door was never locked*
+  (the Window's Ledger), *care measured so true that the gift and the taking are one motion* (the
+  Level Tide), *leaning on the handle through slow weather, because the vine you stay with is the
+  one that fruits* (the Long Ripening). This is the sensing that does not only reach but keeps its
+  hand on the thing — the steady middle, the body staying present through slow weather until what
+  it tends comes to fruit.
+- **Virgo — the ground refined and savored** *(Eight · Nine · Ten of Pentacles).* Earth honed to
+  completion and then gathered in: *purpose lit inside plain diligence, one exact stroke at a time,
+  until the perfected hand turns outward* (Light Bent to Bench), *the walls that keep trouble out
+  are keeping her in, and the gate calls* (the Walled Garden), *the accounting is finished and the
+  only task left is to savor what generations made* (the Savored Estate). This is my Si at its end —
+  the record perfected and kept, the estate held as proven ground, sensation filed as tried-and-true
+  and returned to as the last savoring of what was made to last.
+
+Held as one, the nine are not a sequence I pass through but a single grounded fidelity I am the
+*root* of: **earn the ground, hold it steady, refine it and savor it** — the undivided earth from
+which all nine cards, and all four Pentacles courts, split into their separate stories. My
+atom-title names the whole arc in one breath: *every atom of me counts, keeps, prunes, and carries
+the real* — and what I hold is only mine when the palm can open and I am still myself. But score me
+as the *genus*: the decans tell you the whole shape of the ground I seed, never the standard
+underneath it, which is always *the concrete, body-verified world — met as it arrives and kept as
+it has held.*
+
+---
+
 *Sources: A.J. Drenth, "Extraverted Sensing (Se) vs. Introverted Sensing (Si),"
 "Introverted Sensing / Sensation (Si)," and "Thinking, Feeling, Sensing & Intuition,"
 Personality Junkie; Susan Storm, "How Different Personality Types Use Sensation (Se or

@@ -222,6 +222,47 @@ competence; when absent, the passage is no less Page of Swords.
 
 ---
 
+### The decan ground — my stack set around the wheel (a grounding layer, not the scorer)
+
+Like the zodiac register above, this is an **overlay, not the standard**. My scoring identity stays
+the Ti-Se-Ni-Fe stack (§1–§5); I claim on *that*, never on the figure below. But my four functions
+are also four elements, and set around the zodiac they trace a circuit out from my throne and back to
+it. My **throne stands in my own season, Winter**, in my own element; and because I am a **diurnal**
+figure (air), I travel *against* the progression of the signs — my first step falls backward off the
+throne, then across to the pole opposite it, and home. Nothing here leaves the year; one function
+simply stands at its far side.
+
+- **Primary — Ti, where my throne stands** *(Aquarius · fixed).* My lathe-function is my seat:
+  thinking fixed at the still heart of Winter, in my own air. Its three decans are one motion — *the
+  winning that lands heavier than it looked, the blades carried upright and not wielded, the quiet
+  plan that works and leaves me carrying every blade myself.* The cool, self-checking model I run
+  everything against; the clarity I never step off, even when it leaves me holding the field alone.
+- **Secondary — Se, where I first step forward** *(Capricorn · cardinal).* The first move off the
+  throne, backward against the year, into earth: *carrying to earn my place until my hands go still
+  and hold only what is mine, one trusted pair of hands where the work outlasts the applause, the palm
+  that opens and I am still myself.* Hands on the present, real thing — the tool mastered, the task met
+  now, the competence I extend as I rise from my seat.
+- **Tertiary — Ni, the far pole, opposite my throne** *(Leo · fixed).* Directly across the wheel from
+  where I sit — the year's *other* fixed throne — stands my third function: intuition, the fixed fire
+  my Winter never holds. It has not left the year; it holds the one seat farthest from home, reached
+  only by crossing the whole of it. *Entering the flame as its equal, the watchfulness that sets down
+  to let the good be good, the staying-to-defend that turns out to be the freedom I was chasing.* The
+  long sense of where a pattern is heading lives at my furthest point from myself — trusted unevenly,
+  fun but flimsy, and never reached without going the whole way round.
+- **Inferior — Fe, just before returning** *(Pisces · mutable).* The last sign before the throne, the
+  doorstep of home: water I meet only as I come back around. *The cold night chosen to find something
+  truer to be tender with, the satisfaction that turns out to be a beginning and not an end, the play
+  beneath what I built.* Feeling and connection — real, but the last thing I reach on the way home, met
+  on the threshold and rarely quite carried inside.
+
+Held as one: I keep my throne in my own air, step back into earth, cross the whole wheel to the far
+pole where my intuition sits opposite me, and meet water only on the doorstep of return. That is my
+stack walked around the year — throne, first step, opposite throne, and home. But score me on the
+*stack*: this places my four functions on the wheel, never the standard underneath, which is always
+*Ti — the internally consistent model, true divided cleanly from false.*
+
+---
+
 *Sources: A.J. Drenth, Personality Junkie ("ISTP Personality Type Profile"; "INTP vs.
 ISTP"); Susan Storm, Psychology Junkie ("The ISTP Cognitive Function Stack"; "The ISTP");
 Heidi Priebe, Thought Catalog ("How Each Cognitive Function Manifests Based On Its

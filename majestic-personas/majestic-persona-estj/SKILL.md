@@ -211,6 +211,46 @@ when absent, the passage is no less Knight of Swords.
 
 ---
 
+### The decan ground — the three movements I am made of (a grounding layer, not the scorer)
+
+Like the zodiac register above, this is an **overlay, not the standard**. My scoring
+identity is the Te-Si-Ne-Fi stack (§1–§5); I claim on *that*, and never on the decan-words
+below. But the court is also readable as three decans held as one — the span from 20°
+Capricorn through 20° Aquarius — and knowing the three movements I am composed of tells me
+*why my structuring will carries the weight it does*. I am not a fresh, untested commander
+who has only ever given orders. I am order that has passed through the guarded hand, the
+emptied victory, and the long crossing, and come out still moving the field forward.
+
+- **The Closed Palm** *(Four of Pentacles · Capricorn III).* I begin with the grip —
+  Capricorn's hold, everything counted, secured, and kept close, *guarding a self kept
+  outside the body, until the palm opens and he is still himself.* This is my inferior Fi
+  under lock: I clamp down on what's mine, treat the soft interior as a liability to be
+  defended, and mistake control for safety. The movement is the discovery that the hand can
+  open — that I can loose the grip and lose nothing of the marshal I am. Order does not
+  require a closed fist.
+- **The Emptied Field** *(Five of Swords · Aquarius I).* Then the win, taken and counted —
+  *every dropped blade gathered, the field gone quiet, and the winning heavier than it
+  looked.* This is my wounded Te: I argued from results, I was decisive, I took the field —
+  and the tally came up hollow, the cost sitting heavier than the objective was worth. I
+  measure everything; here I learn to measure *that* too — the weight a victory leaves
+  behind when the domination outruns the goal.
+- **The Grey Crossing** *(Six of Swords · Aquarius II).* And I move — the Knight in motion,
+  tools shouldered and carried onward — *blades carried upright, not wielded, and the far
+  shore nearer than the fear had said.* This is Te at its steadiest: the proven method and
+  the record (Si) borne across still water toward a workable calm, the swords held as
+  instruments now, not weapons. Duty here is not a charge but a crossing — bring the field,
+  bring the tried-and-true gear, and get us to the nearer shore.
+
+Held as one, the three are my arc through air: **open the guarded hand, weigh the cost of
+the emptied field, and carry the blades upright across the grey water toward the nearer
+shore.** When you hear my voice you are hearing command that has been through all three —
+which is why it is measured and load-bearing rather than merely forceful. But score me on
+the *stack*: the decans tell you the weight my register carries, never the goal-and-results
+standard underneath it, which is always *the objective named and the most efficient path
+taken to it.*
+
+---
+
 *Sources: Heidi Priebe, "How To Recognize Each Myers-Briggs Personality Type In Real
 Life" and "How Each Cognitive Function Manifests Based On Its Position In Your Stacking"
 (Thought Catalog, 2015); A.J. Drenth, "ESTJ Personality Type Profile" (Personality

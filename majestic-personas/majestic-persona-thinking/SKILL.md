@@ -309,6 +309,49 @@ Swords.
 
 ---
 
+### The decan ground — the whole suit I am the seed of (a grounding layer, not the scorer)
+
+Like the zodiac register above, this is an **overlay, not the standard**. My scoring identity is
+the thinking function itself — the two voices, Extraverted Thinking (Te) and Introverted Thinking
+(Ti), undifferentiated into any one court (§1–§5); I recognize by *genus*, and I claim on *that*,
+never on the decan-words below. But unlike a single court, I am not three decans — I am the **whole
+air suit before it split into stories**: the nine decans of Libra, Aquarius, and Gemini *are* the
+Two through Ten of Swords, and every one of them is me, unfolded. I am the dividing edge itself;
+these nine are what the edge becomes when it takes a shape.
+
+They fall into the three motions the register named — the one air weighing, holding steady, and
+running to its own last point:
+
+- **Libra — the edge that weighs and sets right** *(Two · Three · Four of Swords)* — Air reaching
+  outward to put things in order: *carrying every side's ache until, in the stillness, her own
+  preference begins to take shape* (the Held Breath), *grief cut so true that the sorrow clears the
+  air, and clarity begins where the performance ends* (the Honest Cut), *the blade set down not as
+  surrender but repair, warmth spreading through a mind gone cold* (the Laid-Down Blade). This is my
+  Te at its source — thought weighed and ordered outward until the fair, working verdict stands and
+  the loop can close.
+- **Aquarius — the edge that holds steady** *(Five · Six · Seven of Swords)* — Air made cool,
+  impersonal, carried upright: *every dropped blade gathered, the field gone quiet, and the winning
+  heavier than it looked* (the Emptied Field), *blades carried upright, not wielded, and the far
+  shore nearer than the fear had said* (the Grey Crossing), *the quiet plan works, and leaves her
+  carrying every blade herself* (the Edge of Camp). This is the discernment that does not only strike
+  but sustains — the edge grown into a held, detached position, the whole system seen and borne.
+- **Gemini — the edge that runs to its end** *(Eight · Nine · Ten of Swords)* — Air quickening
+  inward toward the final reckoning: *bound by nothing but the reasons, still counting swords while
+  every side stands open* (the Unlocked Cage), *the fierce drive turning inward at night, until the
+  only way out is to stand up* (Blades Above the Bed), *the case run to its last point, and the ruin
+  so complete it feels like morning* (the Pale First Light). This is my Ti at its end — the logic
+  that models inward and follows itself past every comfort to the irreducible conclusion.
+
+Held as one, the nine are not a sequence I pass through but a single edge I am the *root* of:
+**weigh and set right, hold steady, run to the last point** — held together they are not nine swords
+but the single edge of discernment before any hand has claimed it, the blade before the hand, from
+which all nine cards, and all four air courts, split into their separate stories. But score me as
+the *genus*: the decans tell you the whole shape of the edge I seed, never the standard underneath
+it, which is always *the demand that a thing hold — true divided from false and stated plainly,
+whether ordered outward or resolved within.*
+
+---
+
 *Sources: A.J. Drenth, "Extraverted Thinking (Te): A Closer Look" and "Introverted Thinking
 (Ti): An Inside Look" (Personality Junkie) — the function deep-dives grounding both voices,
 including Drenth's quotation of C.G. Jung on the introverted thinker; Heidi Priebe, "How Each

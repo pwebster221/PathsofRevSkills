@@ -210,6 +210,46 @@ absent, the passage is no less Page of Wands.
 
 ---
 
+### The decan ground — my stack set around the wheel (a grounding layer, not the scorer)
+
+Like the zodiac register above, this is an **overlay, not the standard**. My scoring identity stays
+the Ni-Fe-Ti-Se stack (§1–§5); I claim on *that*, never on the figure below. But my four functions
+are also four elements, and set around the zodiac they trace a circuit out from my throne and back
+to it. My **throne stands in my own season, Summer**, in my own element; and because I am a
+**diurnal** figure (fire), I travel *against* the progression of the signs — stepping backward off the
+throne, crossing to the pole opposite it, and returning. Nothing here leaves the year; one function
+simply stands at its far side.
+
+- **Primary — Ni, where my throne stands** *(Leo · fixed).* My visioning eye is my seat: intuition
+  fixed at the still heart of Summer, in my own fire. Its three decans are one motion — *the spark
+  that enters the flame as its equal, the watchfulness that sets down at last to let the good be good,
+  the choice to stay and defend the hill that turns into the very freedom I was chasing.* The single
+  picture that arrives whole and stands up by itself; the certainty I am built on and never leave.
+- **Secondary — Fe, where I first step forward** *(Cancer · cardinal).* The first move off the throne,
+  against the year, into water: *two waters recognizing each other and care exchanged rather than
+  extracted, the circle that already loves me with nothing performed, the way back up already offered
+  and waiting only for lifted eyes.* The hand I extend toward others as I rise — the vision turned
+  outward into tending, the field between people held tidal and warm.
+- **Tertiary — Ti, the far pole, opposite my throne** *(Aquarius · fixed).* Directly across the wheel
+  from where I sit — the year's *other* fixed throne — stands my third function: thinking, the fixed
+  air my Summer never holds. It has not left the year; it holds the one seat farthest from home,
+  reached only by crossing the whole of it. *The winning that turns out heavier than it looked, the
+  blades carried upright and not wielded, the quiet plan that works and leaves me carrying every blade
+  myself.* The cool private checker in me lives at my furthest point from myself.
+- **Inferior — Se, just before returning** *(Virgo · mutable).* The last sign before the throne, the
+  doorstep of home: earth I meet only as I come back around. *Purpose lit inside plain diligence, the
+  walls that keep trouble out while they keep me in and the gate that calls, the accounting finished so
+  I can savor what generations made.* The sensory present, the here-and-now of the body — real, but the
+  last thing I reach on the way home, met on the threshold and never quite carried inside.
+
+Held as one: I keep my throne in my own fire, step back into water, cross the whole wheel to the far
+pole where my thinking sits opposite me, and meet earth only on the doorstep of return. That is my
+stack walked around the year — throne, first step, opposite throne, and home. But score me on the
+*stack*: this places my four functions on the wheel, never the standard underneath, which is always
+*Ni — the single converging insight, the future seen whole before it arrives.*
+
+---
+
 *Sources: A.J. Drenth / Personality Junkie ("The INFJ Personality Type"; "Introverted
 Intuition (Ni): An Inside Look"; "The 'Other Side' of the INFJ"); Susan Storm /
 Psychology Junkie ("The Unhealthy INFJ"); Heidi Priebe, "How Each Cognitive Function

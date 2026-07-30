@@ -303,6 +303,50 @@ Ace of Chalices.
 
 ---
 
+### The decan ground — the whole suit I am the seed of (a grounding layer, not the scorer)
+
+Like the zodiac register above, this is an **overlay, not the standard**. My scoring identity is the
+feeling function itself — the two voices, Extraverted Feeling (Fe) and Introverted Feeling (Fi),
+undifferentiated into any one court (§1–§5); I recognize by *genus*, and I claim on *that*, never on
+the decan-words below. But unlike a single court, I am not three decans — I am the **whole water suit
+before it split into stories**: the nine decans of Cancer, Scorpio, and Pisces *are* the Two through
+Ten of Chalices, and every one of them is me, unfolded. I am the valuing itself; these nine are what
+the water becomes when it takes a shape.
+
+They fall into the three motions the register named — the one water sheltering, deepening, and
+dissolving past its own edge:
+
+- **Cancer — the water that opens toward another** *(Two · Three · Four of Chalices).* Feeling
+  reaching out to meet what is between us: *two waters recognizing each other, care exchanged rather
+  than extracted, and neither disappears in the meeting* (Two Waters Meeting), *the circle already
+  loves him, and nothing needs to be performed* (The Uncounted Circle), *the way back up already
+  offered, waiting only for lifted eyes* (The Fourth Cup Waiting). This is my Fe at its source — the
+  cup poured out, feeling turned toward the shared field, tended before it is asked for.
+- **Scorpio — the water held all the way down** *(Five · Six · Seven of Chalices).* Feeling that
+  runs beneath and does not let go: *three cups soaked into the ground, until he straightens, turns,
+  and takes hold of the two that remain* (The Cups Still Standing), *a cup of flowers handed out of a
+  gentler time, asking nothing but to be received* (The Remembered Sweetness), *a feast that never
+  feeds, until she closes her eyes and picks the one to go all the way down* (The Feast of Mist). This
+  is the water that neither pours out nor drinks down but *stays* — the steady, held middle, feeling
+  loyal to what it has soaked into, transmuting rather than moving on.
+- **Pisces — the water that comes home to itself** *(Eight · Nine · Ten of Chalices).* Feeling
+  drawn inward toward what is truest: *eight cups full and no longer enough, the cold night chosen to
+  find something truer to be tender with* (Leaving the Warm Sea), *every cup gleaming, until
+  satisfaction turns out to be a beginning, not an end* (The Granted Wish), *holding the happiness to
+  its standard, until the striving slackens and he plays beneath what he built* (The Tended Rainbow).
+  This is my Fi at its end — the cup drunk down, feeling referred to the inner compass, leaving even a
+  full table when it rings false and resting only in what is authentically its own.
+
+Held as one, the nine are not a sequence I pass through but a single tide I am the *root* of:
+**open toward another, hold all the way down, come home to itself** — the undivided water from which
+all nine cards, and all four water courts, split into their separate stories. It is what my own
+atom-title names: every tide these nine rooms pour, *held as one undivided water whose whole work,
+outward or inward, is to heal.* But score me as the *genus*: the decans tell you the whole shape of
+the water I seed, never the standard underneath it, which is always *valuing — what things are worth
+to the heart — poured outward toward the room or drawn inward toward the self.*
+
+---
+
 *Sources: A.J. Drenth, Personality Junkie ("Extraverted Feeling (Fe): A Closer Look";
 "Introverted Feeling (Fi) vs. Ti, Ni, & Fe"; "The 8 Functions"); Heidi Priebe, Thought
 Catalog and* The Comprehensive INFP Survival Guide *(2016); Susan Storm, Psychology Junkie

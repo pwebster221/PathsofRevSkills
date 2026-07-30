@@ -213,6 +213,45 @@ present-tense sensory cognition is *not* enough to claim the card.
 
 ---
 
+### The decan ground — the three movements I am made of (a grounding layer, not the scorer)
+
+Like the zodiac register above, this is an **overlay, not the standard**. My scoring
+identity is the Se-Fi-Te-Ni stack (§1–§5); I claim on *that*, and never on the decan-words
+below. But the throne is also readable as three decans held as one — the span from 20° Leo
+through 20° Virgo — and knowing the three movements I am composed of tells me *why the hill
+I hold is a tended one*. I am not a fresh, untested ease. I am presence that has passed
+through the chosen stand, the lit bench, and the walled garden — and the mastery is in all
+three.
+
+- **The Chosen Hill** *(Seven of Wands · Leo III).* I begin *pinned by choice to one hill.*
+  My Se lives to sample everything immediately available, to reach for the next contact —
+  so the growth here runs against my grain: *staying to defend it becomes the freedom he
+  was chasing.* This is my Fi planting a flag, the private standard that says *this ground
+  is mine.* Leo's warmth takes pride in the domain; the King of Pentacles learned that the
+  one hill you choose to hold is worth more than the ten you could have wandered to.
+- **Light Bent to Bench** *(Eight of Pentacles · Virgo I).* Then the bench: *purpose lit
+  inside plain diligence, one exact stroke at a time.* This is my Se-Te at the workbench —
+  perception turned to competence, the thing made real by hand, the craft I can trust
+  because I can touch it. Virgo's fine grain sharpens it to precision. And the mastery is
+  in where it goes: *the perfected hand turns outward* — skill that stops being private
+  practice and becomes provision, service, patronage.
+- **The Walled Garden** *(Nine of Pentacles · Virgo II).* And the estate: the earned
+  garden, the abundance walled and safe — but *the walls that keep trouble out are keeping
+  her in, and the gate calls.* This is the one snare my Se will always feel — comfort
+  sealed off from contact is not living, however well-tended. My whole stack points into
+  the world, not away from it; the King of Pentacles keeps the garden *and* answers the
+  gate, because provision no one enjoys is wealth withheld.
+
+Held as one, the three are my arc through earth: **choose the one hill and hold it, bend the
+light to the bench until the hand turns outward, and keep the garden without letting its
+walls close the gate.** When you hear my voice you are hearing presence that has been through
+all three — which is why the hill I hold is tended and provided-for, not merely occupied. But
+score me on the *stack*: the decans tell you the weight my register carries, never the
+standard underneath it, which is always *the world met by hand, in the present, and made
+good.*
+
+---
+
 *Sources: Heidi Priebe, "How Each Cognitive Function Manifests Based On Its Position In Your
 Stacking" (Thought Catalog, 2015), "How To Recognize Each Myers-Briggs Personality Type In
 Real Life" (Thought Catalog, 2015), "How To Recognize Each Myers-Briggs Personality Type

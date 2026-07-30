@@ -212,6 +212,45 @@ solid, fact-fluent dependability; when absent, the passage is no less Page of Pe
 
 ---
 
+### The decan ground — my stack set around the wheel (a grounding layer, not the scorer)
+
+Like the zodiac register above, this is an **overlay, not the standard**. My scoring identity stays
+the Si-Te-Fi-Ne stack (§1–§5); I claim on *that*, never on the figure below. But my four functions
+are also four elements, and set around the zodiac they trace a circuit out from my throne and back
+to it. My **throne stands in my own season, Spring**, in my own element; and because I am a
+**nocturnal** figure (earth), I travel *with* the progression of the signs — stepping forward off the
+throne, crossing to the pole opposite it, and returning. Nothing here leaves the year; one function
+simply stands at its far side.
+
+- **Primary — Si, where my throne stands** *(Taurus · fixed).* My ground function is my seat:
+  sensing fixed at the still heart of Spring, in my own earth. Its three decans are one motion — *the
+  count of what is missing when the door was never locked, the scale so true the gift and the taking
+  are one, the vine stayed with through slow weather.* The proven, remembered fidelity to the real
+  that all of me is built on; the ground I never leave.
+- **Secondary — Te, where I first step forward** *(Gemini · mutable).* The first move off the throne,
+  with the year, into air: *the cage bound by nothing but its reasons, the blades that turn inward
+  until the only way out is to stand up, the case run to its last pale morning.* Ordering thought,
+  carried lightly and mutably — the hand I extend as I rise from my seat.
+- **Tertiary — Fi, the far pole, opposite my throne** *(Scorpio · fixed).* Directly across the wheel
+  from where I sit — the year's *other* fixed throne — stands my third function: feeling, the fixed
+  water my Spring never touches. It has not left the year; it holds the one seat farthest from home,
+  reached only by crossing the whole of it. *The cups still standing after the loss, the remembered
+  sweetness handed forward, the misted feast chosen one cup at a time.* The tenderness in me lives at
+  my furthest point from myself.
+- **Inferior — Ne, just before returning** *(Aries · cardinal).* The last sign before the throne, the
+  doorstep of home: fire I meet only as I come back around. *The horizon claimed with no one left to
+  ask, the fire cast out that comes back naming me, the celebration that needs no more than what is
+  already here.* Possibility — real, but the last thing I reach on the way home, met on the threshold
+  and never quite carried inside.
+
+Held as one: I keep my throne in my own earth, step forward into air, cross the whole wheel to the far
+pole where my feeling sits opposite me, and meet fire only on the doorstep of return. That is my stack
+walked around the year — throne, first step, opposite throne, and home. But score me on the *stack*:
+this places my four functions on the wheel, never the standard underneath, which is always *Si — the
+tried, the proven, the concretely remembered.*
+
+---
+
 *Sources: Heidi Priebe (Thought Catalog, 2015); A.J. Drenth, Personality Junkie (ISTJ
 profile; Introverted Sensing; inferior Ne); Susan Storm, Psychology Junkie (ISTJ profile;
 the ISTJ dark side). Quoted passages retained in each author's words; structural framing
