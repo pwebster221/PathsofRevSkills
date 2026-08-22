@@ -1,6 +1,19 @@
 ---
 name: coding-bible
-description: Use this skill whenever code or infrastructure is being written, built, audited, debugged, deployed, or architected for Paul Webster / DubTown Designs OR for Paths of Reverence — the Coding Bible is the universal coding standard for both. It is Paul's personal coding canon AND Paths of Reverence's coding canon (PoR is one of Paul's projects; PoR services are built to these same rules). Encodes preferred frameworks (FastAPI + Pydantic v2, FastMCP, LangGraph, Astro, Neo4j-first, native systemd over Docker), infrastructure patterns (Proxmox/LXC, Cloudflare Tunnels with protocol http2 only, WireGuard for inter-node VPN, Authentik OIDC for auth, Ansible as sole IaC), container archetype classification (Three-Duality of Depth × Permanence × Velocity → 8 archetypes), MCP service shape conventions (mounted /mcp/mcp vs standalone /mcp), workflow norms (7-phase build, subagent-driven development, macro authorization, optionality as a requirement), agent behavior norms (honest unperformed errors, cost discipline, Esoteric Diction tier discipline for agent outputs), and load-bearing operational gotchas (cloudflared QUIC instability, FastMCP behind tunnel requires custom main(), KairosAPI client drift, Sacred Journey wrapper drift, tar --exclude-from anchoring, Linear renderer quirks, cloudflared has no graceful reload). Trigger on the named technologies, on container/host/network design, on auth/MCP/tunnel setup, on any of the cited PoR services as worked examples, and on broader "how should I build this" questions in Paul's or PoR's workspace. Use even when the user does not name "coding bible" or "standards" — if the work is code or infrastructure under Paul's authorship or under the Paths of Reverence ecosystem, this skill applies.
+description: >-
+  Use this skill whenever code or infrastructure is being written, built, audited,
+  debugged, deployed, or architected for Paul Webster / DubTown Designs OR for Paths of
+  Reverence — the Coding Bible is the universal coding standard for both. It is Paul's
+  personal coding canon AND Paths of Reverence's coding canon (PoR is one of Paul's
+  projects; PoR services are built to these same rules). Encodes preferred frameworks
+  (FastAPI + Pydantic v2, FastMCP, LangGraph, Astro, Neo4j-first, native systemd over
+  Docker), infrastructure patterns (Proxmox/LXC, Cloudflare Tunnels with protocol http2
+  only, WireGuard for inter-node VPN, Authentik OIDC for auth, Ansible as sole IaC),
+  container archetype classification (Three-Duality of Depth × Permanence × Velocity → 8
+  archetypes), MCP service shape conventions (mounted /mcp/mcp vs standalone /mcp),
+  workflow norms (7-phase build, subagent-driven development, macro authorization,
+  optionality as a requirement), agent behavior norms (honest unperformed errors, cost
+  discipline
 ---
 
 # coding-bible

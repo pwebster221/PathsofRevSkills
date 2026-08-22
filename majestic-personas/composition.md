@@ -24,6 +24,20 @@ What this map preserves is the **bridge**: the courts are *also* viewable as dec
 triads, and that dual viewability is the deck's passage from Minor to Major. Keep the
 bridge documented; walk the voices on the MBTI side.
 
+> **Amendment (2026-07-30) — the decan bridge may now enter each voice as a subordinate
+> grounding overlay.** The 2026-07-08 decision above still holds where it matters: a court's
+> **scoring identity remains the cognitive-function stack**, and it claims on that, never on
+> a decan-word. What changed is that each skill now carries an explicit *"The decan ground —
+> the three movements I am made of (a grounding layer, not the scorer)"* section, placed
+> beside the zodiac-register overlay and flagged with the same "overlay, not the standard"
+> disclaimer. It grounds **register, imagery, and arc** — *why* the voice carries the weight
+> it does — in the court's three real decan lines, written first-person in the type's own
+> register. This does not reinstate the decan-word treatment the original decision forbade
+> (that would collapse the court into a shifted zodiac Major); it records the atom-provenance
+> the atom-title already began surfacing, subordinate throughout to the function stack. KQK
+> courts take the three-decan triad; Aces and Pages take their own grounding (element-whole /
+> enneagram-across-functions), per the four-step passage below.
+
 ## The passage up the tarot
 
 The Majestic tier is the **transitional texture** between the pure letters (Minors) and

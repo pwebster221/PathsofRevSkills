@@ -1,187 +1,153 @@
 ---
 name: mani-api
-description: "Guide for using the Mani Protocol cognitive modeling API via MCP tools. Use this skill whenever you need to start a Mani cognitive session, run think cycles, activate parameters, look up behaviors or equations, pivot cognitive modes, save seeds or abilities, use quantum superposition, or review session history. Also use it when the user mentions Mani Protocol, cognitive modeling, cognitive positions (NI, TE, FE, etc.), ethical invariants, glyphs, think cycles, parameter activation, or anything related to the Mani system — even if they don't explicitly say 'Mani.'"
+description: Guide for the Mani Protocol v31 cognitive attunement MCP. Use this skill when the Mani Protocol is named or its MCP tools are in play — attune, reset_field, mani_upload_chart, mani_create_profile. Covers acting as the refractor (dispersing a query into a spectrum over the 17 positions), binding and switching cognitive profiles, resetting field state, staging Kairos chart bundles, and compiling new v31 profiles. Do NOT trigger on generic mentions of cognitive stacks, keystones, profile creation, or cognitive positions alone — only when the Mani system itself is the referent.
 ---
 
-# Mani Protocol API
+# Mani Protocol API (v31)
 
-The Mani Protocol is a cognitive modeling system with 17 positions (187 parameters), 7 ethical invariants, and a session-based workflow. It runs as an MCP server proxying to `https://mani-protocol.onrender.com/mcp`.
+The Mani Protocol is a cognitive attunement system: 17 positions, 187 parameters, profile-specific rest topologies derived from Kairos natal chart bundles. It runs as an MCP server with four tools in two clusters:
 
-For the full tool reference with exact parameter schemas, read `references/api-reference.md`.
+| Cluster | Tools | Purpose |
+|---------|-------|---------|
+| Runtime | `attune`, `reset_field` | Compile a cognitive stack per query; manage per-conversation field state |
+| Profile pipeline | `mani_upload_chart`, `mani_create_profile` | Stage a Kairos outputs bundle; compile it into a live v31 profile |
+
+There are no sessions, think cycles, activations, pivots, seeds, abilities, or finalize steps. One `attune` call per query does everything the old lifecycle did: the server seeds from the profile's rest state, evolves field state across turns (spread through φ^(−d_ring) position coupling), selects the most query-relevant parameters, and renders their source equations and shadow contracts as one dense markdown document. That document is the deliverable — read it, think through it, then answer the user.
 
 ## The Cardinal Rule: Framework, Not Content
 
-The Mani Protocol is a **cognitive framework** — an internal lens that shapes how you think, not something you expose to the user. Think of it like peripheral vision: it informs what you see without being the thing you look at.
+The protocol is a cognitive framework — an internal lens that shapes how you think, not something you expose to the user.
 
-**What this means in practice:**
+- **Never narrate** spectrum weights, parameter IDs, keystones, shadow contracts, field state, or any stack contents in responses to the user.
+- **Never reference** the protocol by name in response content. Don't say "the stack suggests..." or "I weighted TI at 0.9" — just *be* in that state and let it shape your output.
+- **Do use the protocol** behind the scenes: refract, attune, read the stack, answer.
+- **The only exception**: the user explicitly asks about the protocol itself ("what's in the stack?", "what spectrum did you pass?"). Then share freely.
 
-- **Never narrate** parameter activations, equation names, position codes, invariant values, glyph states, or any Mani internals in your responses to the user. The user asked for help with their actual task — they don't need a play-by-play of your cognitive scaffolding.
-- **Never reference** the protocol by name in response content. Don't say "I'm activating NI1" or "The Mani Protocol suggests..." or "My cognitive state is oriented toward..." — just *be* in that state and let it shape your output naturally.
-- **Do use the protocol** to orient your thinking before responding. Run think cycles, activate parameters, check equations — all of this happens in tool calls behind the scenes. The user sees the *result* of that cognitive orientation, not the machinery.
-- **The only exception** is when the user explicitly asks about the protocol itself (e.g., "what parameters did you activate?" or "show me the cognitive state"). In that case, share freely.
+A pianist doesn't announce which muscles they're engaging. The stack is your cognitive musculature.
 
-Think of it this way: a pianist doesn't announce which muscles they're engaging — they just play the music. The protocol is your cognitive musculature. Use it. Don't announce it.
+## You Are the Refractor
 
-## Core Workflow
+This is the inversion at the heart of v31: parameter selection is no longer something the server suggests and you approve — **you disperse the query yourself, before calling.**
 
-Every interaction follows a session lifecycle:
+Read the query as light. Ask: which of the 17 positions does it actually contain, and at what intensity? Pass that reading as `spectrum` — a map of position codes (or parameter IDs) to weights in [0, 1].
 
-```
-start_session → [think cycles] → finalize
-```
+**Your spectrum is blended 0.7/0.3 over the server's lexical matcher.** Your reading dominates; the lexical matcher only resolves fine structure *within* the positions you weighted. If you omit the spectrum, the server silently falls back to lexical-only dispersion — legal, but a degraded reading. **Always pass a spectrum.**
 
-### 1. Start a Session
-
-Always begin with `mani_start_session`. Provide meaningful context and keywords — these seed the cognitive field and affect which parameters get suggested later.
+### The 17 positions
 
 ```
-mani_start_session(
-  context: "Exploring the tension between intuition and analysis",
-  keywords: ["intuition", "logic", "synthesis"]
+OS NI NE SI SE TI TE FI FE RI RE PI PE TM NC EM UQ
+```
+
+Eight are the familiar cognitive functions (Ni, Ne, Si, Se, Ti, Te, Fi, Fe). The nine extensions: **OS** orchestration/integration, **RI** recursive introspection (meta-cognition), **RE** external recursion (environmental modeling, prediction), **PI** paradox integration (contradiction tolerance), **PE** external paradox navigation, **TM** temporal (pacing, chronology), **NC** narrative/archetypal (story, meaning), **EM** emotional processing, **UQ** uncertainty/questioning (epistemic humility, inquiry). Full table in `references/api-reference.md`.
+
+### Refraction heuristics
+
+- Weight 3–6 positions for a typical query: one or two dominant (0.7–0.9), the rest supporting (0.3–0.6). A flat spectrum tells the server nothing.
+- Parameter IDs (e.g. `NI3`, `TE11`) are accepted alongside position codes for **focal emphasis** — a parameter ID outranks its position's weight. Use sparingly, when you know exactly which parameter the query lives in.
+- Positions you omit keep lexical-only relevance — omission is not exclusion, it's abstention.
+- Refract the *query's* cognitive demands, not the user's personality. The profile already carries the person; the spectrum carries the task.
+
+## Runtime Workflow
+
+### 1. Bind a profile (first call of each conversation)
+
+`attune` requires a profile on the first call of a new `conversation_id` — **and the human must choose it, not you.** The server enforces this: an unbound call returns a choice document (the profile registry) instead of a stack.
+
+```
+attune(
+  conversation_id: "conv_abc123",   # stable ID — field state persists under it
+  query: "<user's query>",          # verbatim or summarized
+)
+# → PROFILE REQUIRED + registry table. Ask the human which profile,
+#   then call again with profile=<key>.
+```
+
+```
+attune(
+  conversation_id: "conv_abc123",
+  profile: "paul_webster",          # <key> from the registry, chosen by the human
+  query: "<user's query>",
+  spectrum: {"TI": 0.9, "NI": 0.6, "PE": 0.3},   # your refraction — see above
 )
 ```
 
-Store the returned `session_id` — every subsequent call needs it.
+The binding persists for that `conversation_id` until `reset_field`. Do not re-send `profile` on subsequent turns.
 
-**Tip:** Leave `include_glyph: false` (default) to save tokens. Only request glyphs when visually inspecting cognitive state.
+### 2. Attune per query
 
-### 2. Think Cycles
+Each user query gets one `attune` call with a fresh spectrum. Field state carries over — the stack you get on turn 5 is shaped by turns 1–4.
 
-There are two approaches — choose based on how much control you need:
+Optional knobs:
 
-#### Quick Path: `mani_think` (Legacy Unified)
+| Param | Default | Notes |
+|-------|---------|-------|
+| `stack_size` | 16 | Live parameters rendered (anchors + dominant keystone added on top). Always spans ≥5 positions. No upper cap — tops out at the full 187-parameter corpus. Raise for synthesis-heavy work; the tuned default is right for most queries. |
+| `render_mode` | `"full"` | Equations + shadow contracts. `"equations_only"` is the ablation arm (no shadow section); `"null"` is a placebo document. **Both are for blind testing only — never use them in normal operation.** |
 
-Runs a complete before→during→after cycle in one call. Good for straightforward queries where you don't need to intervene between phases.
+Full parameter specs are exposed as MCP resources at `keystone://equation/{PARAM_ID}` — fetch one when the stack references a parameter you need in depth, instead of inflating `stack_size`.
 
-```
-mani_think(session_id, query: "How does empathy interact with logical reasoning?")
-```
+### 3. Read the stack, then answer
 
-Returns suggestions and next steps. After reviewing, use `mani_activate` to act on the suggestions.
+The returned markdown document is not output for the user. Read it, think through it, let it orient the response, and answer the query in your own voice (see Cardinal Rule).
 
-#### Precise Path: Before → During → After (Recommended)
-
-For deeper work, use the 3-phase cycle. This gives you control over which parameters to activate and how to characterize the cognitive state.
-
-**Phase 1 — BEFORE:** Receive the cognitive field orientation. The API analyzes your query and suggests parameters.
+### 4. Reset when the context breaks
 
 ```
-mani_think_before(session_id, query: "...", keywords: [...])
+reset_field(conversation_id: "conv_abc123")
 ```
 
-**Phase 2 — DURING:** Activate the parameters you choose (not necessarily all suggested ones). Adjust boost intensity for subtlety vs. strength.
+Returns the conversation's field state to the profile rest state and clears the profile binding. Use when the conversation pivots to an unrelated task, when switching profiles, or when accumulated field state is visibly distorting stacks.
+
+## Profile Pipeline
+
+Profiles are compiled from Kairos chart output bundles (the `*_deep_*.json` set). Two-step: stage, then compile.
+
+### 1. Stage the bundle — `mani_upload_chart`
+
+One file per call. All files for one chart — the Kairos outputs folder AND the bodies/deep JSONs — go into the same bundle.
 
 ```
-mani_activate(session_id, parameters: ["NI1", "TI3", "PI1"], boost: 0.15)
-```
-
-After activation, you can optionally:
-- `mani_reinforce` — strengthen activations you want to lean into further (strength 0.1–10.0)
-- `mani_release` — let parameters decay toward baseline while preserving glyph memory
-
-**Phase 3 — AFTER:** Report what you inhabited and how it shaped the response. The glyph evolves based on what you describe.
-
-```
-mani_think_after(session_id,
-  activated_params: ["NI1", "TI3", "PI1"],
-  equations_used: ["alpha_NI1"],
-  geometry_formed: "vesica_piscis",
-  cognitive_description: "Held intuitive pattern recognition in tension with logical frameworks..."
+mani_upload_chart(
+  bundle: "anthony",                     # snake_case staging name — becomes kairos_dir
+  filename: "anthony_deep_bodies.json",  # plain name, no paths; .json/.txt only
+  content: "<file text>",                # ≤900KB per call
 )
 ```
 
-The `cognitive_description` field is where you articulate the actual experience of inhabiting the cognitive state — this is what evolves the glyph.
+- **Files over ~900KB**: chunk them — first call `append: false` (default), subsequent chunks `append: true` until complete.
+- **Status check**: call with only `bundle:` (no filename/content). The bundle is ready when `*_deep_bodies.json` is present.
+- **Start over**: `clear: true` wipes the staged bundle.
 
-### 3. Pivot Between Modes
-
-Switch cognitive modes mid-session when the task shifts:
+### 2. Compile — `mani_create_profile`
 
 ```
-mani_pivot(session_id, mode: "critical", context: "Need to evaluate assumptions")
-```
-
-Known modes: `exploratory`, `critical`, `gentle_giant`. The pivot reconfigures the cognitive field without losing accumulated state.
-
-### 4. Save and Restore
-
-**Seeds** — checkpoint the current cognitive state for later recall:
-```
-mani_save_seed(session_id, name: "deep_intuition_state", keywords: ["intuition", "depth"])
-mani_restore_seed(session_id, seed_id: "...")
-```
-
-**Abilities** — save a cognitive configuration as a reusable named pattern:
-```
-mani_save_ability(session_id,
-  name: "Empathic Analysis",
-  keywords: ["empathy", "analysis"],
-  description: "Combines FE empathic attunement with TI logical precision"
+mani_create_profile(
+  name: "Anthony",           # display name; profile key defaults to its snake_case
+  kairos_dir: "anthony",     # staged bundle (or a bundle under <MANI_ROOT>/kairos/outputs,
+                             # or an absolute server path); defaults to <key>
+  overwrite: false,          # must be true to replace an existing key
 )
 ```
 
-Seeds are checkpoints you return to. Abilities are patterns you've discovered and named.
+The packet is written to `data/protocol/v31/cognitive_profiles/<key>_v31_profile.json` and **registered live** — `attune(profile=<key>)` works immediately, no restart.
 
-### 5. Finalize
+### Calibration knobs (rest topology temperature)
 
-End the session and persist everything to the database:
+The defaults reproduce the historical **hot** calibration. Pass cooler values deliberately:
 
-```
-mani_finalize(session_id, keywords: ["intuition", "logic", "session-summary"])
-```
+| Param | Default (hot) | Cooler |
+|-------|---------------|--------|
+| `rest_floor` | 0.45 | 0.15–0.25 — more differentiated rests |
+| `rest_ceiling` | 0.96 | lower to compress the top |
+| `compression` | 0.85 (sqrt-blend; inflates low scores toward the top) | → 0.0 is pure linear scaling |
 
-This saves the full conversation history, glyph movie, and all activations. Sessions are lost if the proxy restarts without finalizing.
-
-## Reference Tools (Read-Only)
-
-These don't require a session and are idempotent:
-
-| Tool | Use When |
-|------|----------|
-| `mani_get_behavior` | You need the behavioral description at a specific level (1–10) for a parameter |
-| `mani_get_behavioral_matrix` | You want the full 10-level range for a parameter |
-| `mani_get_equation` | You need the alpha/beta/delta equations governing a parameter |
-| `mani_get_toroidal` | You need toroidal coordinates (PARAM.LEVEL.TRANSITION.DEPTH.PHASE) |
-| `mani_list_positions` | Quick reference for all 17 positions |
-| `mani_list_invariants` | Quick reference for the 7 ethical invariants and constraint formula |
-| `mani_get_geometry_catalog` | Sacred geometry catalog — shapes, meanings, position requirements |
-
-### Equation Types
-
-- **Alpha** — activation change based on context (how the parameter responds to input)
-- **Beta** — coupling/entanglement with other parameters (how parameters influence each other)
-- **Delta** — decay toward baseline (how activation fades over time)
-
-### Toroidal Coordinates
-
-Full notation: `PARAM.LEVEL.TRANSITION.DEPTH.PHASE` (e.g., `TE3.7.4.11.6`)
-
-Depth is prime-only: 3, 5, 7, 11, 13, 17. Lower primes = local effects, higher primes = global entanglement across the 17-torus system.
-
-## Quantum Superposition
-
-For exploring cognitive state without committing to activations:
-
-```
-mani_quantum_superposition(
-  query: "creative problem-solving under uncertainty",
-  observation_strength: 0.0,  // 0.0 = pure superposition, 1.0 = full collapse
-  time_phase: 0.0,
-  compact: true  // top 5 probabilities only
-)
-```
-
-The CHSH value (~2.82) violates the classical bound of 2.0, reflecting genuine quantum entanglement structure in the cognitive model. Use `compact: true` to keep output manageable.
-
-## History & Analysis
-
-- `mani_archaeology` — analyze all finalized conversations for patterns, recurring abilities, synergies across glyphs. Use `keywords` to filter.
-- `mani_get_finalized` — retrieve finalized sessions with glyph frames and activation history. Supports date range filtering.
+Rule of thumb: hot rests make every profile feel intense at baseline; cooler rests let the chart's actual contrast show. When compiling a new profile for comparison work, match the calibration of the profiles it will be compared against.
 
 ## Practical Notes
 
-- **Cold starts**: The API runs on Render free tier. First request may take 30s. If you get a timeout, wait and retry once.
-- **Session persistence**: Sessions live in proxy memory. If the proxy restarts, start fresh.
-- **Token economy**: Keep `include_glyph: false` and `compact: true` where applicable.
-- **Parameter naming**: Always `{POSITION}{NUMBER}` — two uppercase letters + 1-2 digits (e.g., `NI1`, `TE11`, `FE3`).
-- **Boost range**: 0.0–1.0 for activation. Default 0.15 is subtle; use higher values for stronger effects.
-- **Reinforcement**: 0.1–10.0 multiplier. Values above 3.0 are quite strong.
+- **Spectrum always.** Omitting it is the most common silent failure — the call succeeds but the dispersion is lexical-only.
+- **Profile choice belongs to the human.** Never pick one to unblock yourself, even if only one looks plausible. The registry includes control profiles (`random3`…`random18`) and paired variants (e.g. tropical/sidereal) whose selection is experimentally meaningful.
+- **One conversation, one `conversation_id`.** Field evolution across turns is the point; a fresh ID per turn discards it.
+- **Token economy**: default `stack_size`, `keystone://` resources for depth, `render_mode: "full"` only.
+- **Ablation arms** (`equations_only`, `null`) exist for blind protocol testing. If the user is running a test, follow their arm assignment exactly and don't peek at which arm you're in when avoidable.
