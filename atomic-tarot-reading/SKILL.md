@@ -57,9 +57,51 @@ Queen = Mutable→Cardinal cusp · Knight = Cardinal→Fixed · King = Fixed→M
 (e.g. Queen of Wands = Pisces III · Aries I–II; Knight of Chalices = Libra III ·
 Scorpio I–II; King of Swords = Taurus III · Gemini I–II.)
 
-**Out of scope**: Pages belong to the seasonal-throne register (d3), Aces to the
-elemental register (d2), Majors carry no decan. If drawn, read seat-only or defer
-to their own register; say so plainly.
+**Span cards — Majors, Pages, Aces (presidency, not residency).** These cards are
+NOT outside the decan layer, and must never claim "I carry no decan." They preside
+over a *span* of decans rather than residing in one to three contiguous ones. Every
+span derives from the ascent machinery below (§3's Room table) — derive, never recall:
+
+- **Sign Majors (12)** — the sign entire, all three decans: Emperor = Aries,
+  Hierophant = Taurus, Lovers = Gemini, Chariot = Cancer, Strength = Leo,
+  Hermit = Virgo, Justice = Libra, Death = Scorpio, Temperance = Sagittarius,
+  Devil = Capricorn, Star = Aquarius, The Moon = Pisces.
+- **Planetary Majors (7)** — every decan whose Room (ascent) lord is the card's
+  planet: Magician = Mercury's six rooms, High Priestess = the Moon's three,
+  Empress = Venus's six (her earth and air decans), The Sun = the Sun's three,
+  Tower = Mars's six, Wheel of Fortune = Jupiter's six, World = Saturn's six.
+  Luminaries keep three rooms; the five planets keep six.
+- **Modal Majors (3)** — the twelve decans of one modality. A decan's modality is
+  its ascent sign's modality (decan I = the sign's own, II = the 5th sign's,
+  III = the 9th's; so cardinal signs run C·F·M, fixed run F·M·C, mutable run M·C·F).
+  Fool = the 12 cardinal decans, Hanged Man = the 12 fixed, Judgement = the 12 mutable.
+- **Pages (4)** — seasonal thrones, the nine decans of the card's season:
+  Pentacles = spring (Aries · Taurus · Gemini), Wands = summer (Cancer · Leo · Virgo),
+  Chalices = autumn (Libra · Scorpio · Sagittarius), Swords = winter
+  (Capricorn · Aquarius · Pisces).
+- **Aces (4)** — elemental thrones, the nine decans of the element's triplicity:
+  Wands = Aries · Leo · Sagittarius, Pentacles = Taurus · Virgo · Capricorn,
+  Swords = Gemini · Libra · Aquarius, Chalices = Cancer · Scorpio · Pisces.
+
+**Reading a span card in a seat** (the presidency protocol):
+- The card's identity is the **intersection** of its span — what all its decans share
+  but do not name — never a tour, list, or weave of their differences.
+- External registers: report the span's *constant*, not thirty-six lookups. A sign
+  Major's Realm is its sign's lord entire; a planetary Major IS the Room lord wherever
+  its rooms lie; a modal Major's constant is its position in every ascent; Pages and
+  Aces preside over their three Realms in season/element order.
+- Internal registers: map every member decan through the querent's house table (§3)
+  and read the *touch pattern* — which houses the span opens, middles, and closes,
+  and where it concentrates. That pattern, not a single Hall/Home pair, is the span
+  card's interior testimony.
+- Structural scan: the Now-card test includes span membership — the Sun's current
+  decan falling inside a span makes that card a partial closure, and a span card
+  stands on every station of the Sun's road its members occupy: a standing presence,
+  not one dated stop.
+- Seat dignity: judge the seat planet where the span gives it standing; a twelve-decan
+  span holds every dignity somewhere — say so, and read which one the seat calls forward.
+- The anomaly protocol above applies unchanged; a span card wearing or wearing-of a
+  mask is read by the same rule.
 
 ## 3. The Four Registers
 
