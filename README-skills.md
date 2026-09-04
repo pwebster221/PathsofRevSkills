@@ -43,3 +43,6 @@ point to it from the body, so it loads only when needed.
 | `metaphysical-conversation` | Contemplative dialogue | new — flesh out |
 | `tarot-interpretation` | Card interpretation (The 78) | active |
 | `generative-principle` | UNC research / number 1–21 exploration | active |
+| `d1-decan-reading` | Register performance — Triune Arcanum I.1 Decan Minors | active |
+| `d2-ace-reading` | Register performance — Triune Arcanum I.2 Elemental Aces | active |
+| `d3-page-reading` | Register performance — Triune Arcanum I.3 Throne Pages | active |
