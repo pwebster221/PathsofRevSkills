@@ -1,0 +1,26 @@
+name: notify-pormcpentry
+# Tell the private PoRMCPEntry repo to re-vendor these skills into its Claude Code plugins.
+# Needs repo secret PORMCPENTRY_DISPATCH_TOKEN: a fine-grained PAT scoped to PoRMCPEntry with
+# Contents: read and write. Without it this job exits cleanly and PoRMCPEntry's daily schedule
+# picks the change up instead.
+on:
+  push:
+    branches: [main]
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: repository_dispatch -> pwebster221/PoRMCPEntry
+        env:
+          TOKEN: ${{ secrets.PORMCPENTRY_DISPATCH_TOKEN }}
+        run: |
+          if [ -z "$TOKEN" ]; then
+            echo "PORMCPENTRY_DISPATCH_TOKEN not set; skipping (daily sync will catch up)"; exit 0
+          fi
+          curl -sS -f -X POST \
+            -H "Authorization: Bearer $TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            https://api.github.com/repos/pwebster221/PoRMCPEntry/dispatches \
+            -d "{\"event_type\":\"skills-updated\",\"client_payload\":{\"sha\":\"$GITHUB_SHA\"}}"
+          echo "dispatched skills-updated for $GITHUB_SHA"
