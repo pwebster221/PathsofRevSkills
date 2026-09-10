@@ -46,3 +46,13 @@ point to it from the body, so it loads only when needed.
 | `d1-decan-reading` | Register performance — Triune Arcanum I.1 Decan Minors | active |
 | `d2-ace-reading` | Register performance — Triune Arcanum I.2 Elemental Aces | active |
 | `d3-page-reading` | Register performance — Triune Arcanum I.3 Throne Pages | active |
+
+## Persona skills are operational (ruling 2026-09-10)
+
+The 78 persona skills (majestic-personas/ · major-personas/ · minor-personas/) no longer carry
+their instrument as a declarative prompt. Each SKILL.md now defines the **MCP setup for its
+archetype**, keyed to the exact card name: `persona_kit` (anchor, Trellis declaration,
+evidence-grounded portrait, crossread) as the perspective and system prompt; `mcp_moment` with
+`as_card` as the viewpoint on content; the reading's payload as content; resonance scoring as
+the judge (the Recognition Pass). The former declarative prompts are preserved verbatim at
+`<skill>/references/retired-declarative.md` — historical reference and engine-down fallback.
