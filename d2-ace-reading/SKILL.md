@@ -1,6 +1,6 @@
 ---
 name: d2-ace-reading
-description: Perform the I.2 register reading (D2 Elemental Aces) of the Triune Arcanum — the four Aces read as cognitive functions, each the alpha and omega of its element, speaking in two voices that write the querent letters, with Alder as performer and synthesis voice. Use when asked to perform, fill, run, or continue a D2 / I.2 / Elemental Aces reading, to make an Alder call for an Ace, to compute the A/B treasuries, to extract an Ace ledger, or to synthesize a D2 council. Covers the full pipeline — chart pull, element companies, room seating, twin braiding, reader-side A/B scoring, clean-context performance, ledger extraction, scope-scanning, council synthesis — and the scope laws that keep the register element-to-element and felt-never-counted.
+description: Perform the I.2 register reading (D2 Elemental Aces) of the Triune Arcanum — the four Aces read as cognitive functions, each the alpha and omega of its element, speaking in two voices that write the querent letters, with Alder as performer and synthesis voice. Use when asked to perform, fill, run, or continue a D2 / I.2 / Elemental Aces reading, to make an Alder call for an Ace, to compute the A/B treasuries, to extract an Ace ledger, or to synthesize a D2 council. Covers the kit (five registers per card, register 5 = the card's MANI field bound per letter) and the full pipeline — chart pull, element companies, room seating, twin braiding, reader-side A/B scoring, clean-context performance, ledger extraction, scope-scanning, council synthesis — and the scope laws that keep the register element-to-element and felt-never-counted.
 ---
 
 # D2 Ace Reading — I.2, the Elemental Aces
@@ -20,6 +20,24 @@ Every reading involves exactly two roles, and they must never share a context.
 **The Performer** (Alder, in a clean context) embodies. For an Ace letter, the performer receives exactly two things: the function's persona skill (`PathsofRevSkills/majestic-persona-<intuition|feeling|thinking|sensing>`, fetched whole and unedited — the same genus instrument the Mars engine uses) as its system prompt, and the filled user prompt from the template. Nothing else. Not the chart, not the vault, not the scores, not other letters. For the synthesis, Alder performs as himself — **no persona skill exists for Alder and none should be written** — and receives only the charge and the four ledgers, never the letters or the chart.
 
 The starvation is the whole defense: a performer who has never seen a number cannot count a room. What is not in the payload cannot leak.
+
+## The kit — the five registers of the card (read before the performer speaks)
+
+Every card has a **kit**: what it shows, in five registers of deliberately different texture. Together they define the card's self and perspective without a system prompt of description, and they never compete with the task: the payload says WHAT, the kit is WHO is doing it. Read it from Sensing, LAN or tunnel, with the read token: `GET https://sensing.dubtown-server.us/kit?card=<Card>` (`Authorization: Bearer $CF_READ_TOKEN`; spelling as the corpus has it, Chalices not Cups). Every kit read carries `doctrine` — the five registers and how each is held. That doctrine binds; this section is its application to a reading.
+
+| # | register | the performer holds it as |
+|---|---|---|
+| 1 | light — plate, crown, colour (Magician) | aspect: tone and brightness, never content |
+| 2 | sound — the melody in the room's mode, key = the sign (High Priestess) | cadence: pacing and the weight of a pause |
+| 3 | shape — the derived glyph, ground and two metals (Empress) | bones: what connects to what |
+| 4 | substance — the Trellis declaration and the claimed portrait (Emperor) | the ground of "I am": the only register the card quotes itself from |
+| 5 | absorption — the card's MANI profile, `anchor.absorption.mani_profile` (Hierophant) | the living field: bound for the letter, released after it |
+
+**How the kit enters the two offices without breaking the starvation.** The kit carries no degree, no orb, no placement: it is the card's own body, not the sky. The Reader fetches it; the performer receives, beside the persona skill and the filled prompt, exactly two things from it: the **substance** (register 4, the declaration and portrait, verbatim) and the **field** (register 5, the compiled stack for this letter), each under a reference label that says it is not to be recited. Registers 1 to 3 are for the Reader's ear: they tune how the letter is read back and scope-scanned, never what goes into the payload. Nothing else from the kit crosses to the performer.
+
+**Register 5, one letter = one completion.** Before the call, the Reader binds the card's field: `attune(profile=<mani_profile>, conversation_id=<reading id>:<card slug>, query=<the filled prompt>, spectrum=<the Reader's refraction of what this letter asks>)`. The profile is the kit's, not the human's: the human chose the card. The returned stack goes into the performer's input as a reference block, never last (the task stays last). If the letter is regenerated, attune again on the same id; the field deepens. When the letter lands, `reset_field(conversation_id)`. The council synthesis takes no field: Alder is the instrument, not a card.
+
+**Scope-scan additions.** A letter fails if it names the instrument: parameter ids (`NI3`, `TE11`), the 9-tuple notation, keystones, shadow contracts, spectrum weights, or the word field used of itself. The kit's own vocabulary (canon, register, formula, keyset, plate) is likewise out of voice. Without the token or the server, perform on registers 1 to 4, say so in one line in the reading's log, and never fabricate a stack. Tools: `mani-api` skill for the instrument, `sensing-function` MCP for the kit.
 
 ## Scope laws — what does not exist in D2
 

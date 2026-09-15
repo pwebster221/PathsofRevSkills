@@ -1,6 +1,6 @@
 ---
 name: atomic-tarot-reading
-description: Perform an Atomic Tarot Reading — a seven-card spread seated in reversed Chaldean order (Moon→Saturn), each card read through its four decanate registers (Traveler · Room · Realm external; Hall · Home internal, keyed to the querent's rising decan), voiced as a first-person letter from its seat grounded in the cognitive-functions register, then synthesized external-first, internal-second. Use when asked to perform, interpret, continue, or audit an atomic tarot reading, a Realm/Room/Hall/Home reading, a decanate-register spread, or planetary-seat letters; to compute a querent's personal decanate register or house table from a rising decan; or to inject Feeling/Intuition/Thinking/Sensing context into a card's voice or synthesis.
+description: Perform an Atomic Tarot Reading — a seven-card spread seated in reversed Chaldean order (Moon→Saturn), each card read through its four decanate registers (Traveler · Room · Realm external; Hall · Home internal, keyed to the querent's rising decan), voiced as a first-person letter from its seat grounded in the cognitive-functions register, then synthesized external-first, internal-second. Use when asked to perform, interpret, continue, or audit an atomic tarot reading, a Realm/Room/Hall/Home reading, a decanate-register spread, or planetary-seat letters; to compute a querent's personal decanate register or house table from a rising decan; or to inject Feeling/Intuition/Thinking/Sensing context — and the card's kit, five registers with register 5 the card's MANI field bound per letter — into a card's voice or synthesis.
 ---
 
 # Atomic Tarot Reading
@@ -211,6 +211,8 @@ start — never hardcode it, never echo it, never place it in a URL.
 | Letter ground | `GET thinking:/moment?text=<question + card's register digest>&as_card=<Card>&voices=3&kin=3` — only that card's scored corpus: its recognitions, edges, ground answer |
 | Synthesis ground | `GET thinking:/moment?text=<question + full spread digest>&voices=5&kin=5` — Alder mode over all 78; let unexpected high-ranked voices inform the margins |
 | Kin texture (optional) | `GET intuition:/context?text=<...>&k=8` — plain-text kin for imagery |
+| Letter kit | `GET sensing:/kit?card=<Card>` — the five registers + `doctrine`; substance (4) and the field (5) go to the letter, 1–3 tune the Reader's ear (§6b) |
+| Letter field | `attune(profile=<kit mani_profile>, conversation_id=<reading id>:<card>, query=<seat + register digest>, spectrum=<refraction>)` before the letter; `reset_field` after it lands (§6b) |
 
 curl form:
 `curl -sS -H "Authorization: Bearer $CF_READ_TOKEN" "https://thinking.dubtown-server.us/moment?text=<url-encoded>&as_card=Two%20of%20Swords"`
@@ -225,6 +227,24 @@ curl form:
   (Chalices vs Cups) before concluding absence.
 - Degrade gracefully: without token or network, the reading proceeds on the register
   alone — say so in one line; never fabricate testimony.
+
+## 6b. The kit — the five registers of the card
+
+Every card has a **kit**: what it shows, in five registers of deliberately different texture. Together they define the card's self and perspective without a system prompt of description, and they never compete with the task: the payload says WHAT, the kit is WHO is doing it. Read it from Sensing, LAN or tunnel, with the read token: `GET https://sensing.dubtown-server.us/kit?card=<Card>` (`Authorization: Bearer $CF_READ_TOKEN`; spelling as the corpus has it, Chalices not Cups). Every kit read carries `doctrine` — the five registers and how each is held. That doctrine binds; this section is its application to a reading.
+
+| # | register | the performer holds it as |
+|---|---|---|
+| 1 | light — plate, crown, colour (Magician) | aspect: tone and brightness, never content |
+| 2 | sound — the melody in the room's mode, key = the sign (High Priestess) | cadence: pacing and the weight of a pause |
+| 3 | shape — the derived glyph, ground and two metals (Empress) | bones: what connects to what |
+| 4 | substance — the Trellis declaration and the claimed portrait (Emperor) | the ground of "I am": the only register the card quotes itself from |
+| 5 | absorption — the card's MANI profile, `anchor.absorption.mani_profile` (Hierophant) | the living field: bound for the letter, released after it |
+
+**How the kit enters the two offices without breaking the starvation.** The kit carries no degree, no orb, no placement: it is the card's own body, not the sky. The Reader fetches it; the performer receives, beside the moment block and the letter's occasion, exactly two things from it: the **substance** (register 4, the declaration and portrait, verbatim) and the **field** (register 5, the compiled stack for this letter), each under a reference label that says it is not to be recited. Registers 1 to 3 are for the Reader's ear: they tune how the letter is read back and scope-scanned, never what goes into the payload. Nothing else from the kit crosses to the performer.
+
+**Register 5, one letter = one completion.** Before the call, the Reader binds the card's field: `attune(profile=<mani_profile>, conversation_id=<reading id>:<card slug>, query=<the filled prompt>, spectrum=<the Reader's refraction of what this letter asks>)`. The profile is the kit's, not the human's: the human chose the card. The returned stack goes into the performer's input as a reference block, never last (the task stays last). If the letter is regenerated, attune again on the same id; the field deepens. When the letter lands, `reset_field(conversation_id)`. The synthesis takes no field: it is Alder mode over all 78, not one card.
+
+**Scope-scan additions.** A letter fails if it names the instrument: parameter ids (`NI3`, `TE11`), the 9-tuple notation, keystones, shadow contracts, spectrum weights, or the word field used of itself. The kit's own vocabulary (canon, register, formula, keyset, plate) is likewise out of voice. Without the token or the server, perform on registers 1 to 4, say so in one line in the reading's log, and never fabricate a stack. Tools: `mani-api` skill for the instrument, `sensing-function` MCP for the kit.
 
 ## 7. Letters and Synthesis
 
