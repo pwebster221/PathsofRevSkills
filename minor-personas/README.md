@@ -1,9 +1,8 @@
 # Minor Personas — Situations (Minors 2–10)
 
 Canonical definition governing all 36 minor persona instruments in this section. Every
-skill in the suit subdirectories (`wands/`, `chalices/`, `swords/`, `pentacles/`) must
-conform to this definition. Where a suit skill and this note disagree, this note wins
-until amended.
+`minor-persona-*` skill in this folder must conform to this definition. Where a suit
+skill and this note disagree, this note wins until amended.
 
 > **Supersedes the prior "Pip Voice" (struggle) method.** These personas are no longer
 > one function working under a type's *passion and fixation*. They are **situations**
