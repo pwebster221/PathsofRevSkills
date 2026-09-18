@@ -63,7 +63,7 @@ two on the same card is itself readable data.
    to the native, or as a character inside the myth.
 2. **Perspective layer — the station (what the card sees).** Station-perspective
    instruments for the Majors, in
-   `dubtown-skills/major-arcana-perspectives/<Card>-Perspective/` — the principle itself
+   `major-arcana-perspectives/<Card>-Perspective/` — the principle itself
    witnessing, built on the intersection-not-union canon (a Major = what its decan-span
    shares but does not name). Use the perspective layer for **diagnosis and witness**: how
    the station reads a placement or transit from where it stands.

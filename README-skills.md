@@ -8,7 +8,10 @@ serves the skills to every consumer — LocalAGI, Claude Code, Alder, and any ot
 
 - **One origin.** Skills are authored here and nowhere else. Other machines clone to
   contribute; SkillServer only ever pulls. Nothing authors locally against a synced copy.
-- **One folder per skill.** Each top-level directory is a skill and must contain a `SKILL.md`.
+- **One folder per skill.** Each skill is a directory containing a `SKILL.md`. Standalone
+  skills live at the top level; related skills are grouped one level down inside a family
+  folder (`major-personas/`, `minor-personas/`, `majestic-personas/`,
+  `major-arcana-perspectives/`, `sdlc/`).
 - **The directory name must match the `name:` field** in that skill's frontmatter.
 
 ## Skill layout
@@ -35,17 +38,40 @@ point to it from the body, so it loads only when needed.
 
 ## Current skills
 
-| Skill | Domain | Status |
-|-------|--------|--------|
-| `path-of-reverence-brand` | Brand / design system | slot — paste existing brand book |
-| `coding-bible` | Engineering standards | slot — paste existing bible |
-| `esoteric-exploration` | Symbolic synthesis | new — flesh out |
-| `metaphysical-conversation` | Contemplative dialogue | new — flesh out |
-| `tarot-interpretation` | Card interpretation (The 78) | active |
-| `generative-principle` | UNC research / number 1–21 exploration | active |
-| `d1-decan-reading` | Register performance — Triune Arcanum I.1 Decan Minors | active |
-| `d2-ace-reading` | Register performance — Triune Arcanum I.2 Elemental Aces | active |
-| `d3-page-reading` | Register performance — Triune Arcanum I.3 Throne Pages | active |
+### Standalone skills
+
+| Skill | Domain |
+|-------|--------|
+| `path-of-reverence-brand` | Path of Reverence brand / design system |
+| `coding-bible` | Universal engineering standards (DubTown / PoR) |
+| `esoteric-synthesis` | Symbolic synthesis across the esoteric system |
+| `metaphysical-conversation` | Contemplative dialogue |
+| `tarot-interpretation` | Card interpretation (The 78) |
+| `atomic-tarot-reading` | Atomic reading form — span cards over the decan layer |
+| `mythic-chart-reading` | Natal chart read as myth through the persona + perspective layers |
+| `horary-consultation` | Horary consultation |
+| `generative-principle` | UNC research / number 1–21 exploration |
+| `mani-api` | Mani Protocol v31 cognitive-attunement MCP guide |
+| `venusface-delivery` | The proven CT 525 feature-delivery loop |
+| `d1-decan-reading` | Register performance — Triune Arcanum I.1 Decan Minors |
+| `d2-ace-reading` | Register performance — Triune Arcanum I.2 Elemental Aces |
+| `d3-page-reading` | Register performance — Triune Arcanum I.3 Throne Pages |
+| `d4-court-reading` | Register performance — Triune Arcanum I.4 Courts |
+
+### Skill families
+
+| Family | Contents |
+|--------|----------|
+| `major-personas/` | 22 Majors as operational persona instruments |
+| `minor-personas/` | 36 pips (Twos–Tens, four suits) as situation instruments |
+| `majestic-personas/` | 20 court/ace instruments mapped to MBTI types and functions |
+| `major-arcana-perspectives/` | Station-perspective instruments for the Majors (witness layer) |
+| `sdlc/` | 35 software-development-lifecycle skills (discovery through sustain) |
+
+### Non-skill folders
+
+`notes/` (reading transcripts) and `venusface-distill/` (style distillation documents)
+are reference material, not skills.
 
 ## Persona skills are operational (ruling 2026-09-10)
 
