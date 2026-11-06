@@ -50,8 +50,10 @@ repository and reporeason are a pair, not a choice: establish what is
 present, then interpret across it. Never synthesize cross-symbol meaning
 from recall when reporeason can explore it. Verify before you assert:
 each claim cites refs copied exactly from the frame, and a claim with no
-citations is ungrounded. Refusals, zeros and empties in a frame are
-results. If reason_verify returns revise, fix or drop what is ungrounded.
+citations is ungrounded. reason_verify checks one exploration id, so
+when a claim joins two symbols, explore them once as a compound and
+verify its cmp: id. Refusals, zeros and empties in a frame are results.
+If reason_verify returns revise, fix or drop what is ungrounded.
 
 ## Hard line
 
