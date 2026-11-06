@@ -119,7 +119,8 @@ list. Read during triage or pre-deploy review. Mark legend: ▲ Gotcha, ◐ Drif
 - ▲ † **Esoteric Repository (KG)** — Update via `mcp__claude_ai_repository__*` tools,
   not raw Cypher edits to production.
 - ▲ **Repository Reasoning Engine (reporeason)** — Standalone → `/mcp`, not `/mcp/mcp`.
-  MCP auth not yet deployed.
+  OIDCProxy plus static service token. v3: sessions are stateful, so long-held clients
+  must reconnect after a redeploy; each explore stores a frame and proposes a pointer.
 - ▲ † **KG Management API** — Edits production data. Use with care.
 - ▲ **Repository sandbox** — Snapshot, not live mirror. Refresh manually.
 - ▲ ✦ **Solar Iteration** — Rigid workflow: define archetypes → set correspondences →
@@ -207,8 +208,9 @@ list. Read during triage or pre-deploy review. Mark legend: ▲ Gotcha, ◐ Drif
 - ▲ **Mounted vs standalone MCP paths** — Mounted (Sacred Journey, Solar, Mars,
   Repository) → `/mcp/mcp`. Standalone wrappers (Kairos, reporeason) → `/mcp`. Don't
   assume.
-- ▲ ✱ **MCP service auth plan** — Decided 2026-04-22, rollout pending. `kaimcp`,
-  `scoring`, `raw-charts`, `reporeason` publicly reachable until then.
+- ▲ ✱ **MCP service auth plan** — Decided 2026-04-22. `reporeason` is done (OIDCProxy
+  plus static service token). This entry's "publicly reachable" status for `kaimcp`,
+  `scoring` and `raw-charts` predates the rollout: check each before relying on it.
 
 ### Data & client drift
 - ▲ ◐ **KairosAPI client drift smoke-test** — Drift won't surface until the first real
