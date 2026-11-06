@@ -208,8 +208,9 @@ list. Read during triage or pre-deploy review. Mark legend: ▲ Gotcha, ◐ Drif
 - ▲ **Mounted vs standalone MCP paths** — Mounted (Sacred Journey, Solar, Mars,
   Repository) → `/mcp/mcp`. Standalone wrappers (Kairos, reporeason) → `/mcp`. Don't
   assume.
-- ▲ ✱ **MCP service auth plan** — Decided 2026-04-22, rollout pending. `kaimcp`,
-  `scoring`, `raw-charts`, `reporeason` publicly reachable until then.
+- ▲ ✱ **MCP service auth plan** — Decided 2026-04-22. `reporeason` is done (OIDCProxy
+  plus static service token). This entry's "publicly reachable" status for `kaimcp`,
+  `scoring` and `raw-charts` predates the rollout: check each before relying on it.
 
 ### Data & client drift
 - ▲ ◐ **KairosAPI client drift smoke-test** — Drift won't surface until the first real
