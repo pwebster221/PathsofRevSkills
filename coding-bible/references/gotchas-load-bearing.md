@@ -119,7 +119,8 @@ list. Read during triage or pre-deploy review. Mark legend: ▲ Gotcha, ◐ Drif
 - ▲ † **Esoteric Repository (KG)** — Update via `mcp__claude_ai_repository__*` tools,
   not raw Cypher edits to production.
 - ▲ **Repository Reasoning Engine (reporeason)** — Standalone → `/mcp`, not `/mcp/mcp`.
-  MCP auth not yet deployed.
+  OIDCProxy plus static service token. v3: sessions are stateful, so long-held clients
+  must reconnect after a redeploy; each explore stores a frame and proposes a pointer.
 - ▲ † **KG Management API** — Edits production data. Use with care.
 - ▲ **Repository sandbox** — Snapshot, not live mirror. Refresh manually.
 - ▲ ✦ **Solar Iteration** — Rigid workflow: define archetypes → set correspondences →

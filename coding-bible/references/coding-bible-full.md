@@ -558,12 +558,12 @@ Update via `mcp__claude_ai_repository__*` MCP tools, *not* raw Cypher edits to p
 
 ### ☿ Repository Reasoning Engine (reporeason)
 
-**PURPOSE** &nbsp; FastMCP-wrapped reasoning engine over the KG; Mani replacement for Alder's symbolic routes.
-**WHERE USED** &nbsp; `CT 560:8100` (Docker), tunneled at *`reporeason.dubtown-server.us`*. Live ~2026-04-22.
+**PURPOSE** &nbsp; FastMCP symbolic analysis engine over the KG (v3): symbol -> archetype -> claimed beats -> co-claimants, kin, land, with a verify gate over the stored frame. The model interprets; the engine stores and checks.
+**WHERE USED** &nbsp; `CT 560:8100` (Docker), tunneled at *`reporeason.dubtown-server.us`*. v3 live 2026-11-06; frames in its MongoDB on `CT 500`.
 **VERSION / SOURCE** &nbsp; Standalone FastMCP.
 
 ▲ **CONVENTIONS & GOTCHAS**
-Standalone wrapper → serves at `/mcp`, *not* `/mcp/mcp`. MCP auth not yet deployed.
+Standalone wrapper → serves at `/mcp`, *not* `/mcp/mcp`. OIDCProxy plus static service token. Four tools: `reason_explore`, `reason_exploration`, `reason_verify`, `reason_identify_symbols`. Citations match the stored frame exactly. Sessions are stateful: a long-held client must reconnect after a redeploy. Each explore stores a frame and proposes a graph pointer. Output is model-facing: never surface it unless an audit is requested.
 
 ⧈ **LINKS** &nbsp; `[[project_reporeason_engine]]`, `[[project_mcp_auth_plan]]`.
 

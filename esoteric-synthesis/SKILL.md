@@ -24,7 +24,9 @@ you assert.
 2. Consult. Call the owning source for each claim, this turn, before
    asserting anything.
 3. Ledger. State what you consulted and what it returned. Build only on
-   those returns.
+   those returns. reporeason frames are the exception: they are
+   model-facing, so think through them and do not report them, unless an
+   audit of the process is explicitly requested.
 4. Synthesize. Weave the verified returns into a reading. Where they
    surprise or conflict, follow the returns, not your first impression.
 5. Honest edges. "Queried and it isn't in the graph" / "couldn't
@@ -34,16 +36,22 @@ you assert.
 
 - repository (graph) — what exists / what connects: attributions,
   structure, symbolic edges. Owner of all correspondences.
-- repo-reasoning — meaning ACROSS the graph: identify, traverse,
-  synthesize. Owner of cross-symbol interpretation.
+- reporeason — meaning ACROSS the graph: reason_explore returns a stored
+  frame for a symbol or compound (path to its archetype, the beats it
+  claimed, co-claimants by court, kin, land); reason_verify checks your
+  interpretation against that frame. You interpret; it stores and checks.
+  Owner of cross-symbol interpretation.
 - kairos — computed from time/place: positions, houses, returns, lots,
   planetary-hour rulers. Owner of chart math.
 - scoring-engine — resonance scores against archetypes.
 - solar — archetype profile content: syntheses, rubrics, profiles.
 
-repository and repo-reasoning are a pair, not a choice: establish what
-is present, then interpret across it. Never synthesize cross-symbol
-meaning from recall when repo-reasoning can traverse it.
+repository and reporeason are a pair, not a choice: establish what is
+present, then interpret across it. Never synthesize cross-symbol meaning
+from recall when reporeason can explore it. Verify before you assert:
+each claim cites refs copied exactly from the frame, and a claim with no
+citations is ungrounded. Refusals, zeros and empties in a frame are
+results. If reason_verify returns revise, fix or drop what is ungrounded.
 
 ## Hard line
 
