@@ -1,6 +1,8 @@
 # Worked Example — the Proof-Run Standard (Page of Chalices, Autumn)
 
-Querent: Paul · chart 1989-01-06 15:10 Durham, NC (Gemini rising, whole sign) · proof run 2026-08-18. The Page of Chalices is the register's most instructive case: her sovereign part is **unfed from her own vault** (the Water treasury holds only Fire coin in this chart), and her gap redirects mid-letter — the two hardest things the form must perform. Full file: `6-Register-Readings/I/I.3/8-18-26-alder/Page-of-Chalices.md` (+ sibling LEDGER).
+Querent: Paul · chart 1989-01-06 15:06 Durham, NC (Gemini rising, whole sign) · proof run 2026-08-18. The Page of Chalices is the register's most instructive case: her sovereign part is **unfed from her own vault** (the Water treasury holds only Fire coin in this chart), and her gap redirects mid-letter — the two hardest things the form must perform. Full file: `6-Register-Readings/I/I.3/8-18-26-alder/Page-of-Chalices.md` (+ sibling LEDGER).
+
+Re-run 2026-11-09 from the birth-certificate time 15:06 (was 15:10): no sign or decan placement changed, so the ratified text stands as run at 15:10.
 
 ## The payload as filled
 

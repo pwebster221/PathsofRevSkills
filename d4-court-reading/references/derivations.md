@@ -119,7 +119,9 @@ Identical to D1–D3; canonical short forms (extend in kind; never numbers, dign
 
 **Lots.** Fortune, of the Moon — the body's own luck. Spirit, of the Sun — the soul's own initiative. Courage, of Mars — the fight the body is willing to have. Eros, of Venus — desire's true aim. Necessity, of Mercury — the unchosen obligation, what must be. Victory, of Jupiter — the promised triumph. Nemesis, of Saturn — the account that comes due.
 
-## 10 · Ratified-run values (Paul, 1989-01-06 15:10 Durham NC, Gemini rising — 2026-09-04)
+## 10 · Ratified-run values (Paul, 1989-01-06 15:06 Durham NC, Gemini rising — 2026-09-04)
+
+Re-run 2026-11-09 from the birth-certificate time 15:06 (was 15:10): no sign or decan placement changed, so the ratified text stands as run at 15:10.
 
 Houses from Gemini rising: Aries H11 · Taurus H12 · Gemini H1 · Cancer H2 · Leo H3 · Virgo H4 · Libra H5 · Scorpio H6 · Sagittarius H7 · Capricorn H8 · Aquarius H9 · Pisces H10.
 

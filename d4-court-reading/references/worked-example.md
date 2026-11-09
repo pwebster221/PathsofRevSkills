@@ -2,6 +2,8 @@
 
 The proof-card standard: the hardest structural case (the empty jewel seat), performed first, ratified same day. Full files: `6-Register-Readings/I/I.4/9-4-26-alder/Knight-of-Pentacles.md` + `-LEDGER.md`.
 
+Re-run 2026-11-09 from the birth-certificate time 15:06 (was 15:10): no sign or decan placement changed, so the ratified text stands as run at 15:10. Venus trine Mars 1.9° and Sun square Mars 6.7° hold at 15:06.
+
 ## The payload (compressed)
 
 **The crossing (fixed):** the Knight of Pentacles guards Taurus's cusp — Aries into Taurus, Fire→Earth (intuition→sensing), Heart→Head. Suit narrative: "by the road's end the fire has become the spark that seeds new life into the earth." Rank narrative: "a heart's urge engaged consciously, and carried to the very end."

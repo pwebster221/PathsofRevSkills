@@ -1,6 +1,8 @@
 # Worked Example — the Ratified Proof (Ace of Pentacles, Earth, Sensing)
 
-Querent: Paul · chart 1989-01-06 15:10 Durham, NC (Gemini rising, whole sign). This was the proof card for the register — chosen because Earth is this chart's heavyweight company and the no-unbraided-carrier fact gives the twin movement its hardest work. The querent ratified the result ("gorgeous") and the remaining three Aces + council ran the same day. Full file: `6-Register-Readings/I/I.2/8-18-26-alder/Ace-of-Pentacles.md` (+ sibling LEDGER).
+Querent: Paul · chart 1989-01-06 15:06 Durham, NC (Gemini rising, whole sign). This was the proof card for the register — chosen because Earth is this chart's heavyweight company and the no-unbraided-carrier fact gives the twin movement its hardest work. The querent ratified the result ("gorgeous") and the remaining three Aces + council ran the same day. Full file: `6-Register-Readings/I/I.2/8-18-26-alder/Ace-of-Pentacles.md` (+ sibling LEDGER).
+
+Re-run 2026-11-09 from the birth-certificate time 15:06 (was 15:10): no sign or decan placement changed, so the ratified text stands as run at 15:10.
 
 ## The payload as filled
 
