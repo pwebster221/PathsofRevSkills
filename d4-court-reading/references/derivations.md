@@ -123,6 +123,8 @@ Identical to D1–D3; canonical short forms (extend in kind; never numbers, dign
 
 Re-run 2026-11-09 from the birth-certificate time 15:06 (was 15:10): no sign or decan placement changed, so the ratified text stands as run at 15:10.
 
+Ruling 2026-11-10: the Lot of Nemesis now uses the corrected formula (day: Ascendant + Fortune - Saturn), 16°57′ Scorpio (decan II), not the earlier 18°50′ Capricorn these runs used. The ratified text stands as run. For new runs: Nemesis leaves the Queen of Pentacles' road, which stays crowded, and joins Pluto on the Knight of Chalices' Result, which stays thin.
+
 Houses from Gemini rising: Aries H11 · Taurus H12 · Gemini H1 · Cancer H2 · Leo H3 · Virgo H4 · Libra H5 · Scorpio H6 · Sagittarius H7 · Capricorn H8 · Aquarius H9 · Pisces H10.
 
 Roads (op/su/res occupant counts, whole-road band): Queen of Wands 1/0/0 thin (Ceres) · Knight of Pentacles 1/0/1 thin (Mars / — / Lot of Victory — the proof card) · King of Swords 1/2/1 peopled (Jupiter Rx / Fortune, Pholus / Ascendant) · Queen of Chalices 0/2/0 thin (Spirit, Chiron) · Knight of Wands 0/1/0 thin (Courage) · King of Pentacles 1/2/1 peopled (IC / South Node, True Lilith / Juno) · Queen of Swords 1/0/1 thin (BML / Necessity) · Knight of Chalices 0/0/1 thin (Pluto — doubly unmet) · King of Wands 1/0/2 peopled (Vesta / — / Eros, Descendant) · **Queen of Pentacles 1/3/3 crowded** (Venus / Moon, Uranus, Saturn / Neptune, Sun, Nemesis) · Knight of Swords 0/1/0 thin (Mercury) · King of Chalices 2/1/0 peopled (Pallas, MC / North Node).

@@ -4,6 +4,8 @@ Querent: Paul · chart 1989-01-06 15:06 Durham, NC (Gemini rising, whole sign) �
 
 Re-run 2026-11-09 from the birth-certificate time 15:06 (was 15:10): no sign or decan placement changed, so the ratified text stands as run at 15:10.
 
+Ruling 2026-11-10: the Lot of Nemesis now uses the corrected formula (day: Ascendant + Fortune - Saturn), 16°57′ Scorpio (decan II), not the earlier 18°50′ Capricorn these runs used. The ratified text stands as run. For new runs: the Chalices throne and the Pentacles gap, both Scorpio (H6), hold Pluto, Nemesis and Vesta and go from thin to peopled. Pole A totals become Earth 32, Air 19, Fire 16, Water 17; vault feeds do not change.
+
 ## The payload as filled
 
 **Arc (fixed).** Autumn, nocturnal — walks with the year. Gate Libra (far part — the ordering hand, behind), throne Scorpio (sovereign — the private heart, inward), passing door Sagittarius (walking part — the scattering eye, walked toward). Dark part: the keeping sense, groundless, pointing at the sister's (Page of Pentacles') throne, Taurus.

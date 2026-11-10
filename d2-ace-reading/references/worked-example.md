@@ -4,6 +4,8 @@ Querent: Paul · chart 1989-01-06 15:06 Durham, NC (Gemini rising, whole sign). 
 
 Re-run 2026-11-09 from the birth-certificate time 15:06 (was 15:10): no sign or decan placement changed, so the ratified text stands as run at 15:10.
 
+Ruling 2026-11-10: the Lot of Nemesis now uses the corrected formula (day: Ascendant + Fortune - Saturn), 16°57′ Scorpio (decan II), not the earlier 18°50′ Capricorn these runs used. The ratified text stands as run. For new runs: Capricorn (Earth's Heart) loses Nemesis and stays crowded; Scorpio (Water's Head) gains it and goes from thin to peopled. A totals become Earth 32, Air 19, Fire 16, Water 17; B totals do not change.
+
 ## The payload as filled
 
 **Rooms seated.** Heart (Capricorn) keeps Paul's transformation and depth — what is shared, lost, and remade (H8). Standing in it: Uranus, the Moon, Saturn, Neptune, the Sun, the Lot of Nemesis — *crowded*. Head (Taurus) keeps the unconscious and surrender (H12): the Lot of Victory; Jupiter walking backward — *thin*. Gut (Virgo) keeps home and roots, the floor of the chart (H4): the South Node twice measured, True Lilith, Juno, Black Moon Lilith — *peopled*.

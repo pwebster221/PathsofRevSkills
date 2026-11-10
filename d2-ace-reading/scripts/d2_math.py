@@ -167,8 +167,8 @@ if __name__ == "__main__":
     assert felt_volume(2, 1) == "thin"
     assert felt_volume(0, 0) == "empty"
     # Full-chart regression: the ratified pull's element A totals (stars added
-    # separately: Algol->Earth +2, Deneb->Air +2 => 34 / 19 / 16 / 15).
-    # Re-run 2026-11-09 from 15:06 (birth certificate); Lot of Nemesis stays on the run's pre-K-06 formula (Asc + Saturn - Fortune), Kairos now returns 226.9467.
+    # separately: Algol->Earth +2, Deneb->Air +2 => 32 / 19 / 16 / 17).
+    # Re-run 2026-11-09 from 15:06 (birth certificate); Lot of Nemesis on the corrected formula per the 2026-11-10 ruling (Asc + Fortune - Saturn by day), as Kairos returns it. The ratified run had it in Capricorn: Earth 34, Water 15.
     P = [("Sun", 286.5012), ("Moon", 273.9430), ("Mercury", 305.3588),
          ("Venus", 265.0967), ("Mars", 23.2246), ("Jupiter", 56.4018),
          ("Saturn", 276.2802), ("Uranus", 272.1012), ("Neptune", 280.1427),
@@ -182,12 +182,12 @@ if __name__ == "__main__":
          ("Lot of Fortune", 65.3344), ("Lot of Spirit", 90.4507),
          ("Lot of Eros", 252.5385), ("Lot of Necessity", 197.8681),
          ("Lot of Courage", 120.0023), ("Lot of Victory", 43.8436),
-         ("Lot of Nemesis", 288.8383)]
+         ("Lot of Nemesis", 226.9467)]
     A, B = company_scores(P, "Gemini")
-    assert sum(A["Earth"].values()) + 2 == 34
+    assert sum(A["Earth"].values()) + 2 == 32
     assert sum(A["Air"].values()) + 2 == 19
     assert sum(A["Fire"].values()) == 16
-    assert sum(A["Water"].values()) == 15
+    assert sum(A["Water"].values()) == 17
     assert sum(v for c in B["Earth"].values() for v in c.values()) + 2 == 20
     assert sum(v for c in B["Fire"].values() for v in c.values()) == 12
     assert sum(v for c in B["Air"].values() for v in c.values()) + 2 == 11
