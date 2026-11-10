@@ -1,6 +1,8 @@
 # Worked Example — the Ratified Proof (Eight of Chalices, decan 34, Pisces I)
 
-Querent: Paul · chart 1989-01-06 15:10 Durham, NC (Gemini rising, whole sign). This was the proof card for the restarted architecture; the querent ratified the result as "exactly what makes the D1." The full file: `6-Register-Readings/I/I.1/8-7-26-alder/Eight-of-Chalices.md` (+ sibling LEDGER).
+Querent: Paul · chart 1989-01-06 15:06 Durham, NC (Gemini rising, whole sign). This was the proof card for the restarted architecture; the querent ratified the result as "exactly what makes the D1." The full file: `6-Register-Readings/I/I.1/8-7-26-alder/Eight-of-Chalices.md` (+ sibling LEDGER).
+
+Re-run 2026-11-09 from the birth-certificate time 15:06 (was 15:10): no sign or decan placement changed, so the ratified text stands as run at 15:10.
 
 ## The payload as filled
 

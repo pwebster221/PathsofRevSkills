@@ -49,7 +49,11 @@ Each Page draws from her **home vault only**: her sovereign element's D2 treasur
 
 Currency-blind: a Page's political strength is her sovereign element's **whole A pole total** from D2. Her terrain, in a rival's or sister's payload, is that element's full company (names + natures), felt not counted — company felt-volumes carry over from D2. Each Page holds exactly three relations: **competes** with the two adjacent seasons (the rival "walks the other way" — always true, since seasons alternate sect) and is **opposed** by the sister across the wheel. A/B resolve in use, without ranking: **A governs inter-Page relations, B governs intra-Page constitution.**
 
-## Proof-run values (Paul, 1989-01-06 15:10 Durham NC, Gemini rising — 2026-08-18)
+## Proof-run values (Paul, 1989-01-06 15:06 Durham NC, Gemini rising — 2026-08-18)
+
+Re-run 2026-11-09 from the birth-certificate time 15:06 (was 15:10): no sign or decan placement changed, so the ratified text stands as run at 15:10.
+
+Ruling 2026-11-10: the Lot of Nemesis now uses the corrected formula (day: Ascendant + Fortune - Saturn), 16°57′ Scorpio (decan II), not the earlier 18°50′ Capricorn these runs used. The ratified text stands as run. For new runs: the Chalices throne and the Pentacles gap, both Scorpio (H6), hold Pluto, Nemesis and Vesta and go from thin to peopled. Pole A totals become Earth 32, Air 19, Fire 16, Water 17; vault feeds do not change.
 
 Stations→houses: Pentacles throne H12 (thin) / walk H1 (peopled) / far H11 (thin), gap→H6 (thin) · Wands throne H3 (thin) / walk H2 (thin) / far H4 (peopled), gap→H9 (peopled) · Chalices throne H6 (thin) / walk H7 (peopled) / far H5 (thin), gap→H12 (thin) · Swords throne H9 (peopled) / walk H8 (crowded) / far H10 (peopled), gap→H3 (thin).
 

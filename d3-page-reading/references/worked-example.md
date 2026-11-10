@@ -1,6 +1,10 @@
 # Worked Example — the Proof-Run Standard (Page of Chalices, Autumn)
 
-Querent: Paul · chart 1989-01-06 15:10 Durham, NC (Gemini rising, whole sign) · proof run 2026-08-18. The Page of Chalices is the register's most instructive case: her sovereign part is **unfed from her own vault** (the Water treasury holds only Fire coin in this chart), and her gap redirects mid-letter — the two hardest things the form must perform. Full file: `6-Register-Readings/I/I.3/8-18-26-alder/Page-of-Chalices.md` (+ sibling LEDGER).
+Querent: Paul · chart 1989-01-06 15:06 Durham, NC (Gemini rising, whole sign) · proof run 2026-08-18. The Page of Chalices is the register's most instructive case: her sovereign part is **unfed from her own vault** (the Water treasury holds only Fire coin in this chart), and her gap redirects mid-letter — the two hardest things the form must perform. Full file: `6-Register-Readings/I/I.3/8-18-26-alder/Page-of-Chalices.md` (+ sibling LEDGER).
+
+Re-run 2026-11-09 from the birth-certificate time 15:06 (was 15:10): no sign or decan placement changed, so the ratified text stands as run at 15:10.
+
+Ruling 2026-11-10: the Lot of Nemesis now uses the corrected formula (day: Ascendant + Fortune - Saturn), 16°57′ Scorpio (decan II), not the earlier 18°50′ Capricorn these runs used. The ratified text stands as run. For new runs: the Chalices throne and the Pentacles gap, both Scorpio (H6), hold Pluto, Nemesis and Vesta and go from thin to peopled. Pole A totals become Earth 32, Air 19, Fire 16, Water 17; vault feeds do not change.
 
 ## The payload as filled
 

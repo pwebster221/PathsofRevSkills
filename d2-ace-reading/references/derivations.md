@@ -83,7 +83,11 @@ Worked (canon + ratified run): Sun in Capricorn → 3 Fire points into Earth's t
 
 Volume is felt in performance, banded reader-side from occupant count with the scores as conscience: **empty = 0 · thin = 1–2 · peopled = 3+ without planetary majority · crowded = 5+ with planetary majority, both options concurring.** The deliberate judgment call of the ratified run: a room of five standing that scores A 10 / B 0 (all points, no currency) is **peopled** — the word honors the count without pretending weight.
 
-## Ratified run values (Paul, 1989-01-06 15:10 Durham NC, Gemini rising — 2026-08-18)
+## Ratified run values (Paul, 1989-01-06 15:06 Durham NC, Gemini rising — 2026-08-18)
+
+Re-run 2026-11-09 from the birth-certificate time 15:06 (was 15:10): no sign or decan placement changed, so the ratified text stands as run at 15:10.
+
+Ruling 2026-11-10: the Lot of Nemesis now uses the corrected formula (day: Ascendant + Fortune - Saturn), 16°57′ Scorpio (decan II), not the earlier 18°50′ Capricorn these runs used. The ratified text stands as run. For new runs: Capricorn (Earth's Heart) loses Nemesis and stays crowded; Scorpio (Water's Head) gains it and goes from thin to peopled. A totals become Earth 32, Air 19, Fire 16, Water 17; B totals do not change.
 
 Companies (33 placements): Earth 13 · Air 7 · Water 7 · Fire 6. **A totals:** Earth 34 (incl. Algol +2) · Air 19 (incl. Deneb +2) · Fire 16 · Water 15. **B totals:** Earth 20 (Heart E6+A6+F3, Head F3+★2) · Fire 12 (Heart F6+W3, Gut E3) · Air 11 (Head A6+E3+★2) · Water 3 (Head F3). Company felt volumes: Earth crowded; Fire, Air, Water peopled.
 

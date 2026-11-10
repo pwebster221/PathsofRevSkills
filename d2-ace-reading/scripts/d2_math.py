@@ -1,7 +1,7 @@
 """D2 (I.2 Elemental Aces) reference math — PAT-[d2], rulings of 2026-08-12.
 
 Pure functions, no I/O. Verified against the ratified 2026-08-18 performance
-(Paul, 1989-01-06 15:10 Durham NC, Gemini rising, whole sign).
+(Paul, 1989-01-06 15:06 Durham NC, Gemini rising, whole sign).
 
 Reader-side only: everything here feeds Reader's Scores and felt-volume
 banding. None of it is ever sent to a performer.
@@ -167,26 +167,27 @@ if __name__ == "__main__":
     assert felt_volume(2, 1) == "thin"
     assert felt_volume(0, 0) == "empty"
     # Full-chart regression: the ratified pull's element A totals (stars added
-    # separately: Algol->Earth +2, Deneb->Air +2 => 34 / 19 / 16 / 15).
-    P = [("Sun", 286.5040), ("Moon", 273.9814), ("Mercury", 305.3622),
-         ("Venus", 265.1002), ("Mars", 23.2261), ("Jupiter", 56.4017),
-         ("Saturn", 276.2806), ("Uranus", 272.1014), ("Neptune", 280.1428),
-         ("Pluto", 224.7017), ("True North Node", 335.9610),
-         ("True South Node", 155.9610), ("Mean North Node", 337.4790),
-         ("Mean South Node", 157.4790), ("True Lilith", 158.3075),
-         ("Black Moon Lilith", 176.3712), ("Chiron", 93.4837),
-         ("Pholus", 68.5494), ("Ceres", 357.0637), ("Pallas", 321.0213),
-         ("Juno", 160.5258), ("Vesta", 238.9148), ("Ascendant", 78.8923),
-         ("Descendant", 258.8923), ("MC", 327.7993), ("IC", 147.7993),
-         ("Lot of Fortune", 66.3697), ("Lot of Spirit", 91.4149),
-         ("Lot of Eros", 252.5776), ("Lot of Necessity", 199.8998),
-         ("Lot of Courage", 122.0360), ("Lot of Victory", 43.8791),
-         ("Lot of Nemesis", 288.8032)]
+    # separately: Algol->Earth +2, Deneb->Air +2 => 32 / 19 / 16 / 17).
+    # Re-run 2026-11-09 from 15:06 (birth certificate); Lot of Nemesis on the corrected formula per the 2026-11-10 ruling (Asc + Fortune - Saturn by day), as Kairos returns it. The ratified run had it in Capricorn: Earth 34, Water 15.
+    P = [("Sun", 286.5012), ("Moon", 273.9430), ("Mercury", 305.3588),
+         ("Venus", 265.0967), ("Mars", 23.2246), ("Jupiter", 56.4018),
+         ("Saturn", 276.2802), ("Uranus", 272.1012), ("Neptune", 280.1427),
+         ("Pluto", 224.7016), ("True North Node", 335.9674),
+         ("True South Node", 155.9674), ("Mean North Node", 337.4792),
+         ("Mean South Node", 157.4792), ("True Lilith", 158.3147),
+         ("Black Moon Lilith", 176.3709), ("Chiron", 93.4839),
+         ("Pholus", 68.5496), ("Ceres", 357.0630), ("Pallas", 321.0204),
+         ("Juno", 160.5258), ("Vesta", 238.9134), ("Ascendant", 77.8925),
+         ("Descendant", 257.8925), ("MC", 326.7553), ("IC", 146.7553),
+         ("Lot of Fortune", 65.3344), ("Lot of Spirit", 90.4507),
+         ("Lot of Eros", 252.5385), ("Lot of Necessity", 197.8681),
+         ("Lot of Courage", 120.0023), ("Lot of Victory", 43.8436),
+         ("Lot of Nemesis", 226.9467)]
     A, B = company_scores(P, "Gemini")
-    assert sum(A["Earth"].values()) + 2 == 34
+    assert sum(A["Earth"].values()) + 2 == 32
     assert sum(A["Air"].values()) + 2 == 19
     assert sum(A["Fire"].values()) == 16
-    assert sum(A["Water"].values()) == 15
+    assert sum(A["Water"].values()) == 17
     assert sum(v for c in B["Earth"].values() for v in c.values()) + 2 == 20
     assert sum(v for c in B["Fire"].values() for v in c.values()) == 12
     assert sum(v for c in B["Air"].values() for v in c.values()) + 2 == 11

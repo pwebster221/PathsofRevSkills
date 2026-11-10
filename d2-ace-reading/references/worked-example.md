@@ -1,6 +1,10 @@
 # Worked Example — the Ratified Proof (Ace of Pentacles, Earth, Sensing)
 
-Querent: Paul · chart 1989-01-06 15:10 Durham, NC (Gemini rising, whole sign). This was the proof card for the register — chosen because Earth is this chart's heavyweight company and the no-unbraided-carrier fact gives the twin movement its hardest work. The querent ratified the result ("gorgeous") and the remaining three Aces + council ran the same day. Full file: `6-Register-Readings/I/I.2/8-18-26-alder/Ace-of-Pentacles.md` (+ sibling LEDGER).
+Querent: Paul · chart 1989-01-06 15:06 Durham, NC (Gemini rising, whole sign). This was the proof card for the register — chosen because Earth is this chart's heavyweight company and the no-unbraided-carrier fact gives the twin movement its hardest work. The querent ratified the result ("gorgeous") and the remaining three Aces + council ran the same day. Full file: `6-Register-Readings/I/I.2/8-18-26-alder/Ace-of-Pentacles.md` (+ sibling LEDGER).
+
+Re-run 2026-11-09 from the birth-certificate time 15:06 (was 15:10): no sign or decan placement changed, so the ratified text stands as run at 15:10.
+
+Ruling 2026-11-10: the Lot of Nemesis now uses the corrected formula (day: Ascendant + Fortune - Saturn), 16°57′ Scorpio (decan II), not the earlier 18°50′ Capricorn these runs used. The ratified text stands as run. For new runs: Capricorn (Earth's Heart) loses Nemesis and stays crowded; Scorpio (Water's Head) gains it and goes from thin to peopled. A totals become Earth 32, Air 19, Fire 16, Water 17; B totals do not change.
 
 ## The payload as filled
 
