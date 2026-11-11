@@ -157,7 +157,7 @@ house's far learning. A closing-heavy spread is a season of finishing.
 
 ## 4. Default Querent — Paul
 
-Gemini II rising (18°53′ Gemini): *a* = 8, seam native (Traveler invariant),
+Gemini II rising (17°53′ Gemini): *a* = 8, seam native (Traveler invariant),
 courts straddle 2+1. Twelve houses:
 
 | House | Span | Home |
