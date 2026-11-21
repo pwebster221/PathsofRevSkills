@@ -23,7 +23,7 @@ A horary chart is cast for the moment a question is received and understood, and
 
 ## Step 1 — Cast
 
-Call `kairos-mcp:get_current_transit` with the querent's latitude/longitude and `house_system` (default `whole_sign`). This returns the moment-chart: planets with longitudes, sign-degrees, speeds, retrograde flags, plus house cusps. Record timestamp, JD, epoch. If the call needs user approval and fails with "no approval received," tell the user to approve and explain that the horary moment is preserved — the question already landed.
+Call `astraeus:get_current_transit` (the Astraeus MCP server, key `astraeus`; formerly `kairos-mcp`, tool names unchanged) with the querent's latitude/longitude and `house_system` (default `whole_sign`). This returns the moment-chart: planets with longitudes, sign-degrees, speeds, retrograde flags, plus house cusps. Record timestamp, JD, epoch. If the call needs user approval and fails with "no approval received," tell the user to approve and explain that the horary moment is preserved — the question already landed.
 
 ## Step 2 — Seat the chart
 
@@ -43,7 +43,7 @@ The judgment must end in a verdict: can the thing be done / will it happen / whe
 
 ## Step 4 — Verify against the natals (radicality)
 
-For each principal whose birth data is available, cast `kairos-mcp:get_natal` (sunrise convention if no time; tiers 0–5 suffice). Then hunt **echoes between the horary and the natals** — these are radicality testimonies that the chart knows who it's for:
+For each principal whose birth data is available, cast `astraeus:get_natal` (sunrise convention if no time; tiers 0–5 suffice). Then hunt **echoes between the horary and the natals** — these are radicality testimonies that the chart knows who it's for:
 
 - The horary's significator *choice* matching a natal occupancy (the horary gives the dog to Jupiter; the querent's natal Jupiter sits in his natal 6th, the animal house).
 - A horary house landing on a natal cluster (the horary's quesited-house sign holds the querent's natal Moon and Saturn — the matter lives where his heart and duty live).
@@ -58,7 +58,7 @@ When the user adds biographical context (homelessness, addiction, illness, a bre
 
 ## Step 6 — Relational layer (optional)
 
-When the question is entangled with a relationship between principals, run `kairos-mcp:get_synastry` and read it **for the question's sake** — what binds these two, which channels are clean for the needed contact, which are live wires. Protocol, including the chemistry/saturn-glue blocks, dignity-exchange traps, the cross-aspect attribution gotcha, and the transit corridor, lives in **`references/relational-layer.md`. Read it before any synastry call.**
+When the question is entangled with a relationship between principals, run `astraeus:get_synastry` and read it **for the question's sake** — what binds these two, which channels are clean for the needed contact, which are live wires. Protocol, including the chemistry/saturn-glue blocks, dignity-exchange traps, the cross-aspect attribution gotcha, and the transit corridor, lives in **`references/relational-layer.md`. Read it before any synastry call.**
 
 ## Step 7 — The timeline
 

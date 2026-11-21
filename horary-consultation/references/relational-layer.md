@@ -5,7 +5,7 @@ Run this layer only when the question is entangled with a relationship between p
 ## 1. Inputs and casting
 
 - Reuse persisted natals by `chart_id` where possible; cast missing principals with the sunrise convention (verify ASC≈Sun; state the Moon's intraday range).
-- Call `kairos-mcp:get_synastry` with `chart_a` / `chart_b` as `{"chart_id": ...}` or `{"birth_data": {...}, "anonymous": true}`, `house_system: "whole_sign"`.
+- Call `astraeus:get_synastry` with `chart_a` / `chart_b` as `{"chart_id": ...}` or `{"birth_data": {...}, "anonymous": true}`, `house_system: "whole_sign"`.
 - Output keys: `natal_a`, `natal_b`, `cross_aspects`, `perspectives` (a_in_b / b_in_a overlays), `pair_synthesis` (`contacts`, `chemistry`, `houses`, `dignity_exchange`), `metadata` (overlay_id, canonical chart ids).
 
 ## 2. Attribution verification — do this before reading anything
