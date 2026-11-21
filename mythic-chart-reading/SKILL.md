@@ -101,7 +101,7 @@ sign cannot oppose). The myth is only as true as the math beneath it.
    from explicit locale context or state the convention used in the reading's method note;
    never silently choose day/month order. If time is missing, say plainly that angles,
    houses, and the Moon's degree are unreliable, and scope the reading accordingly.
-2. Compute the natal chart with the Kairos MCP — use `get_natal_full` (or `get_natal` plus
+2. Compute the natal chart with the Astraeus (formerly Kairos) MCP — use `get_natal_full` (or `get_natal` plus
    tiers). Pull at minimum: planets, angles, aspects, dignities, **fixed stars**
    (`tier_fixed_stars`), and lots if available.
 3. Compute current transits with `get_current_transit` / `get_transit_full` for the reading
@@ -118,14 +118,14 @@ sign cannot oppose). The myth is only as true as the math beneath it.
      nested cards (decan pip ⊂ court stretch ⊂ Page/season + Ace/element + sign-Major +
      planet-Major) are structural — derive them from the longitude via the composition
      map — and their computed weights are read off `grid.cells` and `arcana_rankings`.
-     Prefer sending the Kairos blob (`{"deep_analysis": ...}` — the full ~83-point
+     Prefer sending the Astraeus blob (`{"deep_analysis": ...}` — the full ~83-point
      census: lots, midpoints, stars, and antiscia all light decans); the legacy
      `{"placements": [...]}` payload still works but sees only 12 points.
    - `POST /score/resonance` (MCP: `MarsAPI score_resonance`) — the v2 "78 Natal
      Resonance": a chart-global ranked 78. This is the **selector for the Prologue and the
      Legend synthesis**: the chart's dominant cards overall.
-   Kairos embeds the same two-report response at `deep_analysis.esoteric` in
-   `/natal/full`; if present, use it — but via the Kairos MCP a full natal can arrive
+   Astraeus embeds the same two-report response at `deep_analysis.esoteric` in
+   `/natal/full`; if present, use it — but via the Astraeus MCP a full natal can arrive
    cap-trimmed (60KB ceiling), so when the scoring matters, call Mars directly. Never
    rank the cards by feel.
 5. **Verify every aspect you intend to narrate against the computed aspect list.** If it

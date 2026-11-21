@@ -103,14 +103,14 @@ Eleven Tree stations (10 Sephiroth + Da'ath), 7 cards each = 77, **+ the Fool ap
 lenses, membership is **chart-derived**: the deck is ordered from the individual natal
 chart, then dealt. This is the **derived / "between"** board.
 
-It is the only lens that needs a computed chart (Kairos). It reuses the 7×11 lordship
+It is the only lens that needs a computed chart (Astraeus, formerly Kairos). It reuses the 7×11 lordship
 as the card→lord map.
 
 ### Method — the Procession of the Lords
 
 1. **Anchor.** Compute the **almuten figuris** (lord of the chart) — Ibn Ezra weighted
    essential dignity over the Ascendant, Sun, Moon, Lot of Fortune, and prenatal
-   syzygy (Kairos `tier_almuten`). The almuten is the head of the procession.
+   syzygy (Astraeus `tier_almuten`). The almuten is the head of the procession.
 2. **Procession.** The anchor's lordship-block (its 11 cards) leads. The remaining six
    lords' blocks follow, ordered by each lord's **zodiacal distance forward from the
    anchor's degree** (ascending). Ties (equal distance): higher essential dignity,

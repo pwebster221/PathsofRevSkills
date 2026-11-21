@@ -206,7 +206,7 @@ Tree").
   Pages/Aces by sect.
 - **11×7 — Tree Stations** (the derived laying). 10 Sephiroth + Da'ath × 7, Fool
   apart → the **derived / between** board. Chart-derived: compute the almuten figuris
-  (Kairos) as anchor, process the 7 lordship-blocks by each lord's distance from it,
+  (Astraeus, formerly Kairos) as anchor, process the 7 lordship-blocks by each lord's distance from it,
   deal 7 per station down the lightning flash, Da'ath taking the remainder. Full
   method in `lenses.md`. This is the one lens that needs a computed chart.
 
@@ -293,6 +293,6 @@ The bundled tables, authoritative and self-contained:
   chart-derived laying).
 
 All three lenses are now defined. The only chart-dependent piece is the 11×7, which
-calls Kairos for the almuten and lord positions; everything else reads from the static
+calls Astraeus for the almuten and lord positions; everything else reads from the static
 tables. (The 7×11 luminaries' third Major is derived by sect — Judgement→Sun, Hanged
 Man→Moon; flag if you ever want it hard-set.)

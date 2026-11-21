@@ -21,7 +21,7 @@ Check and record; judge anyway with stated cautions (Lilly's own practice):
 
 ## 3. Dignity audit
 
-For each significator, from Kairos data plus the standard tables:
+For each significator, from Astraeus (formerly Kairos) data plus the standard tables:
 
 - **Essential:** domicile, exaltation, triplicity (state which scheme; sect-assign if Dorothean), terms (Egyptian and Ptolemaic differ — if a claim depends on the term, verify it holds in both or name the system), face. **Peregrine** = none of the above: the wanderer. Read peregrination literally when the question's context supports it (homelessness, drift, the unplaced). Detriment and fall are debilities, not moral verdicts: detriment = acting outside one's strength; fall = helping in a jurisdiction not one's own.
 - **Accidental:** house strength (angular > succedent > cadent), speed, retrogradation, combustion (within ~8.5° of the Sun, same sign — the burned/silenced voice; cazimi within 17' exalts instead), besiegement, station.

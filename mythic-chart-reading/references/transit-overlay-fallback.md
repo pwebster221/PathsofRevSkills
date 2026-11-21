@@ -1,6 +1,6 @@
 # Transit Overlay Fallback
 
-Use this when a Kairos transit overlay succeeds but is response-cap trimmed before the transit-to-natal contact list appears, or when the full endpoint rejects a timestamp shape.
+Use this when an Astraeus (formerly Kairos) transit overlay succeeds but is response-cap trimmed before the transit-to-natal contact list appears, or when the full endpoint rejects a timestamp shape.
 
 ## Retry sequence
 
