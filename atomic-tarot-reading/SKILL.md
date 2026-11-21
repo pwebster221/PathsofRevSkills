@@ -176,7 +176,7 @@ courts straddle 2+1. Twelve houses:
 | 12th | Taurus II – Gemini I | Jupiter |
 
 For any other querent, ask for the rising decan (or compute it from birth data via
-kairos-mcp) and regenerate the table from §3 before reading.
+the astraeus MCP server, formerly kairos-mcp) and regenerate the table from §3 before reading.
 
 ## 5. Structural Scan (run before writing anything)
 

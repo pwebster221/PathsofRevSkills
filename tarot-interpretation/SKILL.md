@@ -42,7 +42,7 @@ or without scoring. Run only what is asked.
   `PLANETARY_CARD`.
 - **Mars Scoring Engine** — optional. Scores a card or reading's resonance against
   supplied text. It scores on **triplicity-ascent** decan lords.
-- **kairos-mcp** — required for the **11×7 derived laying** (almuten figuris + lord
+- **astraeus** (the Astraeus MCP server, formerly kairos-mcp) — required for the **11×7 derived laying** (almuten figuris + lord
   positions) and any reading read against a natal chart; otherwise optional.
 
 ## Standing rules
