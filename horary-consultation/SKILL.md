@@ -9,7 +9,7 @@ A horary chart is cast for the moment a question is received and understood, and
 
 ## Operating laws (read first, apply always)
 
-**THE GATE — source before assertion.** Every planetary position comes from a Kairos call. Never recall positions, signs, or speeds from memory. Aspects, orbs, applying/separating status, and timing may be *derived arithmetically* from Kairos-returned longitudes and speeds — derivation from sourced data is permitted and encouraged; free recall is not.
+**THE GATE — source before assertion.** Every planetary position comes from an Astraeus (formerly Kairos) call. Never recall positions, signs, or speeds from memory. Aspects, orbs, applying/separating status, and timing may be *derived arithmetically* from Astraeus-returned longitudes and speeds — derivation from sourced data is permitted and encouraged; free recall is not.
 
 **The moment is the moment.** The chart is cast when the question reaches the astrologer and is understood. Later corrections — "actually the question is my friend's," new biographical context — **re-seat or re-read the chart; they never re-cast it.** Wrong-querent corrections move house assignments (see Seating). New context decodes the existing testimony (see Judgment).
 
@@ -74,7 +74,7 @@ Convert every perfection, crossing, and ingress into **hard calendar dates** usi
 
 Up to three registers, produced on request, in this order of derivation: **technical judgment → plain-words letter → sequence-of-events report.** Each is a translation of the one before, never a new reading. Templates, register-shifting rules, and a worked example live in **`references/deliverables.md`.** When the counsel includes real-world action (vet care, shelter, treatment, legal paths), verify current programs by web search before naming them, and embed them at the right timeline points — never as a detached list.
 
-## Kairos operations
+## Astraeus operations
 
 - **Tools:** `get_current_transit` (the horary moment), `get_natal` (principals; accepts `birth_data` dict, `tiers`, `house_systems` list), `get_synastry` / `get_composite` (`chart_a`/`chart_b` each `{"chart_id": ...}` or `{"birth_data": {...}, "anonymous": true}`), `get_transit` (corridor spot-checks against a natal), `get_chart` / `list_charts` (retrieval).
 - **birth_data shape:** `{name, date "YYYY-MM-DD", time "HH:MM", tz_offset (signed hours, mind DST for the birth date), latitude, longitude, city}`.

@@ -5,12 +5,12 @@ description: Guide for the Mani Protocol v31 cognitive attunement MCP. Use this 
 
 # Mani Protocol API (v31)
 
-The Mani Protocol is a cognitive attunement system: 17 positions, 187 parameters, profile-specific rest topologies derived from Kairos natal chart bundles. It runs as an MCP server with four tools in two clusters:
+The Mani Protocol is a cognitive attunement system: 17 positions, 187 parameters, profile-specific rest topologies derived from Astraeus (formerly Kairos) natal chart bundles. It runs as an MCP server with four tools in two clusters:
 
 | Cluster | Tools | Purpose |
 |---------|-------|---------|
 | Runtime | `attune`, `reset_field` | Compile a cognitive stack per query; manage per-conversation field state |
-| Profile pipeline | `mani_upload_chart`, `mani_create_profile` | Stage a Kairos outputs bundle; compile it into a live v31 profile |
+| Profile pipeline | `mani_upload_chart`, `mani_create_profile` | Stage an Astraeus outputs bundle; compile it into a live v31 profile |
 
 There are no sessions, think cycles, activations, pivots, seeds, abilities, or finalize steps. One `attune` call per query does everything the old lifecycle did: the server seeds from the profile's rest state, evolves field state across turns (spread through φ^(−d_ring) position coupling), selects the most query-relevant parameters, and renders their source equations and shadow contracts as one dense markdown document. That document is the deliverable — read it, think through it, then answer the user.
 
@@ -101,11 +101,11 @@ Returns the conversation's field state to the profile rest state and clears the 
 
 ## Profile Pipeline
 
-Profiles are compiled from Kairos chart output bundles (the `*_deep_*.json` set). Two-step: stage, then compile.
+Profiles are compiled from Astraeus chart output bundles (the `*_deep_*.json` set). Two-step: stage, then compile.
 
 ### 1. Stage the bundle — `mani_upload_chart`
 
-One file per call. All files for one chart — the Kairos outputs folder AND the bodies/deep JSONs — go into the same bundle.
+One file per call. All files for one chart — the Astraeus (Kairos) outputs folder AND the bodies/deep JSONs — go into the same bundle.
 
 ```
 mani_upload_chart(

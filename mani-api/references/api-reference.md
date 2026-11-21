@@ -51,7 +51,7 @@ Return a conversation's field state to the profile rest state.
 
 ### `mani_upload_chart`
 
-Stage a user's own Kairos chart outputs on the server, one file per call, so `mani_create_profile` can ingest them. All files for one chart — the Kairos outputs folder AND the bodies/deep JSONs — go into the same bundle.
+Stage a user's own Astraeus (formerly Kairos) chart outputs on the server, one file per call, so `mani_create_profile` can ingest them. All files for one chart — the Astraeus (Kairos) outputs folder AND the bodies/deep JSONs — go into the same bundle.
 
 | Parameter | Type | Required | Default | Constraints | Description |
 |-----------|------|----------|---------|-------------|-------------|
@@ -74,7 +74,7 @@ Only `.json` and `.txt` chart files are accepted; names are sanitized and size-c
 
 ### `mani_create_profile`
 
-Ingest a Kairos chart outputs bundle (the `*_deep_*.json` set) and compile it into a MANI v31 cognitive profile packet.
+Ingest an Astraeus chart outputs bundle (the `*_deep_*.json` set) and compile it into a MANI v31 cognitive profile packet.
 
 | Parameter | Type | Required | Default | Constraints | Description |
 |-----------|------|----------|---------|-------------|-------------|
